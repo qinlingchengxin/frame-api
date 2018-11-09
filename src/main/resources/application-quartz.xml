@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:task="http://www.springframework.org/schema/task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+    <task:scheduler id="qbScheduler" pool-size="15"/>
+
+    <task:scheduled-tasks scheduler="qbScheduler">
+
+        <task:scheduled ref="jobService" method="test" cron="5 1 0 * * ?"/>
+
+    </task:scheduled-tasks>
+</beans>

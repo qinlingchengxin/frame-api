@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<#assign baseUrl=request.contextPath />
+<head>
+    <meta charset="UTF-8">
+    <title>用户</title>
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/basic.css">
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/index.css">
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/topAndBottom.css">
+    <script type="text/javascript" src="${baseUrl}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${baseUrl}/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript">
+
+        function searchData() {
+            var name = document.getElementById("name").value;
+            window.location = "${baseUrl}/web/person/list?name=" + name;
+        }
+    </script>
+</head>
+<body>
+
+<div class="content clearfloat">
+    <div class="content_right fr">
+        <div class="first clearfloat">
+            <div class="fl title">用户</div>
+            <div class="fr operation">
+                <span><a href="${baseUrl}/web/person/list?name=${name}" target="rightFrame"> <img src="${baseUrl}/img/flush.png">刷新</a></span>
+            </div>
+        </div>
+
+        <div class="second">
+            <form>
+                <span>用户名：</span>
+                <input style="width: 120px; height: 26px;background-color: #ffffff;color:#000;border: 1px solid #EAEBE8;cursor: auto;" type="text" id="name" value="${name}"/>
+
+                <input type="button" onclick="searchData();" value="搜索"/>
+            </form>
+        </div>
+
+        <div class="third">
+            <table>
+                <tr>
+                    <th width="4%">序号</th>
+                    <th width="15%">用户名</th>
+                    <th width="15%">年龄</th>
+                    <th width="12%">创建时间</th>
+                </tr>
+
+                <#list persons as person>
+                    <tr>
+                        <td>${person_index + 1}</td>
+                        <td>${(person.name)!}</td>
+                        <td>${(person.age)!}</td>
+                        <td>${(person.createTime?number_to_datetime)!}</td>
+                    </tr>
+                </#list>
+            </table>
+
+            <div class="fenye">
+                <ul class="fy_ul">
+                    <li class="fy_li_first">共 ${count} 条记录</li>
+
+                    <#if (currPage == 1)>
+                        <li><a href="#">上一页</a></li>
+                    </#if>
+                    <#if (currPage > 1) >
+                        <li><a href="${baseUrl}/web/person/list?name=${name}&page=${currPage - 1}">上一页</a></li>
+                    </#if>
+
+                    <li id="currPage">${currPage}</li>
+
+                    <#if (currPage >= totalPage)>
+                        <li><a href="#">下一页</a></li>
+                    </#if>
+
+                    <#if (totalPage > currPage)>
+                        <li><a href="${baseUrl}/web/person/list?name=${name}&page=${currPage + 1}">下一页</a></li>
+                    </#if>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

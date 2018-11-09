@@ -1,0 +1,142 @@
+.i_active {
+    background: url(../img/xiajiantou.png) no-repeat center !important;
+}
+
+.lv2-li_a_active {
+    color: #1166B8 !important;
+}
+
+/*内容左侧菜单*/
+.content {
+    width: 100%;
+}
+
+.content_left {
+    border-right: 1px solid #dcdcdc;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 700px;
+}
+
+.content_left .lv1-li span {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    border-bottom: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;
+    line-height: 50px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-indent: 20px;
+    color: #4D7909;
+    font-weight: 700;
+}
+
+.content_left .lv1-li span i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/youjiantou.png) no-repeat center;
+    float: right;
+    margin-top: 16px;
+    margin-right: 25px;
+}
+
+.content_left .lv1-li .lv2-ul {
+    display: none;
+}
+
+.content_left .lv2-li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;;
+    line-height: 50px;
+    font-size: 16px;
+    text-indent: 30px;
+}
+
+.content_left .lv2-li:hover {
+    background: #F2F2F2;
+}
+
+.content_left .lv2-li a {
+    color: #323232
+}
+
+.top {
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    height: 100%;
+}
+
+.logo a {
+    display: inline-block;
+    height: 100%;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.time {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.time p {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.time p span {
+    color: #FE981B;
+    margin-right: 5px;
+}
+
+.fullSearch {
+    height: 46px;
+    width: 100%;
+    background-color: #7CA710;
+    line-height: 46px;
+}
+
+.fullSearch .welcome {
+    display: inline-block;
+    width: 115px;
+    height: 46px;
+    border-right: 1px solid #678A0B;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.fullSearch .index {
+    display: inline-block;
+    width: 65px;
+    height: 46px;
+    border-right: 1px solid #678A0B;
+    text-align: center;
+    color: #fff;
+}
+
+.fullSearch .index img {
+    vertical-align: middle;
+    margin-top: 13px;
+}
+
+.footr {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #7CA710;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+

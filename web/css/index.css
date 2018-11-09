@@ -1,0 +1,130 @@
+.content_right {
+    width: 99.5%;
+    margin-bottom: 60px;
+}
+
+.first {
+    height: 58px;
+    line-height: 58px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    text-indent: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #7CA710;
+    font-weight: 700;
+}
+
+.operation {
+    margin-right: 1.4rem;
+}
+
+.operation span {
+    display: inline-block;
+    width: 7rem;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #fff;
+    background-color: #89B446;
+    border-radius: 3px;
+    margin-right: 1rem;
+    text-indent: 0;
+    cursor: pointer;
+}
+
+.operation span img {
+    margin-right: 1rem;
+}
+
+.second {
+    height: 70px;
+    line-height: 70px;
+    background-color: #fff;
+    text-indent: 20px;
+}
+
+.second span {
+    font-weight: 700;
+}
+
+.second select {
+    width: 160px;
+    height: 26px;
+    margin-right: 20px;
+}
+
+.second input {
+    width: 62px;
+    height: 26px;
+    background-color: #FE8E2C;
+    color: #fff;
+    border: 1px solid #FE8E2C;
+    cursor: pointer;
+}
+
+.third {
+    background-color: #fff;
+}
+
+.third table {
+    width: 100%;
+}
+
+.third table tr th {
+    height: 40px;
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #EAEBE8;
+    border-top: 1px solid #EAEBE8;
+}
+
+.third table tr td {
+    height: 40px;
+    border-bottom: 1px solid #EAEBE8;
+    border-top: 1px solid #EAEBE8;
+    text-align: center;
+}
+
+.third table tr td span {
+    border: 1px solid #CECECE;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.third table tr td span img {
+    margin-right: 10px;
+}
+
+.third table tr:nth-child(odd) {
+    background-color: #F6F6F6;
+}
+
+.fenye {
+    height: 60px;
+    float: right;
+    line-height: 60px;
+    margin-right: 100px;
+}
+
+.fy_ul {
+    list-style: none;
+}
+
+.fy_ul li {
+    float: left;
+    margin-right: 5px;
+}
+
+.fy_li_first {
+    margin-right: 10px;
+}
+
+.fy_ul a {
+    color: #4D7909;
+}
+
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<#assign baseUrl=request.contextPath />
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/basic.css">
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/login.css">
+    <script type="text/javascript">
+        function login() {
+            document.getElementById("frm").submit();
+        }
+    </script>
+</head>
+<body>
+<div class="top">
+    <div>签章平台</div>
+</div>
+<div class="content">
+    <div class="login">
+        <form id="frm" action="${baseUrl}/web/admin/login" method="post">
+            <div class="loginBox fr">
+                <div class="title">用户登录</div>
+                <div class="user clearfloat userAndPassword">
+                    <span class="fl"><img src="${baseUrl}/img/user.png"></span><input class="fl" type="text" name="username">
+                </div>
+                <div class="password clearfloat userAndPassword">
+                    <span class="fl"><img src="${baseUrl}/img/password.png"></span><input class="fl" type="password" name="password">
+                </div>
+                <div class="entry">
+                    <span onclick="login();">登录</span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
