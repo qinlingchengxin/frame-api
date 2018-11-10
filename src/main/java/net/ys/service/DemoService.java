@@ -5,7 +5,13 @@ import net.ys.utils.LogUtil;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.IOFileFilter;
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.springframework.stereotype.Service;
+
+import java.io.File;
+import java.util.Collection;
 
 @Service
 public class DemoService {
@@ -46,6 +52,24 @@ public class DemoService {
             System.out.println(getMethod.getResponseBodyAsString());
         } catch (Exception e) {
             LogUtil.error(e);
+        }
+    }
+
+    public void testFile() {
+        Collection<File> files = FileUtils.listFiles(new File("E:/test/"), new IOFileFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return false;
+            }
+
+            @Override
+            public boolean accept(File file) {
+                return true;
+            }
+        }, TrueFileFilter.INSTANCE);
+
+        for (File file : files) {
+            System.out.println(file.getAbsolutePath());
         }
     }
 }
