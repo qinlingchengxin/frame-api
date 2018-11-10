@@ -26,6 +26,7 @@
             <div class="fl title">用户</div>
             <div class="fr operation">
                 <span><a href="${baseUrl}/web/person/list?name=${name}" target="rightFrame"> <img src="${baseUrl}/img/flush.png">刷新</a></span>
+                <span><a href="${baseUrl}/web/person/edit" target="rightFrame"> <img src="${baseUrl}/img/zengjia.png">新增</a></span>
             </div>
         </div>
 
@@ -45,6 +46,7 @@
                     <th width="15%">用户名</th>
                     <th width="15%">年龄</th>
                     <th width="12%">创建时间</th>
+                    <th style="text-align: center;">操作</th>
                 </tr>
 
                 <#list persons as person>
@@ -53,6 +55,9 @@
                         <td>${(person.name)!}</td>
                         <td>${(person.age)!}</td>
                         <td>${(person.createTime?number_to_datetime)!}</td>
+                        <td style="text-align: center;">
+                            <span><a href="${baseUrl}/web/person/edit?id=${person.id}" target="rightFrame">编辑</a></span>
+                        </td>
                     </tr>
                 </#list>
             </table>

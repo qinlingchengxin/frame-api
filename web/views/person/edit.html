@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<#assign baseUrl=request.contextPath />
+<head>
+    <meta charset="UTF-8">
+    <title>用户</title>
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/basic.css">
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/form.css">
+    <link rel="stylesheet" type="text/css" href="${baseUrl}/css/topAndBottom.css">
+    <script type="text/javascript" src="${baseUrl}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="${baseUrl}/js/menu.js"></script>
+    <script type="text/javascript" src="${baseUrl}/js/jquery.extend.js"></script>
+
+    <script type="text/javascript">
+
+        function save() {
+            var form = $('#form');
+            var baseObj = form.serializeObject();
+            $.ajax({
+                url: "${baseUrl}/web/person/save",
+                type: "POST",
+                data: baseObj,
+                dataType: "json",
+                success: function (result) {
+                    if (result.code == 1000) {
+                        alert('保存成功');
+                    } else {
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
+
+        function add() {
+            var form = $('#form');
+            var baseObj = form.serializeObject();
+            $.ajax({
+                url: "${baseUrl}/web/person/add",
+                type: "POST",
+                data: baseObj,
+                dataType: "json",
+                success: function (result) {
+                    if (result.code == 1000) {
+                        $("#id").val(result.data.id);
+                        $("#btn_add").attr("onclick", "save();").text("保存");
+                        alert('添加成功');
+                    } else {
+                        alert(result.msg);
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="content clearfloat">
+    <div class="content_right fr">
+        <div class="first">
+            <a href="javascript:history.go(-1);">返回</a><span>></span><a href="javascript:void(0)">用户</a>
+        </div>
+        <div class="second">
+            <form id="form">
+                <input type="hidden" id="id" name="id" value="${person.id}"/>
+
+                <div>
+                    <span class="title">用户名</span>
+                    <input id="doc-ipt-name-1" type="text" name="name" value="${person.name}"/>
+                </div>
+
+                <div>
+                    <span class="title">年龄</span>
+                    <input id="doc-ipt-age-1" type="text" name="age" value="${person.age}"/>
+                </div>
+
+                <!-- <div>
+                     <span class="title" style="vertical-align: top;">描述</span>
+                     <textarea id="doc-ipt-description-1" name="description">${busCustomEntity.description}</textarea>
+                 </div>-->
+
+                <div>
+                    <#if person.id  == 0>
+                        <span id="btn_add" class="save" onclick="add();">添加</span>
+                    </#if>
+
+                    <#if person.id != 0>
+                        <span class="save" onclick="save();">保存</span>
+                    </#if>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
