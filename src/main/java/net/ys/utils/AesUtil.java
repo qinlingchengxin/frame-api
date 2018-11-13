@@ -24,7 +24,7 @@ public class AesUtil {
      */
     public static String encryptAES(String content) {
         try {
-            byte[] byteContent = content.getBytes(X.ENCODING.U);
+            byte[] byteContent = content.getBytes(X.Code.U);
             byte[] enCodeFormat = KEY.getBytes();
             SecretKeySpec secretKeySpec = new SecretKeySpec(enCodeFormat, "AES");
             byte[] initParam = IV_STRING.getBytes();
@@ -55,7 +55,7 @@ public class AesUtil {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
             byte[] result = cipher.doFinal(encryptedBytes);
-            return new String(result, X.ENCODING.U);
+            return new String(result, X.Code.U);
         } catch (Exception e) {
         }
         return "";

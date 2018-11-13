@@ -1,7 +1,13 @@
 package net.ys.utils;
 
+import net.sf.json.JSONObject;
 import net.ys.constant.X;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.RequestEntity;
+import org.apache.commons.httpclient.methods.StringRequestEntity;
 
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -97,7 +103,7 @@ public class Tools {
             if (str == null || "".equals(str.trim())) {
                 return "";
             }
-            byte[] bs = md5.digest((PREFIX + str).getBytes(X.ENCODING.U));
+            byte[] bs = md5.digest((PREFIX + str).getBytes(X.Code.U));
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < bs.length; i++) {
                 sb.append(Character.forDigit((bs[i] >>> 4) & 0x0F, 16)).append(Character.forDigit(bs[i] & 0x0F, 16));
@@ -143,5 +149,29 @@ public class Tools {
             result = df.format((double) fileSize / 1073741824) + "GB";
         }
         return result;
+    }
+
+    public static String genShortUrl(String url) throws IOException {
+        HttpClient httpclient = new HttpClient();
+        PostMethod postMethod = new PostMethod("https://dwz.cn/admin/create");
+        RequestEntity entity = new StringRequestEntity("{\"url\":\"" + url + "\"}", "application/json", X.Code.U);
+        postMethod.setRequestEntity(entity);
+        postMethod.setRequestHeader("Content-Type", X.ContentType.JSON);
+
+        int statusCode = httpclient.executeMethod(postMethod);
+        if (statusCode == 200) {
+            String result = postMethod.getResponseBodyAsString();
+            JSONObject object = JSONObject.fromObject(result);
+            int code = object.optInt("Code");
+            if (code == 0) {
+                return object.optString("ShortUrl");
+            }
+        }
+        return null;
+    }
+
+    public static void main(String[] args) throws IOException {
+        String url = "https://www.cnblogs.com/Smileing/p/7207646.html";
+        System.out.println(genShortUrl(url));
     }
 }

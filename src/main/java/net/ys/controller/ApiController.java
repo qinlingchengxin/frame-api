@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import net.ys.constant.GenResult;
 import net.ys.utils.LogUtil;
+import net.ys.utils.Tools;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,9 @@ public class ApiController {
     @ApiOperation(httpMethod = "GET", response = Map.class, responseContainer = "Map", value = "测试")
     public Map<String, Object> test() {
         try {
-            return GenResult.SUCCESS.genResult();
+            String url = "https://www.cnblogs.com/Smileing/p/7207646.html";
+            String s = Tools.genShortUrl(url);
+            return GenResult.SUCCESS.genResult(s);
         } catch (Exception e) {
             LogUtil.error(e);
             return GenResult.UNKNOWN_ERROR.genResult();

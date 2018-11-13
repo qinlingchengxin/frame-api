@@ -309,17 +309,17 @@ public class TimeUtil {
      */
     public static String alreadyPass(long time) {
         long pass = System.currentTimeMillis() - time;
-        if (pass <= X.TIME.SECOND_MILLISECOND) {//不足一秒
+        if (pass <= X.Time.SECOND_MILLISECOND) {//不足一秒
             pass += 2000;
         }
-        if (pass < X.TIME.MINUTE_MILLISECOND) {//几秒前
-            return (pass / X.TIME.SECOND_MILLISECOND) + "秒前";
-        } else if (pass < X.TIME.HOUR_MILLISECOND) {//分钟前
-            return (pass / X.TIME.MINUTE_MILLISECOND) + "分钟前";
-        } else if (pass < X.TIME.DAY_MILLISECOND) {
-            return (pass / X.TIME.HOUR_MILLISECOND) + "小时前";
-        } else if (pass < 6 * X.TIME.DAY_MILLISECOND) {//5天以内
-            return (pass / X.TIME.DAY_MILLISECOND) + "天前";
+        if (pass < X.Time.MINUTE_MILLISECOND) {//几秒前
+            return (pass / X.Time.SECOND_MILLISECOND) + "秒前";
+        } else if (pass < X.Time.HOUR_MILLISECOND) {//分钟前
+            return (pass / X.Time.MINUTE_MILLISECOND) + "分钟前";
+        } else if (pass < X.Time.DAY_MILLISECOND) {
+            return (pass / X.Time.HOUR_MILLISECOND) + "小时前";
+        } else if (pass < 6 * X.Time.DAY_MILLISECOND) {//5天以内
+            return (pass / X.Time.DAY_MILLISECOND) + "天前";
         } else {
             return yMdHm.format(new Date(time));
         }
