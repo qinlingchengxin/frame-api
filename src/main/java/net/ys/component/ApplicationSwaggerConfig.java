@@ -1,4 +1,4 @@
-package net.ys.common;
+package net.ys.component;
 
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.service.ApiInfo;

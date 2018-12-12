@@ -7,16 +7,14 @@
 
     <context:component-scan base-package="net.ys.service"/>
     <context:component-scan base-package="net.ys.dao"/>
-    <context:component-scan base-package="net.ys.common"/>
     <context:component-scan base-package="net.ys.job"/>
+    <context:component-scan base-package="net.ys.component"/>
 
     <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <value>classpath:config.properties</value>
         </property>
     </bean>
-
-    <bean class="net.ys.utils.ApplicationContextUtil"/>
 
     <import resource="application-quartz.xml"/>
 

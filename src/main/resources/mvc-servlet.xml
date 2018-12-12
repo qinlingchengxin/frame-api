@@ -97,6 +97,6 @@
     <mvc:resources mapping="/**" location="/"/>
 
     <bean class="org.springframework.http.converter.ResourceHttpMessageConverter"/>
-    <bean name="applicationSwaggerConfig" class="net.ys.common.ApplicationSwaggerConfig"/>
+    <bean name="applicationSwaggerConfig" class="net.ys.component.ApplicationSwaggerConfig"/>
 
 </beans>
