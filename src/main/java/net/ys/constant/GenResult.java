@@ -6,11 +6,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public enum GenResult {
+
     SUCCESS(1000, "request success"),
 
     FAILED(1001, "request failed"),
 
     PARAMS_ERROR(1003, "parameter error"),
+
+    REQUEST_METHOD_ERROR(1004, "request method error"),
 
     UNKNOWN_ERROR(9999, "unknown error"),;
 
