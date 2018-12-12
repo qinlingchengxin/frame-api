@@ -17,15 +17,15 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-@RequestMapping(value = "web/person")
+@RequestMapping(value = "web")
 @ApiIgnore
 public class PersonController {
 
     @Resource
     private PersonService personService;
 
-    @RequestMapping(value = "list")
-    public ModelAndView list(@RequestParam(defaultValue = "") String name, @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int pageSize) {
+    @RequestMapping(value = "persons")
+    public ModelAndView list(@RequestParam(defaultValue = "") String name, @RequestParam(defaultValue = "1") int page, @RequestParam(value = "page_size", defaultValue = "10") int pageSize) {
         ModelAndView modelAndView = new ModelAndView("person/list");
 
         if (page < 1) {
@@ -57,7 +57,7 @@ public class PersonController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "edit")
+    @RequestMapping(value = "person/edit")
     public ModelAndView edit(@RequestParam(defaultValue = "") String id) {
         ModelAndView modelAndView = new ModelAndView("person/edit");
         Person person;
@@ -71,7 +71,7 @@ public class PersonController {
         return modelAndView;
     }
 
-    @RequestMapping(value = "save")
+    @RequestMapping(value = "person/save")
     @ResponseBody
     public Map<String, Object> save(Person person) {
 
@@ -83,7 +83,7 @@ public class PersonController {
         return GenResult.SUCCESS.genResult();
     }
 
-    @RequestMapping(value = "add")
+    @RequestMapping(value = "person/add")
     @ResponseBody
     public Map<String, Object> add(Person person) {
         try {

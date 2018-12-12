@@ -17,7 +17,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 18-5-4
  */
 public class FileUploadUtil {

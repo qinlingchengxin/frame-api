@@ -14,7 +14,7 @@
 
         function searchData() {
             var name = document.getElementById("name").value;
-            window.location = "${baseUrl}/web/person/list?name=" + name;
+            window.location = "${baseUrl}/web/persons?name=" + name;
         }
     </script>
 </head>
@@ -25,7 +25,7 @@
         <div class="first clearfloat">
             <div class="fl title">用户</div>
             <div class="fr operation">
-                <span><a href="${baseUrl}/web/person/list?name=${name}" target="rightFrame"> <img src="${baseUrl}/img/flush.png">刷新</a></span>
+                <span><a href="${baseUrl}/web/persons?name=${name}" target="rightFrame"> <img src="${baseUrl}/img/flush.png">刷新</a></span>
                 <span><a href="${baseUrl}/web/person/edit" target="rightFrame"> <img src="${baseUrl}/img/zengjia.png">新增</a></span>
             </div>
         </div>
@@ -70,7 +70,7 @@
                         <li><a href="#">上一页</a></li>
                     </#if>
                     <#if (currPage > 1) >
-                        <li><a href="${baseUrl}/web/person/list?name=${name}&page=${currPage - 1}">上一页</a></li>
+                        <li><a href="${baseUrl}/web/persons?name=${name}&page=${currPage - 1}">上一页</a></li>
                     </#if>
 
                     <li id="currPage">${currPage}</li>
@@ -80,7 +80,7 @@
                     </#if>
 
                     <#if (totalPage > currPage)>
-                        <li><a href="${baseUrl}/web/person/list?name=${name}&page=${currPage + 1}">下一页</a></li>
+                        <li><a href="${baseUrl}/web/persons?name=${name}&page=${currPage + 1}">下一页</a></li>
                     </#if>
 
                 </ul>

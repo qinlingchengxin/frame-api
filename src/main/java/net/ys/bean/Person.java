@@ -1,10 +1,12 @@
 package net.ys.bean;
 
+import java.io.Serializable;
+
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 18-5-18
  */
-public class Person {
+public class Person implements Serializable {
 
     private int id;
 

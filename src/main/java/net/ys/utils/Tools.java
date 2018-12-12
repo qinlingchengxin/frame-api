@@ -14,13 +14,12 @@ import java.util.Random;
 import java.util.UUID;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 16-9-8
  */
 public class Tools {
 
     static MessageDigest md5;
-    static final String PREFIX = "88_";
     private static Random rand;
 
     static {
@@ -103,7 +102,7 @@ public class Tools {
             if (str == null || "".equals(str.trim())) {
                 return "";
             }
-            byte[] bs = md5.digest((PREFIX + str).getBytes(X.Code.U));
+            byte[] bs = md5.digest((str).getBytes(X.Code.U));
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < bs.length; i++) {
                 sb.append(Character.forDigit((bs[i] >>> 4) & 0x0F, 16)).append(Character.forDigit(bs[i] & 0x0F, 16));

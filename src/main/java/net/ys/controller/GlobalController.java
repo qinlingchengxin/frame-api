@@ -16,9 +16,6 @@ import java.util.Map;
 @ApiIgnore
 public class GlobalController {
 
-    /**
-     * HTTP 400
-     */
     @RequestMapping(value = "http_400", method = RequestMethod.POST, headers = "Accept=application/json")
     public Map<String, Object> http400() {
         return GenResult.PARAMS_ERROR.genResult();

@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 16-9-12
  */
 public class ApplicationContextUtil implements ApplicationContextAware {

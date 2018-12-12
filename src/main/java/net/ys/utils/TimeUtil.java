@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 16-9-8
  */
 public class TimeUtil {

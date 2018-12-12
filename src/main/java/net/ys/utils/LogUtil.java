@@ -3,7 +3,7 @@ package net.ys.utils;
 import org.apache.log4j.Logger;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 18-4-26
  */
 public class LogUtil {

@@ -6,13 +6,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public enum GenResult {
-    SUCCESS(1000, "请求成功"),
+    SUCCESS(1000, "request success"),
 
-    FAILED(1001, "请求失败"),
+    FAILED(1001, "request failed"),
 
-    PARAMS_ERROR(1003, "请求参数错误"),
+    PARAMS_ERROR(1003, "parameter error"),
 
-    UNKNOWN_ERROR(9999, "未知异常"),;
+    UNKNOWN_ERROR(9999, "unknown error"),;
 
     public int msgCode;
     public String message;

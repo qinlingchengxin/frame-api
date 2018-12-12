@@ -1,7 +1,7 @@
 package net.ys.utils.rsa;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 17-11-14
  */
 public class MyPair<T, K> {
