@@ -73,19 +73,11 @@
         <property name="messageConverters">
             <list>
                 <ref bean="jsonConverter"/>
+                <ref bean="stringConverter"/>
             </list>
         </property>
     </bean>
     <!-- 输出对象转JSON支持 -->
-
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="stringConverter"/>
-                <ref bean="jsonConverter"/>
-            </list>
-        </property>
-    </bean>
 
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="UTF-8"/>
