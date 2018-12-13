@@ -1,2 +1,1 @@
-api 框架，包含api文档swagger和web模块，包含常用的工具类
-包含数据库文件
+api框架，包含api文档swagger和web模块，包含常用的工具类，数据库文件
