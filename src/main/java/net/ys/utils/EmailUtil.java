@@ -293,7 +293,7 @@ public class EmailUtil {
     }
 
     public static void main(String[] args) throws UnsupportedEncodingException {
-        EmailUtil emailUtil = new EmailUtil("smtp.qq.com", "529726271@qq.com", "djvzaksvnarrbgec");
+        EmailUtil emailUtil = new EmailUtil("smtp.qq.com", "xxxxx@qq.com", "djvzaksvnarrbgec");
 
         emailUtil.sendCommonEmail("xxxx", String.format("【数据共享中心】尊敬的管理员%s，数据共享中心监控到与%s的对接中断，请尽快进行排查！", "南美鹰", "内蒙古监督平台"), "1290821453@qq.com");
     }
