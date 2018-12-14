@@ -11,9 +11,9 @@ public enum GenResult {
 
     FAILED(1001, "request failed"),
 
-    PARAMS_ERROR(1003, "parameter error"),
+    PARAMS_ERROR(1002, "parameter error"),
 
-    REQUEST_METHOD_ERROR(1004, "request method error"),
+    REQUEST_METHOD_ERROR(1003, "request method error"),
 
     UNKNOWN_ERROR(9999, "unknown error"),;
 
@@ -45,5 +45,13 @@ public enum GenResult {
         object.put("code", msgCode);
         object.put("msg", message);
         return object.toString();
+    }
+
+    public int getMsgCode() {
+        return msgCode;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

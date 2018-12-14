@@ -123,12 +123,12 @@
     </artifact>
     <artifact type="war" name="frame-api:war">
       <output-path>$PROJECT_DIR$/target</output-path>
-      <root id="archive" name="frame-api-dev.war">
+      <root id="archive" name="frame-api-product.war">
         <element id="artifact" artifact-name="frame-api:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="frame-api:war exploded">
-      <output-path>$PROJECT_DIR$/target/frame-api-dev</output-path>
+      <output-path>$PROJECT_DIR$/target/frame-api-product</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="frame-api/web/Web" />
         <element id="directory" name="WEB-INF">
