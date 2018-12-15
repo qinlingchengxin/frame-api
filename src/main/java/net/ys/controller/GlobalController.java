@@ -56,7 +56,9 @@ public class GlobalController {
         try {
             Map<String, Object> map = new HashMap<String, Object>();
             List<Map<String, String>> records = ApiDoc.genRecords();
+            GenResult[] results = GenResult.values();
             map.put("records", records);
+            map.put("results", results);
             String templateFileName = request.getSession().getServletContext().getRealPath("/template/api.xls");
             String resultFileName = "api_docs_" + System.currentTimeMillis() + ".xls";
             os = response.getOutputStream();
