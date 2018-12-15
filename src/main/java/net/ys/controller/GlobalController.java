@@ -1,12 +1,25 @@
 package net.ys.controller;
 
+import net.sf.jxls.transformer.XLSTransformer;
 import net.ys.constant.GenResult;
+import net.ys.utils.ApiDoc;
+import net.ys.utils.LogUtil;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import springfox.documentation.annotations.ApiIgnore;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -33,5 +46,43 @@ public class GlobalController {
         GenResult[] results = GenResult.values();
         mv.addObject("results", results);
         return mv;
+    }
+
+    @RequestMapping("api/export")
+    public void exportFace(HttpServletRequest request, HttpServletResponse response) {
+
+        ServletOutputStream os = null;
+        InputStream is = null;
+        try {
+            Map<String, Object> map = new HashMap<String, Object>();
+            List<Map<String, String>> records = ApiDoc.genRecords();
+            map.put("records", records);
+            String templateFileName = request.getSession().getServletContext().getRealPath("/template/api.xls");
+            String resultFileName = "api_docs_" + System.currentTimeMillis() + ".xls";
+            os = response.getOutputStream();
+            is = new BufferedInputStream(new FileInputStream(templateFileName));
+            XLSTransformer transformer = new XLSTransformer();
+            Workbook wb = transformer.transformXLS(is, map);
+            response.reset();
+            response.setHeader("Content-disposition", "attachment; filename=" + resultFileName);
+            response.setContentType("application/msexcel");
+            wb.write(os);
+            is.close();
+            os.close();
+        } catch (Exception e) {
+            LogUtil.error(e);
+        } finally {
+            try {
+                if (os != null) {
+                    os.flush();
+                    os.close();
+                }
+                if (is != null) {
+                    is.close();
+                }
+            } catch (IOException e) {
+                LogUtil.error(e);
+            }
+        }
     }
 }
