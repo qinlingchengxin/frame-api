@@ -25,25 +25,23 @@ public enum GenResult {
         this.message = message;
     }
 
-    public Map<String, Object> genResult() {
+    public Map<String, Object> genResult(Object... data) {
         Map<String, Object> map = new LinkedHashMap<String, Object>();
         map.put("code", msgCode);
         map.put("msg", message);
+        if (data.length > 0) {
+            map.put("data", data);
+        }
         return map;
     }
 
-    public Map<String, Object> genResult(Object data) {
-        Map<String, Object> map = new LinkedHashMap<String, Object>();
-        map.put("code", msgCode);
-        map.put("msg", message);
-        map.put("data", data);
-        return map;
-    }
-
-    public String toJson() {
+    public String toJson(Object... data) {
         JSONObject object = new JSONObject();
         object.put("code", msgCode);
         object.put("msg", message);
+        if (data.length > 0) {
+            object.put("data", data[0]);
+        }
         return object.toString();
     }
 
