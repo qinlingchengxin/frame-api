@@ -1,4 +1,4 @@
-package net.ys;
+package net.ys.db;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,4 @@
-package net.ys;
+package net.ys.db;
 
 import java.io.IOException;
 import java.sql.SQLException;
