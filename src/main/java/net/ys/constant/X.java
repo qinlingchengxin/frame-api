@@ -6,6 +6,8 @@ package net.ys.constant;
  */
 public interface X {
 
+    String SEPARATOR = "/";
+
     interface Time {
         int DAY_SECOND = 24 * 60 * 60;
         int HOUR_SECOND = 60 * 60;
