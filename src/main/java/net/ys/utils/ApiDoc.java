@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.ys.constant.GenResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -55,7 +56,8 @@ public class ApiDoc {
                                 if (parameter.isAnnotationPresent(ApiParam.class)) {
                                     record = new HashMap<>();
                                     ApiParam paramAnnotation = parameter.getAnnotation(ApiParam.class);
-                                    String param = paramAnnotation.name();
+                                    RequestParam reqAnnotation = parameter.getAnnotation(RequestParam.class);
+                                    String param = reqAnnotation.value();
                                     String paramName = paramAnnotation.value();
                                     String paramType = parameter.getType().getName();
                                     record.put("name", name);
