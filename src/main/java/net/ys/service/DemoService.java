@@ -1,5 +1,6 @@
 package net.ys.service;
 
+import net.ys.constant.MsgKey;
 import net.ys.threadpool.ThreadPoolManager;
 import net.ys.utils.LogUtil;
 import org.apache.commons.httpclient.HttpClient;
@@ -10,11 +11,15 @@ import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.util.Collection;
 
 @Service
 public class DemoService {
+
+    @Resource
+    private MsgProducer msgProducer;
 
     public void testThread() {
         Runnable r = new Runnable() {
@@ -71,5 +76,10 @@ public class DemoService {
         for (File file : files) {
             System.out.println(file.getAbsolutePath());
         }
+    }
+
+    public void testSendMsg() {
+        String pushMsg = "test msg";
+        msgProducer.sendObjMsg(MsgKey.QUEUE_J_PUSH_KEY, pushMsg);
     }
 }
