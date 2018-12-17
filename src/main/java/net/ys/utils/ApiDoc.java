@@ -3,14 +3,15 @@ package net.ys.utils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import net.ys.collection.StringMap;
 import net.ys.constant.GenResult;
+import net.ys.controller.GlobalController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -29,7 +30,7 @@ public class ApiDoc {
      * @return
      */
     public static List<Map<String, String>> genRecords() throws Exception {
-        List<Class> classes = ClassUtil.getClasses("net.ys.controller");
+        List<Class> classes = ClassUtil.getClasses(GlobalController.class.getPackage().getName());
         List<Map<String, String>> records = new ArrayList<>();
         Map<String, String> record;
         for (Class clazz : classes) {
@@ -54,7 +55,7 @@ public class ApiDoc {
                         if (parameters.length > 0) {
                             for (Parameter parameter : parameters) {
                                 if (parameter.isAnnotationPresent(ApiParam.class)) {
-                                    record = new HashMap<>();
+                                    record = new StringMap<>();
                                     ApiParam paramAnnotation = parameter.getAnnotation(ApiParam.class);
                                     RequestParam reqAnnotation = parameter.getAnnotation(RequestParam.class);
                                     String param = reqAnnotation.value();
@@ -71,7 +72,7 @@ public class ApiDoc {
                                 }
                             }
                         } else {
-                            record = new HashMap<>();
+                            record = new StringMap<>();
                             record.put("name", name);
                             record.put("url", url);
                             record.put("method", requestMethod);

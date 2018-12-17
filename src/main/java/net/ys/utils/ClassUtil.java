@@ -17,61 +17,6 @@ import java.util.jar.JarFile;
  */
 public class ClassUtil {
 
-    public static void main(String[] args) throws Exception {
-        List<Class> classes = ClassUtil.getClasses("net.ys.controller");
-        for (Class clazz : classes) {
-            System.out.println(clazz.getName());
-        }
-    }
-
-    /**
-     * 取得某个接口下所有实现这个接口的类
-     *
-     * @param c
-     * @return
-     */
-    public static List<Class> getAllClassByInterface(Class c) {
-        List<Class> returnClassList = null;
-
-        if (c.isInterface()) {
-            String packageName = c.getPackage().getName();// 获取当前的包名
-            List<Class> allClass = getClasses(packageName);// 获取当前包下以及子包下所以的类
-            if (allClass != null) {
-                returnClassList = new ArrayList<Class>();
-                for (Class classes : allClass) {
-                    if (c.isAssignableFrom(classes)) { // 判断是否是同一个接口
-                        if (!c.equals(classes)) {// 本身不加入进去
-                            returnClassList.add(classes);
-                        }
-                    }
-                }
-            }
-        }
-        return returnClassList;
-    }
-
-    /**
-     * 取得某一类所在包的所有类名 不含迭代
-     *
-     * @param classLocation
-     * @param packageName
-     * @return
-     */
-    public static String[] getPackageAllClassName(String classLocation, String packageName) {
-        String[] packagePathSplit = packageName.split("[.]");//将packageName分解
-        String realClassLocation = classLocation;
-        int packageLength = packagePathSplit.length;
-        for (int i = 0; i < packageLength; i++) {
-            realClassLocation = realClassLocation + File.separator + packagePathSplit[i];
-        }
-        File packageDir = new File(realClassLocation);
-        if (packageDir.isDirectory()) {
-            String[] allClassName = packageDir.list();
-            return allClassName;
-        }
-        return null;
-    }
-
     /**
      * 从包package中获取所有的Class
      */
