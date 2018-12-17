@@ -2,7 +2,7 @@ package net.ys.controller;
 
 import net.sf.jxls.transformer.XLSTransformer;
 import net.ys.constant.GenResult;
-import net.ys.utils.ApiDoc;
+import net.ys.utils.ApiDocUtil;
 import net.ys.utils.LogUtil;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,7 +55,7 @@ public class GlobalController {
         InputStream is = null;
         try {
             Map<String, Object> map = new HashMap<String, Object>();
-            List<Map<String, String>> records = ApiDoc.genRecords();
+            List<Map<String, String>> records = ApiDocUtil.genRecords();
             GenResult[] results = GenResult.values();
             map.put("records", records);
             map.put("results", results);

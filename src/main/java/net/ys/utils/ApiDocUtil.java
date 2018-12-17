@@ -22,7 +22,7 @@ import java.util.Map;
  * User: NMY
  * Date: 18-12-15
  */
-public class ApiDoc {
+public class ApiDocUtil {
 
     /**
      * 获取数据

@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContextAware;
  * User: NMY
  * Date: 16-9-12
  */
-public class ApplicationContextUtil implements ApplicationContextAware {
+public class AppContextUtil implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext;
 

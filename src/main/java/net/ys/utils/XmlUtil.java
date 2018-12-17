@@ -9,7 +9,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
 
-public class XmlUtils {
+public class XmlUtil {
 
     static JAXBContext jaxbContext;
     static Marshaller marshaller;

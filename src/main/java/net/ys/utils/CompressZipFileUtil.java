@@ -10,11 +10,11 @@ import java.util.zip.ZipOutputStream;
 /**
  * 压缩zip文件
  */
-public class CompressZipFile {
+public class CompressZipFileUtil {
 
     private File targetFile;
 
-    public CompressZipFile(File target) {
+    public CompressZipFileUtil(File target) {
         this.targetFile = target;
         if (this.targetFile.exists()) {
             this.targetFile.delete();
@@ -123,6 +123,6 @@ public class CompressZipFile {
 
     public static void main(String[] args) {
         File f = new File("E:/test/");
-        new CompressZipFile(new File("E:/", System.currentTimeMillis() + ".zip")).zipFiles(f);
+        new CompressZipFileUtil(new File("E:/", System.currentTimeMillis() + ".zip")).zipFiles(f);
     }
 }
