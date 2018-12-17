@@ -59,7 +59,7 @@ public class WebUtil {
                 System.out.println(resp);
             }
         } catch (Exception e) {
-            LogUtil.error(e);
+            System.out.println("request failed---->" + e.getMessage());
         } finally {
             if (connection != null) {
                 connection.disconnect();
