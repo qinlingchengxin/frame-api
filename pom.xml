@@ -401,6 +401,12 @@
             <version>1.4.5.RELEASE</version>
         </dependency>
         <!--rabbitmq-->
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0.1-jre</version>
+        </dependency>
     </dependencies>
 
     <profiles>
