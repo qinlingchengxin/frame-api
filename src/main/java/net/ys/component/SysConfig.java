@@ -16,11 +16,25 @@ public class SysConfig {
 
     public static String appName;
 
+    public static String pushMasterSecret;
+
+    public static String pushAppKey;
+
     public static String[] testName;
 
     @Value("${app.name}")
     public void setAppName(String appName) {
         this.appName = appName;
+    }
+
+    @Value("${push.master.secret}")
+    public void setPushMasterSecret(String pushMasterSecret) {
+        this.pushMasterSecret = pushMasterSecret;
+    }
+
+    @Value("${push.app.key}")
+    public void setPushAppKey(String pushAppKey) {
+        this.pushAppKey = pushAppKey;
     }
 
     @Value("${testName:test.name.*}")
