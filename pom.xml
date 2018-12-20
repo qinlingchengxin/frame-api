@@ -412,17 +412,17 @@
     <profiles>
         <profile>
             <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <package.environment>dev</package.environment>
-                <war.name>frame-api-dev</war.name>
+                <war.name>frame-api</war.name>
             </properties>
         </profile>
 
         <profile>
             <id>product</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <package.environment>product</package.environment>
                 <war.name>frame-api-product</war.name>
