@@ -11,7 +11,7 @@ public class ApplicationSwaggerConfig {
     @Bean
     public Docket addUserDocket() {
         Docket docket = new Docket(DocumentationType.SWAGGER_2);
-        ApiInfo apiInfo = new ApiInfo("REST API", "<a href=\"/frame-api/global/api/export\">API文档</a>", "V3.8.0", "www.yx.net", "postmaster@yx.net", "result code", "/frame-api/global/result/code");
+        ApiInfo apiInfo = new ApiInfo("REST API", "<a id=\"api_doc_id\" href=\"/global/api/export\">API文档</a>", "V3.8.0", "www.yx.net", "postmaster@yx.net", "result code", "/global/result/code");
         docket.apiInfo(apiInfo);
         return docket;
     }

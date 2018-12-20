@@ -30,7 +30,8 @@
     <script type="text/javascript">
         $(function () {
             var url = window.location.href;
-            url = url.substring(0, url.indexOf("/api-docs")) + "/v2/api-docs";
+            var appLink = url.substring(0, url.indexOf("/api-docs"));
+            url = appLink + "/v2/api-docs";
 
             // Pre load translate...
             if (window.SwaggerTranslator) {
@@ -41,6 +42,12 @@
                 dom_id: "swagger-ui-container",
                 supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
                 onComplete: function (swaggerApi, swaggerUi) {
+
+                    var my_node = $("#api_doc_id");
+                    my_node.attr("href", appLink + my_node.attr("href"));
+                    my_node = $(".info_license a:first");
+                    my_node.attr("href", appLink + my_node.attr("href"));
+
                     if (typeof initOAuth == "function") {
                         initOAuth({
                             clientId: "your-client-id",

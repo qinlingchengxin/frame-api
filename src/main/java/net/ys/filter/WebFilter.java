@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @javax.servlet.annotation.WebFilter(urlPatterns = "/web/*")
-public final class WebLoginFilter implements Filter {
+public final class WebFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
