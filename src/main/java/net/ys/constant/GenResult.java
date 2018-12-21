@@ -30,7 +30,7 @@ public enum GenResult {
         map.put("code", msgCode);
         map.put("msg", message);
         if (data.length > 0) {
-            map.put("data", data);
+            map.put("data", data[0]);
         }
         return map;
     }
