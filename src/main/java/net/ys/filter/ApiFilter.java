@@ -21,10 +21,10 @@ public final class ApiFilter implements Filter {
         Enumeration<String> names = request.getParameterNames();
         String name;
         String newLine = "\r\n";
-        StringBuffer sb = new StringBuffer("uri-->" + uri + newLine);
+        StringBuffer sb = new StringBuffer("uri-->").append(uri).append(newLine);
         while (names.hasMoreElements()) {
             name = names.nextElement();
-            sb.append(name + "->" + request.getParameter(name) + newLine);
+            sb.append(name).append("->").append(request.getParameter(name)).append(newLine);
         }
         LogUtil.debug(sb.toString());
 
