@@ -30,12 +30,12 @@ import java.util.Map;
 @ApiIgnore
 public class GlobalController {
 
-    @RequestMapping(value = "http_400", method = RequestMethod.POST, headers = "Accept=application/json")
+    @RequestMapping(value = "code/400", method = RequestMethod.POST, headers = "Accept=application/json")
     public Map<String, Object> http400() {
         return GenResult.PARAMS_ERROR.genResult();
     }
 
-    @RequestMapping(value = "http_405", headers = "Accept=application/json")
+    @RequestMapping(value = "code/405", headers = "Accept=application/json")
     public Map<String, Object> http405() {
         return GenResult.REQUEST_METHOD_ERROR.genResult();
     }

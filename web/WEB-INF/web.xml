@@ -50,12 +50,12 @@
     <!--error page-->
     <error-page>
         <error-code>400</error-code>
-        <location>/global/http_400</location>
+        <location>/global/code/400</location>
     </error-page>
 
     <error-page>
         <error-code>405</error-code>
-        <location>/global/http_405</location>
+        <location>/global/code/405</location>
     </error-page>
     <!--error page-->
 
