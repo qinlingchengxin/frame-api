@@ -8,12 +8,12 @@ import java.util.List;
 public class GenerateTools {
 
     public static void main(String[] args) throws Exception {
-        generateBean(DB_NAME);
-        generateMapper(DB_NAME);
-        generateRespMapper(DB_NAME);
-        select(DB_NAME, TABLE_NAME);
-        update(DB_NAME, TABLE_NAME);
-        insert(DB_NAME, TABLE_NAME);
+        generateBean();
+        generateMapper();
+        generateRespMapper();
+        select();
+        update();
+        insert();
 
         statement.close();
         connection.close();
@@ -61,11 +61,11 @@ public class GenerateTools {
         }
     }
 
-    public static void generateBean(String dbName) throws SQLException, IOException {
-        List<String> tables = getTables(dbName);
+    public static void generateBean() throws SQLException, IOException {
+        List<String> tables = getTables();
 
         if (tables.size() > 0) {
-            String sql = "SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='" + dbName + "'";
+            String sql = "SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='" + DB_NAME + "'";
             String columnName;
             String columnClassName;
             String columnComment;
@@ -79,13 +79,13 @@ public class GenerateTools {
 
                 fileWriter = new FileWriter(BEAN_PATH + fileName + ".java");
 
-                rs = statement.executeQuery("SELECT COUNT(COLUMN_TYPE) AS c FROM information_schema.`COLUMNS` WHERE TABLE_SCHEMA = '" + dbName + "' AND TABLE_NAME = '" + table + "' AND DATA_TYPE = 'decimal'");
+                rs = statement.executeQuery("SELECT COUNT(COLUMN_TYPE) AS c FROM information_schema.`COLUMNS` WHERE TABLE_SCHEMA = '" + DB_NAME + "' AND TABLE_NAME = '" + table + "' AND DATA_TYPE = 'decimal'");
                 if (rs.first()) {
                     if (rs.getInt("c") > 0) {
                         fileWriter.write("import java.math.BigDecimal;" + twoEnter);
                     }
                 }
-                rs = statement.executeQuery("SELECT TABLE_COMMENT FROM information_schema.`TABLES` WHERE TABLE_SCHEMA = '" + dbName + "' AND TABLE_NAME = '" + table + "';");
+                rs = statement.executeQuery("SELECT TABLE_COMMENT FROM information_schema.`TABLES` WHERE TABLE_SCHEMA = '" + DB_NAME + "' AND TABLE_NAME = '" + table + "';");
                 String tableComment = "";
                 if (rs.first()) {
                     tableComment = rs.getString("TABLE_COMMENT");
@@ -143,11 +143,11 @@ public class GenerateTools {
         }
     }
 
-    public static void generateRespMapper(String dbName) throws SQLException, IOException {
-        List<String> tables = getTables(dbName);
+    public static void generateRespMapper() throws SQLException, IOException {
+        List<String> tables = getTables();
 
         if (tables.size() > 0) {
-            String sql = "SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='" + dbName + "'";
+            String sql = "SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='" + DB_NAME + "'";
             String columnName;
             String columnClassName;
             String columnComment;
@@ -210,11 +210,11 @@ public class GenerateTools {
         }
     }
 
-    public static void generateMapper(String dbName) throws SQLException, IOException {
-        List<String> tables = getTables(dbName);
+    public static void generateMapper() throws SQLException, IOException {
+        List<String> tables = getTables();
 
         if (tables.size() > 0) {
-            String sql = "SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='" + dbName + "'";
+            String sql = "SELECT COLUMN_NAME, DATA_TYPE, COLUMN_COMMENT FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='" + DB_NAME + "'";
             String columnDb;//数据库中字段名称
             String columnName;
             String columnClassName;
@@ -264,10 +264,10 @@ public class GenerateTools {
         }
     }
 
-    public static void select(String dbName, String tableName) throws SQLException, IOException {
+    public static void select() throws SQLException, IOException {
         String sql = "SELECT COLUMN_NAME FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='%s'";
         String columnName;
-        rs = statement.executeQuery(String.format(sql, tableName, dbName));
+        rs = statement.executeQuery(String.format(sql, TABLE_NAME, DB_NAME));
         StringBuffer sb = new StringBuffer("SELECT ");
         while (rs.next()) {
             columnName = rs.getString("COLUMN_NAME").toLowerCase();
@@ -275,15 +275,15 @@ public class GenerateTools {
         }
         sb.deleteCharAt(sb.length() - 1);
         sb.deleteCharAt(sb.length() - 1);
-        sb.append(" FROM `" + tableName + "` WHERE 1 = 1");
+        sb.append(" FROM `" + TABLE_NAME + "` WHERE 1 = 1");
         System.out.println(sb.toString());
     }
 
-    public static void update(String dbName, String tableName) throws SQLException, IOException {
+    public static void update() throws SQLException, IOException {
         String sql = "SELECT COLUMN_NAME FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='%s'";
         String columnName;
-        rs = statement.executeQuery(String.format(sql, tableName, dbName));
-        StringBuffer sb = new StringBuffer("UPDATE `").append(tableName).append("` SET ");
+        rs = statement.executeQuery(String.format(sql, TABLE_NAME, DB_NAME));
+        StringBuffer sb = new StringBuffer("UPDATE `").append(TABLE_NAME).append("` SET ");
         while (rs.next()) {
             columnName = rs.getString("COLUMN_NAME").toLowerCase();
             if ("id".equals(columnName)) {
@@ -297,11 +297,11 @@ public class GenerateTools {
         System.out.println(sb.toString());
     }
 
-    public static void insert(String dbName, String tableName) throws SQLException, IOException {
+    public static void insert() throws SQLException, IOException {
         String sql = "SELECT COLUMN_NAME FROM information_schema.`COLUMNS` WHERE TABLE_NAME = '%s' AND TABLE_SCHEMA='%s'";
         String columnName;
-        rs = statement.executeQuery(String.format(sql, tableName, dbName));
-        StringBuffer sb = new StringBuffer("INSERT INTO `").append(tableName).append("` (");
+        rs = statement.executeQuery(String.format(sql, TABLE_NAME, DB_NAME));
+        StringBuffer sb = new StringBuffer("INSERT INTO `").append(TABLE_NAME).append("` (");
         int size = 0;
         while (rs.next()) {
             columnName = rs.getString("COLUMN_NAME").toLowerCase();
@@ -325,8 +325,8 @@ public class GenerateTools {
         return sb.toString();
     }
 
-    public static List<String> getTables(String dbName) throws SQLException {
-        String sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA. TABLES WHERE TABLE_SCHEMA = '" + dbName + "'";
+    public static List<String> getTables() throws SQLException {
+        String sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA. TABLES WHERE TABLE_SCHEMA = '" + DB_NAME + "'";
 
         rs = statement.executeQuery(sql);
         List<String> tables = new ArrayList<String>();
