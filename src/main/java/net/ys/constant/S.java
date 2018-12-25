@@ -14,7 +14,7 @@ public interface S {
 
     String PERSON_COUNT_LIKE = "SELECT COUNT(*) FROM `person` WHERE `name` LIKE ?";
 
-    String PERSON_LIST = "SELECT `id`, `name`, `age`, `create_time` FROM `person1 LIMIT ?,?";
+    String PERSON_LIST = "SELECT `id`, `name`, `age`, `create_time` FROM `person` LIMIT ?,?";
 
     String PERSON_LIST_LIKE = "SELECT `id`, `name`, `age`, `create_time` FROM `person` WHERE `name` LIKE ? LIMIT ?,?";
 
