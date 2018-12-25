@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/doc.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/net/ys/db/DbField.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/GenerateDoc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/GenerateTools.java" />
-      <change type="DELETED" beforePath="E:\workspace_idea\frame-api\src\test\java\net\ys\db\BeanMain.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace_idea\frame-api\src\test\java\net\ys\db\GenerateBean.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace_idea\frame-api\src\test\java\net\ys\db\GenerateBeanRespMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace_idea\frame-api\src\test\java\net\ys\db\GenerateMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace_idea\frame-api\src\test\java\net\ys\db\GenerateSql.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iml" afterPath="$PROJECT_DIR$/frame-api.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
+      <change type="MOVED" beforePath="E:\workspace_idea\frame-api\src\test\java\net\ys\db\DbField.java" afterPath="$PROJECT_DIR$/src/test/java/DbField.java" />
     </list>
     <ignored path="frame-api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +15,10 @@
     <file path="/PersonDao.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545713494703" ignored="false" />
     <file path="/list.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544587223971" ignored="false" />
     <file path="/JobService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541820331654" ignored="false" />
-    <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545717537681" ignored="false" />
+    <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545717589124" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541820727460" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545717507720" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545717555634" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541822529579" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -209,19 +200,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenerateDoc.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GenerateDoc.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/GenerateDoc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+            <state line="4" column="13" selection-start="52" selection-end="52" vertical-scroll-proportion="0.17889088">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbField.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/net/ys/db/DbField.java">
+      <file leaf-file-name="DbField.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/DbField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="74" selection-end="74" vertical-scroll-proportion="0.26833633">
+            <state line="4" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -247,7 +238,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/dao/SysAdminDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/dao/PersonDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSelectAll.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" />
@@ -263,6 +253,7 @@
         <option value="$PROJECT_DIR$/src/test/java/GenerateTools.java" />
         <option value="$PROJECT_DIR$/src/test/java/GenerateDoc.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/ys/db/DbField.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DbField.java" />
       </list>
     </option>
   </component>
@@ -428,32 +419,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -983,7 +948,11 @@
       <created>1545715372714</created>
       <updated>1545715372714</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="update">
+      <created>1545717560935</created>
+      <updated>1545717560935</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1193,16 +1162,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GenerateDoc.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DbField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+        <state line="4" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/ys/db/DbField.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/GenerateDoc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="74" selection-end="74" vertical-scroll-proportion="0.26833633">
+        <state line="4" column="13" selection-start="52" selection-end="52" vertical-scroll-proportion="0.17889088">
           <folding />
         </state>
       </provider>

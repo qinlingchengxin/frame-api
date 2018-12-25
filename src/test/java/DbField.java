@@ -1,5 +1,3 @@
-package net.ys.db;
-
 /**
  * User: LiWenC
  * Date: 17-12-7
