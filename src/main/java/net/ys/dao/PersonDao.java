@@ -1,6 +1,7 @@
 package net.ys.dao;
 
 import net.ys.bean.Person;
+import net.ys.constant.S;
 import net.ys.mapper.PersonMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -24,27 +25,21 @@ public class PersonDao {
     public long queryPersonCount(String name) {
 
         if ("".equals(name)) {
-            String sql = "SELECT COUNT(*) FROM person";
-            return jdbcTemplate.queryForObject(sql, Long.class);
+            return jdbcTemplate.queryForObject(S.PERSON_COUNT, Long.class);
         }
-
-        String sql = "SELECT COUNT(*) FROM person WHERE name LIKE ?";
-        return jdbcTemplate.queryForObject(sql, Long.class, "%" + name + "%");
+        return jdbcTemplate.queryForObject(S.PERSON_COUNT_LIKE, Long.class, "%" + name + "%");
     }
 
     public List<Person> queryPersons(String name, int page, int pageSize) {
 
         if ("".equals(name)) {
-            String sql = "SELECT id, name, age, create_time FROM person LIMIT ?,?";
-            return jdbcTemplate.query(sql, new PersonMapper(), (page - 1) * pageSize, pageSize);
+            return jdbcTemplate.query(S.PERSON_LIST, new PersonMapper(), (page - 1) * pageSize, pageSize);
         }
-        String sql = "SELECT id, name, age, create_time FROM person WHERE name LIKE ? LIMIT ?,?";
-        return jdbcTemplate.query(sql, new PersonMapper(), name, (page - 1) * pageSize, pageSize);
+        return jdbcTemplate.query(S.PERSON_LIST_LIKE, new PersonMapper(), name, (page - 1) * pageSize, pageSize);
     }
 
     public Person queryPerson(String id) {
-        String sql = "SELECT id, name, age, create_time FROM person WHERE id = ?";
-        List<Person> list = jdbcTemplate.query(sql, new PersonMapper(), id);
+        List<Person> list = jdbcTemplate.query(S.PERSON_SELECT, new PersonMapper(), id);
         if (list.size() > 0) {
             return list.get(0);
         }
@@ -53,18 +48,15 @@ public class PersonDao {
     }
 
     public boolean savePerson(Person person) {
-        String sql = "UPDATE person SET name = ?, age = ? WHERE id = ?";
-        return jdbcTemplate.update(sql, person.getName(), person.getAge(), person.getId()) >= 0;
+        return jdbcTemplate.update(S.PERSON_UPDATE, person.getName(), person.getAge(), person.getId()) >= 0;
     }
 
     public Person addPerson(final Person person) {
-        final String sql = "INSERT INTO person ( `name`, `age`, `create_time`) VALUES (?,?,?)";
-
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection conn) throws SQLException {
-                PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                PreparedStatement ps = conn.prepareStatement(S.PERSON_INSERT, Statement.RETURN_GENERATED_KEYS);
                 ps.setString(1, person.getName());
                 ps.setInt(2, person.getAge());
                 ps.setLong(3, System.currentTimeMillis());
@@ -74,8 +66,7 @@ public class PersonDao {
         long id = keyHolder.getKey().longValue();
 
         if (id > 0) {
-            String selSql = "SELECT id, name, age, create_time FROM person WHERE id = " + id;
-            List<Person> persons = jdbcTemplate.query(selSql, new PersonMapper());
+            List<Person> persons = jdbcTemplate.query(S.PERSON_SELECT, new PersonMapper());
             if (persons.size() > 0) {
                 return persons.get(0);
             }
