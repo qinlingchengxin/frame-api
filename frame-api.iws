@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSql.java" afterPath="$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSql.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
     </list>
     <ignored path="frame-api.iws" />
@@ -18,7 +18,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545710124022" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541820727460" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545714816977" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545714867491" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541822529579" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -184,19 +184,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="S.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="S.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/constant/S.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="71" selection-start="574" selection-end="585" vertical-scroll-proportion="-9.0">
+            <state line="8" column="47" selection-start="127" selection-end="133" vertical-scroll-proportion="0.2760181">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenerateSql.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GenerateSql.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="63" selection-start="3085" selection-end="3085" vertical-scroll-proportion="0.59090906">
+            <state line="31" column="50" selection-start="1033" selection-end="1044" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -214,7 +214,16 @@
       <file leaf-file-name="SysAdminDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/dao/SysAdminDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="59" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/constant/X.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="19" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -232,7 +241,7 @@
       <file leaf-file-name="PersonDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/dao/PersonDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="62" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.0">
+            <state line="68" column="69" selection-start="2418" selection-end="2431" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1801#2275#0" expanded="true" />
                 <element signature="e#2264#2265#0" expanded="true" />
@@ -261,7 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/component/ApplicationSwaggerConfig.java" />
         <option value="$PROJECT_DIR$/web/api-docs/api.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/controller/GlobalController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
@@ -277,6 +285,7 @@
         <option value="$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSelectAll.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/ys/db/BeanMain.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSql.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" />
       </list>
     </option>
   </component>
@@ -1029,7 +1038,11 @@
       <created>1545714819716</created>
       <updated>1545714819716</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="update">
+      <created>1545714869816</created>
+      <updated>1545714869816</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1039,7 +1052,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46589595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13063584" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1055,8 +1068,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14075887" sideWeight="0.6320646" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21664627" sideWeight="0.66705203" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33294797" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21664627" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1017341" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1228,40 +1241,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/constant/X.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/dao/PersonDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="62" selection-start="2424" selection-end="2424" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1801#2275#0" expanded="true" />
-            <element signature="e#2264#2265#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/mapper/SysAdminMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="21" selection-start="173" selection-end="187" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/dao/SysAdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="59" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/constant/S.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="71" selection-start="574" selection-end="585" vertical-scroll-proportion="-9.0">
           <folding />
         </state>
       </provider>
@@ -1275,7 +1257,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/ys/db/GenerateSql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="63" selection-start="3085" selection-end="3085" vertical-scroll-proportion="0.59090906">
+        <state line="31" column="50" selection-start="1033" selection-end="1044" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/dao/PersonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="69" selection-start="2418" selection-end="2431" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1801#2275#0" expanded="true" />
+            <element signature="e#2264#2265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/dao/SysAdminDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/constant/X.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="19" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/constant/S.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="47" selection-start="127" selection-end="133" vertical-scroll-proportion="0.2760181">
           <folding />
         </state>
       </provider>
