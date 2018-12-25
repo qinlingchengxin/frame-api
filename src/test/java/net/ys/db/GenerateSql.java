@@ -74,7 +74,7 @@ public class GenerateSql {
         }
         sb.deleteCharAt(sb.length() - 1);
         sb.deleteCharAt(sb.length() - 1);
-        sb.append(") VALUES (").append(genMark(size)).append(") WHERE 1 = 1");
+        sb.append(") VALUES (").append(genMark(size)).append(")");
         System.out.println(sb.toString());
     }
 
