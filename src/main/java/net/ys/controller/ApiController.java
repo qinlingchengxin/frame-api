@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,20 +31,6 @@ public class ApiController {
         try {
             List<Person> persons = personService.queryPersons("", page, pageSize);
             return GenResult.SUCCESS.genResult(persons);
-        } catch (Exception e) {
-            LogUtil.error(e);
-            return GenResult.UNKNOWN_ERROR.genResult();
-        }
-    }
-
-    @RequestMapping(value = "test", headers = "Accept=application/json")
-    @ApiOperation(response = Map.class, responseContainer = "Map", value = "测试接口")
-    public Map<String, Object> test(@ApiParam(required = true, value = "用户名", defaultValue = "") @RequestParam(required = true, value = "user_name", defaultValue = "") String userName, @ApiParam(required = true, value = "密码", defaultValue = "") @RequestParam(required = true, value = "password", defaultValue = "") String password) {
-        try {
-            Map<String, String> map = new HashMap<>();
-            map.put("user_name", userName);
-            map.put("password", password);
-            return GenResult.SUCCESS.genResult(map);
         } catch (Exception e) {
             LogUtil.error(e);
             return GenResult.UNKNOWN_ERROR.genResult();
