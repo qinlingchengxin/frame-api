@@ -8,10 +8,8 @@ import net.ys.constant.GenResult;
 import net.ys.mapper.resp.PersonResp;
 import net.ys.service.PersonService;
 import net.ys.utils.LogUtil;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -31,6 +29,18 @@ public class ApiController {
         try {
             List<Person> persons = personService.queryPersons("", page, pageSize);
             return GenResult.SUCCESS.genResult(persons);
+        } catch (Exception e) {
+            LogUtil.error(e);
+            return GenResult.UNKNOWN_ERROR.genResult();
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "upload", method = RequestMethod.POST)
+    @ApiOperation(httpMethod = "POST", response = Map.class, responseContainer = "Map", value = "上传文件")
+    public Map<String, Object> upload(@RequestParam(required = true) MultipartFile file) {
+        try {
+            return GenResult.SUCCESS.genResult(file.getOriginalFilename());
         } catch (Exception e) {
             LogUtil.error(e);
             return GenResult.UNKNOWN_ERROR.genResult();
