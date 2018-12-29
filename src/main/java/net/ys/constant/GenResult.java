@@ -36,12 +36,7 @@ public enum GenResult {
     }
 
     public String toJson(Object... data) {
-        JSONObject object = new JSONObject();
-        object.put("code", msgCode);
-        object.put("msg", message);
-        if (data.length > 0) {
-            object.put("data", data[0]);
-        }
+        JSONObject object = JSONObject.fromObject(genResult(data));
         return object.toString();
     }
 

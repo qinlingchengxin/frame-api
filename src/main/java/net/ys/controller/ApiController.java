@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +42,15 @@ public class ApiController {
     @ApiOperation(httpMethod = "POST", response = Map.class, responseContainer = "Map", value = "上传文件")
     public Map<String, Object> upload(@RequestParam(required = true) MultipartFile file) {
         try {
-            return GenResult.SUCCESS.genResult(file.getOriginalFilename());
+            long start = System.currentTimeMillis();
+            File f = File.createTempFile("file-", ".zip");
+            file.transferTo(f);
+            System.out.println(f.getAbsoluteFile());
+            Map<String, Object> result = new HashMap<>();
+            result.put("name", f.getAbsolutePath());
+            result.put("time", System.currentTimeMillis() - start);
+            result.put("file_size", f.length());
+            return GenResult.SUCCESS.genResult(result);
         } catch (Exception e) {
             LogUtil.error(e);
             return GenResult.UNKNOWN_ERROR.genResult();
