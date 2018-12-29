@@ -69,14 +69,12 @@ public class GlobalController {
             response.setHeader("Content-disposition", "attachment; filename=" + resultFileName);
             response.setContentType("application/msexcel");
             wb.write(os);
-            is.close();
-            os.close();
+            os.flush();
         } catch (Exception e) {
             LogUtil.error(e);
         } finally {
             try {
                 if (os != null) {
-                    os.flush();
                     os.close();
                 }
                 if (is != null) {
