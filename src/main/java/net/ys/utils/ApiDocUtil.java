@@ -1,5 +1,6 @@
 package net.ys.utils;
 
+import com.google.common.collect.Maps;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -49,7 +50,13 @@ public class ApiDocUtil {
                         String name = apiAnnotation.value();
                         String url = prefix + "/" + requestAnnotation.value()[0];
                         String requestMethod = apiAnnotation.httpMethod();
-                        Object o = apiAnnotation.response().newInstance();
+                        Class<?> response = apiAnnotation.response();
+                        Object o;
+                        if (response == Map.class) {
+                            o = Maps.newHashMap();
+                        } else {
+                            o = response.newInstance();
+                        }
                         String resExample = GenResult.SUCCESS.toJson(o);
                         Parameter[] parameters = method.getParameters();
                         if (parameters.length > 0) {
