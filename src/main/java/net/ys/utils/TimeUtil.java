@@ -15,12 +15,6 @@ public class TimeUtil {
 
     private static SimpleDateFormat yMd = new SimpleDateFormat("yyyy-MM-dd");
 
-    private static SimpleDateFormat yM = new SimpleDateFormat("yyyyMM");
-
-    private static SimpleDateFormat yMdHm = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-
-    private static SimpleDateFormat mdHm = new SimpleDateFormat("MM-dd HH:mm");
-
     private static SimpleDateFormat yMdHms = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     /**
@@ -321,6 +315,7 @@ public class TimeUtil {
         } else if (pass < 6 * X.Time.DAY_MILLISECOND) {//5天以内
             return (pass / X.Time.DAY_MILLISECOND) + "天前";
         } else {
+            SimpleDateFormat yMdHm = new SimpleDateFormat("yyyy-MM-dd HH:mm");
             return yMdHm.format(new Date(time));
         }
     }
@@ -392,6 +387,7 @@ public class TimeUtil {
         }
         Date date = new Date();
         date.setTime(time);
+        SimpleDateFormat mdHm = new SimpleDateFormat("MM-dd HH:mm");
         return mdHm.format(date);
     }
 
@@ -492,6 +488,7 @@ public class TimeUtil {
      */
     public static String toYm() {
         Date date = new Date();
+        SimpleDateFormat yM = new SimpleDateFormat("yyyyMM");
         return yM.format(date);
     }
 }

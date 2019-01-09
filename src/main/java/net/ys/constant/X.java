@@ -18,6 +18,7 @@ public interface X {
     interface Code {
         String U = "UTF-8";
         String I = "ISO-8859-1";
+        String G = "GBK";
     }
 
     interface ContentType {

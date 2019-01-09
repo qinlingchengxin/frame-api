@@ -19,18 +19,6 @@ import java.util.UUID;
  */
 public class Tools {
 
-    static MessageDigest md5;
-    private static Random rand;
-
-    static {
-        try {
-            md5 = MessageDigest.getInstance("MD5");
-            rand = new Random();
-        } catch (Exception e) {
-            LogUtil.error(e);
-        }
-    }
-
     /**
      * 判断多个字符串是否为空
      *
@@ -55,6 +43,7 @@ public class Tools {
      * @return
      */
     public static int randomInt() {
+        Random rand = new Random();
         int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         for (int i = 10; i > 1; i--) {
             int index = rand.nextInt(i);
@@ -88,6 +77,7 @@ public class Tools {
      * @return
      */
     public static int randomInt(int num) {
+        Random rand = new Random();
         return rand.nextInt(num);
     }
 
@@ -102,6 +92,7 @@ public class Tools {
             if (str == null || "".equals(str.trim())) {
                 return "";
             }
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
             byte[] bs = md5.digest((str).getBytes(X.Code.U));
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < bs.length; i++) {
