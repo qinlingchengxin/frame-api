@@ -66,7 +66,7 @@ public class PersonDao {
         long id = keyHolder.getKey().longValue();
 
         if (id > 0) {
-            List<Person> persons = jdbcTemplate.query(S.PERSON_SELECT, new PersonMapper());
+            List<Person> persons = jdbcTemplate.query(S.PERSON_SELECT, new PersonMapper(), id);
             if (persons.size() > 0) {
                 return persons.get(0);
             }

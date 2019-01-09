@@ -49,7 +49,7 @@ public class ApiController {
             Map<String, Object> result = new HashMap<>();
             result.put("name", f.getAbsolutePath());
             result.put("time", System.currentTimeMillis() - start);
-            result.put("file_size", f.length());
+            result.put("file_len", f.length());
             return GenResult.SUCCESS.genResult(result);
         } catch (Exception e) {
             LogUtil.error(e);

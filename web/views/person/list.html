@@ -66,21 +66,21 @@
                 <ul class="fy_ul">
                     <li class="fy_li_first">共 ${count} 条记录</li>
 
-                    <#if (currPage == 1)>
+                    <#if (curr_page == 1)>
                         <li><a href="#">上一页</a></li>
                     </#if>
-                    <#if (currPage > 1) >
-                        <li><a href="${baseUrl}/web/persons?name=${name}&page=${currPage - 1}">上一页</a></li>
+                    <#if (curr_page > 1) >
+                        <li><a href="${baseUrl}/web/persons?name=${name}&page=${curr_page - 1}">上一页</a></li>
                     </#if>
 
-                    <li id="currPage">${currPage}</li>
+                    <li id="curr_page">${curr_page}</li>
 
-                    <#if (currPage >= totalPage)>
+                    <#if (curr_page >= total_page)>
                         <li><a href="#">下一页</a></li>
                     </#if>
 
-                    <#if (totalPage > currPage)>
-                        <li><a href="${baseUrl}/web/persons?name=${name}&page=${currPage + 1}">下一页</a></li>
+                    <#if (total_page > curr_page)>
+                        <li><a href="${baseUrl}/web/persons?name=${name}&page=${curr_page + 1}">下一页</a></li>
                     </#if>
 
                 </ul>

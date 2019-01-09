@@ -50,8 +50,8 @@ public class PersonController {
         }
 
         modelAndView.addObject("count", count);
-        modelAndView.addObject("currPage", page);
-        modelAndView.addObject("totalPage", totalPage);
+        modelAndView.addObject("curr_page", page);
+        modelAndView.addObject("total_page", totalPage);
         modelAndView.addObject("persons", persons);
         modelAndView.addObject("name", name);
         return modelAndView;
