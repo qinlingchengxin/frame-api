@@ -76,6 +76,11 @@
 .logo a {
     display: inline-block;
     height: 100%;
+    line-height: 80px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #FE981B;
+    margin-left: 41px;
 }
 
 .logo img {

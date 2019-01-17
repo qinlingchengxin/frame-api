@@ -70,6 +70,12 @@ public class AdminController {
         return modelAndView;
     }
 
+    @RequestMapping(value = "welcome")
+    public ModelAndView welcome() {
+        ModelAndView modelAndView = new ModelAndView("welcome");
+        return modelAndView;
+    }
+
     @RequestMapping(value = "logout")
     @ResponseBody
     public Map<String, Object> logout(HttpSession session) {
