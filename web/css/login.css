@@ -86,6 +86,8 @@ body {
     line-height: 70px;
     font-size: 18px;
     font-weight: 700;
+    text-align: center;
+    color: #7ea800;
 }
 
 .loginBox .userAndPassword {
