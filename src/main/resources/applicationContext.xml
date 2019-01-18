@@ -8,6 +8,7 @@
     <context:component-scan base-package="net.ys.service"/>
     <context:component-scan base-package="net.ys.dao"/>
     <context:component-scan base-package="net.ys.job"/>
+    <context:component-scan base-package="net.ys.cache"/>
     <context:component-scan base-package="net.ys.component"/>
 
     <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

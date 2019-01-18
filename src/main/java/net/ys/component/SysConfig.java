@@ -20,6 +20,8 @@ public class SysConfig {
 
     public static String pushAppKey;
 
+    public static int apiAccessTimeLimit;
+
     public static String[] testName;
 
     @Value("${app.name}")
@@ -35,6 +37,11 @@ public class SysConfig {
     @Value("${push.app.key}")
     public void setPushAppKey(String pushAppKey) {
         this.pushAppKey = pushAppKey;
+    }
+
+    @Value("${api.access.time.limit}")
+    public void setApiAccessTimeLimit(int apiAccessTimeLimit) {
+        this.apiAccessTimeLimit = apiAccessTimeLimit;
     }
 
     @Value("${testName:test.name.*}")

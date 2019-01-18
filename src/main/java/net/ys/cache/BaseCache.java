@@ -249,4 +249,29 @@ public class BaseCache {
         };
         return new RedsExecutor<Boolean>().exe(rr, RedsServer.MASTER);
     }
+
+    /**
+     * 获取访问次数
+     *
+     * @param cacheKey
+     * @param timeLimit 秒
+     * @return
+     */
+    public long getAccessCount(final String cacheKey, final int timeLimit) {
+        RedsRunner<Long> rr = new RedsRunner<Long>() {
+            @Override
+            public Long run(Jedis jedis) throws JedisConnectionException {
+                try {
+                    long currVal = jedis.incr(cacheKey);//当前访问次数
+                    if (currVal == 1) {//第一次访问的时候加个有效期
+                        jedis.expire(cacheKey, timeLimit);
+                    }
+                    return currVal;
+                } catch (Exception e) {
+                }
+                return 0L;
+            }
+        };
+        return new RedsExecutor<Long>().exe(rr, RedsServer.MASTER);
+    }
 }

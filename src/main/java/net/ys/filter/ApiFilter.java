@@ -1,5 +1,8 @@
 package net.ys.filter;
 
+import net.ys.cache.BaseCache;
+import net.ys.component.AppContextUtil;
+import net.ys.component.SysConfig;
 import net.ys.constant.GenResult;
 import net.ys.constant.X;
 import net.ys.utils.Tools;
@@ -17,8 +20,11 @@ public final class ApiFilter implements Filter {
 
     String pk = "4c4e6c7120ad4748";
 
+    BaseCache baseCache;
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
+        baseCache = AppContextUtil.getBean("baseCache", BaseCache.class);
     }
 
     @Override
@@ -65,19 +71,14 @@ public final class ApiFilter implements Filter {
             }
         }
 
-        String sign = Tools.genMD5(pk + src + pk);
-        String s = request.getParameter("sign");
-        boolean flag = s.equals(sign);
+        String md = Tools.genMD5(pk + src + pk);
+        String sign = request.getParameter("sign");
 
-        if (flag) {
-            flag = !accessed(sign);
+        if (!md.equals(sign)) {
+            return false;
         }
-        return flag;
-    }
 
-    //缓存中是否有，有的话就返回false，否则插入到缓存，并且返回true
-    boolean accessed(String sign) {
-        return false;
+        return baseCache.getAccessCount(sign, SysConfig.apiAccessTimeLimit * X.Time.MINUTE_SECOND) == 1;
     }
 
     @Override

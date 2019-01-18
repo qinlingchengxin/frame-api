@@ -9,6 +9,7 @@ public interface X {
     String SEPARATOR = "/";
 
     interface Time {
+        int MINUTE_SECOND = 60;
         int DAY_MILLISECOND = 24 * 60 * 60 * 1000;
         int HOUR_MILLISECOND = 60 * 60 * 1000;
         int MINUTE_MILLISECOND = 60 * 1000;
