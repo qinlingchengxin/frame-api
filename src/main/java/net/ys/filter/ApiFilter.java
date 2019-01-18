@@ -5,13 +5,14 @@ import net.ys.constant.X;
 import net.ys.utils.Tools;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 
-@javax.servlet.annotation.WebFilter(urlPatterns = "/api/*")
+@WebFilter(urlPatterns = "/api/*")
 public final class ApiFilter implements Filter {
 
     String pk = "4c4e6c7120ad4748";

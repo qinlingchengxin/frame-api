@@ -1,12 +1,13 @@
 package net.ys.filter;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@javax.servlet.annotation.WebFilter(urlPatterns = "/web/*")
-public final class WebFilter implements Filter {
+@WebFilter(urlPatterns = "/web/*")
+public final class LoginFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
