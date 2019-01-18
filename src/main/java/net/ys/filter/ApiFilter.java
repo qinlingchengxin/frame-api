@@ -21,10 +21,12 @@ public final class ApiFilter implements Filter {
     String pk = "4c4e6c7120ad4748";
 
     BaseCache baseCache;
+    int timeLimit;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         baseCache = AppContextUtil.getBean("baseCache", BaseCache.class);
+        timeLimit = SysConfig.apiAccessTimeLimit * X.Time.MINUTE_SECOND;
     }
 
     @Override
@@ -78,7 +80,7 @@ public final class ApiFilter implements Filter {
             return false;
         }
 
-        return baseCache.getAccessCount(sign, SysConfig.apiAccessTimeLimit * X.Time.MINUTE_SECOND) == 1;
+        return baseCache.getAccessCount(sign, timeLimit) == 1;
     }
 
     @Override

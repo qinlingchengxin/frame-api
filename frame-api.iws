@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/cache/BaseCache.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/cache/BaseCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/product/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/product/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/test/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/test/config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
     </list>
     <ignored path="frame-api.iws" />
@@ -57,7 +50,7 @@
     <file path="/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545215747109" ignored="false" />
     <file path="/left.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544683012364" ignored="false" />
     <file path="/main.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547706962312" ignored="false" />
-    <file path="/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547796222808" ignored="false" />
+    <file path="/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547797423056" ignored="false" />
     <file path="/result_code.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544776451199" ignored="false" />
     <file path="$PROJECT_DIR$/../frame-mvc/src/main/resources/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544850093969" ignored="false" />
     <file path="$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.5.2/javax.mail-1.5.2.jar!/META-INF/maven/com.sun.mail/javax.mail/pom.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544843845169" ignored="false" />
@@ -98,7 +91,7 @@
     <file path="$PROJECT_DIR$/../etl_trans/src/main/java/net/ys/component/AppContextUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545215326169" ignored="false" />
     <file path="$PROJECT_DIR$/../etl_trans/src/main/java/net/ys/component/ApplicationSwaggerConfig.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545215326169" ignored="false" />
     <file path="$PROJECT_DIR$/../etl_trans/src/main/resources/applicationContext.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545215340326" ignored="false" />
-    <file path="/SysConfig.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547796302345" ignored="false" />
+    <file path="/SysConfig.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547797393623" ignored="false" />
     <file path="$PROJECT_DIR$/../etl_trans/src/main/resources/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545215449004" ignored="false" />
     <file path="$PROJECT_DIR$/../etl_trans/src/main/java/net/ys/controller/EtlController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545215859323" ignored="false" />
     <file path="/EtlController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545220296119" ignored="false" />
@@ -120,7 +113,7 @@
     <file path="/api.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545296335723" ignored="false" />
     <file path="$PROJECT_DIR$/../db-doc/db-doc.iws" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545371626499" ignored="false" />
     <file path="/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545371601767" ignored="false" />
-    <file path="/ApiFilter.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547797225979" ignored="false" />
+    <file path="/ApiFilter.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547797449008" ignored="false" />
     <file path="/sql.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545709508828" ignored="false" />
     <file path="/S.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545713408821" ignored="false" />
     <file path="/SysAdminDao.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545713443562" ignored="false" />
@@ -235,13 +228,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ApiFilter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ApiFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="2236" selection-end="2236" vertical-scroll-proportion="0.0">
+            <state line="80" column="9" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.45397815">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1336#1344#0" expanded="true" />
+                <element signature="e#1428#1436#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -250,7 +243,7 @@
       <file leaf-file-name="config.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="712" selection-end="754" vertical-scroll-proportion="0.0">
+            <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -265,10 +258,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.properties" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/product/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.8829953">
+            <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -277,7 +270,7 @@
       <file leaf-file-name="SysConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="22" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+            <state line="43" column="31" selection-start="984" selection-end="1002" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -304,7 +297,7 @@
       <file leaf-file-name="BaseCache.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/cache/BaseCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="271" column="26" selection-start="8411" selection-end="8411" vertical-scroll-proportion="0.0">
+            <state line="259" column="16" selection-start="7855" selection-end="7855" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#784#793#0" expanded="true" />
                 <element signature="e#2068#2077#0" expanded="true" />
@@ -368,14 +361,14 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/constant/GenResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/filter/LoginFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/constant/X.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/cache/BaseCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/test/config.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/product/config.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" />
       </list>
     </option>
   </component>
@@ -1224,7 +1217,11 @@
       <created>1547795757207</created>
       <updated>1547795757207</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="update">
+      <created>1547797272571</created>
+      <updated>1547797272571</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1421,16 +1418,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+        <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/product/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/cache/BaseCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="26" selection-start="8411" selection-end="8411" vertical-scroll-proportion="0.0">
+        <state line="259" column="16" selection-start="7855" selection-end="7855" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#784#793#0" expanded="true" />
             <element signature="e#2068#2077#0" expanded="true" />
@@ -1447,34 +1451,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2236" selection-end="2236" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1336#1344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="712" selection-end="754" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/product/config.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="23" selection-start="754" selection-end="754" vertical-scroll-proportion="0.8829953">
+        <state line="43" column="31" selection-start="984" selection-end="1002" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="9" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.45397815">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1428#1436#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
