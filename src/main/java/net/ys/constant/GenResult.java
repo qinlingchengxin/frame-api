@@ -15,6 +15,8 @@ public enum GenResult {
 
     REQUEST_METHOD_ERROR(1003, "request method error"),
 
+    REQUEST_INVALID(1004, "request invalid"),
+
     UNKNOWN_ERROR(9999, "unknown error"),;
 
     public int msgCode;
