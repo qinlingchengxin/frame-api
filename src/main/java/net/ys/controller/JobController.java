@@ -1,5 +1,7 @@
 package net.ys.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import net.ys.constant.GenResult;
 import net.ys.job.JobService;
 import net.ys.utils.LogUtil;
@@ -7,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
 import java.lang.reflect.Method;
@@ -18,7 +19,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "job", produces = {"application/json;charset=utf-8"})
-@ApiIgnore
+@Api(value = "job-api", description = "定时任务")
 public class JobController {
 
     @Resource
@@ -26,6 +27,7 @@ public class JobController {
 
     @RequestMapping(value = "call/{method}", headers = "Accept=application/json")
     @ResponseBody
+    @ApiOperation(httpMethod = "GET", response = Map.class, responseContainer = "Map", value = "总接口")
     public Map<String, Object> call(@PathVariable("method") String method) {
         long start = System.currentTimeMillis();
         try {
