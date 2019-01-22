@@ -12,7 +12,7 @@ public class JobService {
             @Override
             public void run() {
                 try {
-                    LogUtil.debug("JobService-->" + System.currentTimeMillis());
+                    LogUtil.debug("jobService:test->" + System.currentTimeMillis());
                 } catch (Exception e) {
                     LogUtil.error(e);
                 }
