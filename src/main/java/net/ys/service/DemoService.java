@@ -26,7 +26,7 @@ public class DemoService {
             @Override
             public void run() {
                 try {
-                    LogUtil.debug("DemoService-->" + System.currentTimeMillis());
+                    LogUtil.debug("DemoService");
                 } catch (Exception e) {
                     LogUtil.error(e);
                 }
