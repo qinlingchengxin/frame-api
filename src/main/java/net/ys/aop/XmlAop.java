@@ -1,4 +1,4 @@
-package net.ys.aspect;
+package net.ys.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * Date: 19-4-7
  */
 @Component
-public class XmlAspect {
+public class XmlAop {
 
     //前置通知
     public void before(JoinPoint jp) {

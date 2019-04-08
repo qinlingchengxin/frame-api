@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan base-package="net.ys.aspect"/>
+    <context:component-scan base-package="net.ys.aop"/>
 
     <!--使用注解方式需要加以下配置-->
     <aop:aspectj-autoproxy/>
@@ -15,12 +15,12 @@
 
     <!--<aop:config>
         <aop:pointcut expression="execution(public * net.ys.service..*(..))" id="pt"/>
-        <aop:aspect ref="xmlAspect">
+        <aop:aop ref="xmlAop">
             <aop:before method="before" pointcut-ref="pt"/>
             <aop:after method="after" pointcut-ref="pt"/>
             <aop:after-returning method="afterReturn" pointcut-ref="pt" returning="retVal"/>
             <aop:after-throwing method="afterThrow" pointcut-ref="pt" throwing="ex"/>
             <aop:around method="around" pointcut-ref="pt"/>
-        </aop:aspect>
+        </aop:aop>
     </aop:config>-->
 </beans>
