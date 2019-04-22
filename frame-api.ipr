@@ -256,6 +256,7 @@
             <element id="library" level="project" name="Maven: cn.jpush.api:jpush-client:3.2.17" />
             <element id="library" level="project" name="Maven: cn.jpush.api:jiguang-common:1.0.3" />
             <element id="library" level="project" name="Maven: io.netty:netty-all:4.1.6.Final" />
+            <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.4" />
           </element>
         </element>
       </root>
@@ -482,6 +483,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/cn/jpush/api/jpush-client/3.2.17/jpush-client-3.2.17-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba:fastjson:1.2.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.4/fastjson-1.2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.4/fastjson-1.2.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.4/fastjson-1.2.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.7">

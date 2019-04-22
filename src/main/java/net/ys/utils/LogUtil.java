@@ -15,6 +15,11 @@ public class LogUtil {
         log.error(e, e);
     }
 
+    public static void error(Object msg, Exception e) {
+        System.out.println("\r\n" + System.currentTimeMillis() + " error-msg: " + msg);
+        log.error(msg, e);
+    }
+
     public static void info(Object msg) {
         System.out.println("\r\n" + System.currentTimeMillis() + " info-msg: " + msg);
         log.info(msg);

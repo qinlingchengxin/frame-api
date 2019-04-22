@@ -673,6 +673,12 @@
             </exclusions>
         </dependency>
         <!--极光推送-->
+
+        <!--  <dependency>
+              <groupId>com.alibaba</groupId>
+              <artifactId>fastjson</artifactId>
+              <version>1.2.4</version>
+          </dependency>-->
     </dependencies>
 
     <profiles>
