@@ -15,7 +15,6 @@ public class KyRoSerialize implements ISerialize {
 
     Kryo kryo;
 
-
     private KyRoSerialize() {
         kryo = new Kryo();
     }
