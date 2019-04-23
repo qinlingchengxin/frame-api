@@ -687,6 +687,12 @@
             <version>1.4.10</version>
         </dependency>
         <!--xml bean translate-->
+
+        <dependency>
+            <groupId>com.esotericsoftware</groupId>
+            <artifactId>kryo</artifactId>
+            <version>4.0.0</version>
+        </dependency>
     </dependencies>
 
     <profiles>

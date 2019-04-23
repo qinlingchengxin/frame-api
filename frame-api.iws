@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtilNew.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtilNew.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/serialize/ISerialize.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/serialize/MsgPackSerialize.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iml" afterPath="$PROJECT_DIR$/frame-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.ipr" afterPath="$PROJECT_DIR$/frame-api.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="frame-api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +24,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1555932639138" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541820727460" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1555983030735" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556012072803" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1555982125721" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -180,6 +186,13 @@
     <file path="/AliMsgUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1555928632145" ignored="false" />
     <file path="/NewXmlUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1555983309561" ignored="false" />
     <file path="/XmlUtilNew.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1555983310562" ignored="false" />
+    <file path="/KryoTest.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556015568253" ignored="false" />
+    <file path="/ISerialize.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556014887799" ignored="false" />
+    <file path="/JdkSerialize.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556015266124" ignored="false" />
+    <file path="/KyroSerialize.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556014384635" ignored="false" />
+    <file path="/KyRoSerialize.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556014385079" ignored="false" />
+    <file path="/MyS.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556014725236" ignored="false" />
+    <file path="/MsgPackSerialize.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556015052991" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +212,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -233,7 +247,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -244,10 +257,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="XmlUtilNew.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtilNew.java">
+      <file leaf-file-name="MsgPackSerialize.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/MsgPackSerialize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="34" selection-start="1610" selection-end="1620" vertical-scroll-proportion="0.67950964">
+            <state line="10" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.33333334">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringJunitTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SpringJunitTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -256,52 +280,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="687" column="21" selection-start="24001" selection-end="24176" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XStreamConverter.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamConverter.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="18" selection-start="405" selection-end="405" vertical-scroll-proportion="-7.56">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XStreamImplicit.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamImplicit.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="-7.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XStreamInclude.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamInclude.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="332" selection-end="332" vertical-scroll-proportion="-7.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XStreamOmitField.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamOmitField.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="-7.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Person.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+            <state line="694" column="21" selection-start="24385" selection-end="24385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -327,22 +306,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/component/ApplicationSwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/aspect/AnnotationAop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/aspect/XmlAop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/aop/XmlAop.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-aop.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" />
-        <option value="$PROJECT_DIR$/aaa.txt" />
-        <option value="$PROJECT_DIR$/src/test/java/ExportExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/LogUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/DingDingRobotMessageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/AliMsgUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/AliMsgUtil.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/NewXmlUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtilNew.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ryoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/KyroSerialize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/MyS.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/ISerialize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/MsgPackSerialize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java" />
+        <option value="$PROJECT_DIR$/src/test/java/KryoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/KyRoSerialize.java" />
       </list>
     </option>
   </component>
@@ -419,6 +398,25 @@
     <option name="y" value="-8" />
     <option name="width" value="1696" />
     <option name="height" value="1026" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SerializableHasSerialVersionUIDField</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -524,10 +522,126 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serialize" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -538,7 +652,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frame-api.ipr" />
     <property name="project.structure.side.proportion" value="0.3135198" />
@@ -548,9 +662,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -575,7 +689,7 @@
       <recent name="E:\workspace_idea\frame-api\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.XmlUtilNew">
+  <component name="RunManager" selected="Application.KryoTest">
     <configuration default="false" name="GenerateDoc" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="GenerateDoc" />
@@ -660,6 +774,23 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="KryoTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="KryoTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="frame-api" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -695,6 +826,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -723,19 +867,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -749,6 +880,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -770,13 +908,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -886,20 +1017,22 @@
         </option>
       </method>
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.XmlUtilNew" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.8080" />
       <item index="2" class="java.lang.String" itemvalue="Application.GenerateDoc" />
       <item index="3" class="java.lang.String" itemvalue="Application.ExportExcel" />
       <item index="4" class="java.lang.String" itemvalue="Application.DingDingRobotMessageUtil" />
       <item index="5" class="java.lang.String" itemvalue="Application.AliMsgUtil" />
+      <item index="6" class="java.lang.String" itemvalue="Application.KryoTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.AliMsgUtil" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DingDingRobotMessageUtil" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ExportExcel" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GenerateDoc" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.KryoTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.AliMsgUtil" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DingDingRobotMessageUtil" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ExportExcel" />
+        <item index="4" class="java.lang.String" itemvalue="Application.GenerateDoc" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1222,12 +1355,16 @@
       <created>1555983033997</created>
       <updated>1555983033997</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="update">
+      <created>1555983392567</created>
+      <updated>1555983392567</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46589595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1240,15 +1377,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29181084" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29132947" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.029375765" sideWeight="0.6913295" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.02876377" sideWeight="0.6624277" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23011015" sideWeight="0.6913295" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30867052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22949816" sideWeight="0.6624277" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33757225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34913296" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1353,117 +1490,112 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/EmailUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="745" selection-end="745" vertical-scroll-proportion="0.047984645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ExportExcel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="279" selection-end="279" vertical-scroll-proportion="0.04681648">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GenerateDoc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="0.047984645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/AliMsgUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamConverter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="405" selection-end="405" vertical-scroll-proportion="-7.56">
+        <state line="9" column="18" selection-start="405" selection-end="405" vertical-scroll-proportion="0.030674847">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamImplicit.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="-7.0">
+        <state line="8" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="0.24539877">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamInclude.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="332" selection-end="332" vertical-scroll-proportion="-7.0">
+        <state line="8" column="18" selection-start="332" selection-end="332" vertical-scroll-proportion="0.24539877">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamOmitField.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="-7.0">
+        <state line="8" column="18" selection-start="333" selection-end="333" vertical-scroll-proportion="0.24539877">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamAsAttribute.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/esotericsoftware/kryo/4.0.0/kryo-4.0.0.jar!/com/esotericsoftware/kryo/Kryo.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="366" selection-end="366" vertical-scroll-proportion="0.35906643">
+        <state line="100" column="49" selection-start="5935" selection-end="5951" vertical-scroll-proportion="0.34289277">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamAlias.class">
+    <entry file="jar://D:/Java/jdk1.8.0_91/jre/lib/rt.jar!/java/io/ByteArrayOutputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="372" selection-end="384" vertical-scroll-proportion="0.31418312">
+        <state line="27" column="29" selection-start="933" selection-end="933" vertical-scroll-proportion="0.33274958">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/annotations/XStreamAliasType.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/controller/PersonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="332" selection-end="332" vertical-scroll-proportion="0.31418312">
+        <state line="21" column="13" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar!/com/thoughtworks/xstream/XStream.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/ISerialize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="28" selection-start="8162" selection-end="8162" vertical-scroll-proportion="0.34805652">
+        <state line="6" column="22" selection-start="87" selection-end="87" vertical-scroll-proportion="0.30737704">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/msgpack/msgpack/0.6.11/msgpack-0.6.11.jar!/org/msgpack/MessagePack.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="23" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.34814814">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="-1.2459016">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/cache/BaseCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="560" selection-end="567" vertical-scroll-proportion="0.57894737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="138" selection-end="138" vertical-scroll-proportion="0.39344263">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="687" column="21" selection-start="24001" selection-end="24176" vertical-scroll-proportion="0.0">
+        <state line="694" column="21" selection-start="24385" selection-end="24385" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtilNew.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SpringJunitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="34" selection-start="1610" selection-end="1620" vertical-scroll-proportion="0.67950964">
+        <state line="11" column="13" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/MsgPackSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.33333334">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

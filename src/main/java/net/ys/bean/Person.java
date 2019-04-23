@@ -1,12 +1,17 @@
 package net.ys.bean;
 
+import org.msgpack.annotation.Message;
+
 import java.io.Serializable;
 
 /**
  * User: NMY
  * Date: 18-5-18
  */
+@Message
 public class Person implements Serializable {
+
+    private static final long serialVersionUID = 4456266159406621344L;
 
     private int id;
 
@@ -15,6 +20,16 @@ public class Person implements Serializable {
     private int age;
 
     private long createTime;
+
+    public Person() {
+    }
+
+    public Person(int id, String name, int age, long createTime) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.createTime = createTime;
+    }
 
     public int getId() {
         return id;
