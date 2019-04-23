@@ -1,15 +1,15 @@
 package net.ys.cache;
 
+import net.ys.serialize.ISerialize;
+import net.ys.serialize.KyRoSerialize;
 import net.ys.storage.RedsExecutor;
 import net.ys.storage.RedsRunner;
 import net.ys.storage.RedsServer;
 import org.apache.commons.collections.CollectionUtils;
-import org.msgpack.MessagePack;
 import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -21,7 +21,7 @@ import java.util.Set;
 @Repository
 public class BaseCache {
 
-    MessagePack msgPack = new MessagePack();
+    ISerialize serialize = KyRoSerialize.getInstance();
 
     /**
      * k-v
@@ -35,8 +35,8 @@ public class BaseCache {
             @Override
             public Boolean run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    return "OK".equals(jedis.set(msgPack.write(key), msgPack.write(obj)));
-                } catch (IOException e) {
+                    return "OK".equals(jedis.set(serialize.serialize(key), serialize.serialize(obj)));
+                } catch (Exception e) {
                 }
                 return false;
             }
@@ -57,11 +57,11 @@ public class BaseCache {
             @Override
             public T run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    byte[] data = jedis.get(msgPack.write(key));
+                    byte[] data = jedis.get(serialize.serialize(key));
                     if (data != null) {
-                        return msgPack.read(data, clazz);
+                        return serialize.deSerialize(data, clazz);
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                 }
                 return null;
             }
@@ -80,7 +80,7 @@ public class BaseCache {
             @Override
             public Boolean run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    return jedis.del(msgPack.write(key)) > 0;
+                    return jedis.del(serialize.serialize(key)) > 0;
                 } catch (Exception e) {
                 }
                 return false;
@@ -101,8 +101,8 @@ public class BaseCache {
             @Override
             public Boolean run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    return jedis.zadd(msgPack.write(key), score, msgPack.write(obj)) > 0;
-                } catch (IOException e) {
+                    return jedis.zadd(serialize.serialize(key), score, serialize.serialize(obj)) > 0;
+                } catch (Exception e) {
                 }
                 return false;
             }
@@ -122,9 +122,9 @@ public class BaseCache {
             @Override
             public Boolean run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    jedis.zremrangeByScore(msgPack.write(key), score, score);
-                    return jedis.zadd(msgPack.write(key), score, msgPack.write(obj)) > 0;
-                } catch (IOException e) {
+                    jedis.zremrangeByScore(serialize.serialize(key), score, score);
+                    return jedis.zadd(serialize.serialize(key), score, serialize.serialize(obj)) > 0;
+                } catch (Exception e) {
                 }
                 return false;
             }
@@ -143,13 +143,13 @@ public class BaseCache {
             @Override
             public T run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    Set<byte[]> data = jedis.zrangeByScore(msgPack.write(key), score, score);
+                    Set<byte[]> data = jedis.zrangeByScore(serialize.serialize(key), score, score);
                     if (data.size() > 0) {
                         for (byte[] bytes : data) {
-                            return msgPack.read(bytes, clazz);
+                            return serialize.deSerialize(bytes, clazz);
                         }
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                 }
                 return null;
             }
@@ -169,13 +169,13 @@ public class BaseCache {
             public List<T> run(Jedis jedis) throws JedisConnectionException {
                 List<T> list = new ArrayList<T>();
                 try {
-                    Set<byte[]> data = jedis.zrangeByScore(msgPack.write(key), min, max, offset, count);
+                    Set<byte[]> data = jedis.zrangeByScore(serialize.serialize(key), min, max, offset, count);
                     if (CollectionUtils.isNotEmpty(data)) {
                         for (byte[] bytes : data) {
-                            list.add(msgPack.read(bytes, clazz));
+                            list.add(serialize.deSerialize(bytes, clazz));
                         }
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                 }
                 return list;
             }
@@ -195,13 +195,13 @@ public class BaseCache {
             public List<T> run(Jedis jedis) throws JedisConnectionException {
                 List<T> list = new ArrayList<T>();
                 try {
-                    Set<byte[]> data = jedis.zrevrangeByScore(msgPack.write(key), max, min, offset, count);
+                    Set<byte[]> data = jedis.zrevrangeByScore(serialize.serialize(key), max, min, offset, count);
                     if (CollectionUtils.isNotEmpty(data)) {
                         for (byte[] bytes : data) {
-                            list.add(msgPack.read(bytes, clazz));
+                            list.add(serialize.deSerialize(bytes, clazz));
                         }
                     }
-                } catch (IOException e) {
+                } catch (Exception e) {
                 }
                 return list;
             }
@@ -220,7 +220,7 @@ public class BaseCache {
             @Override
             public Long run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    return jedis.zcard(msgPack.write(key));
+                    return jedis.zcard(serialize.serialize(key));
                 } catch (Exception e) {
                 }
                 return 0L;
@@ -241,7 +241,7 @@ public class BaseCache {
             @Override
             public Boolean run(Jedis jedis) throws JedisConnectionException {
                 try {
-                    return jedis.zremrangeByScore(msgPack.write(key), score, score) > 0;
+                    return jedis.zremrangeByScore(serialize.serialize(key), score, score) > 0;
                 } catch (Exception e) {
                 }
                 return false;

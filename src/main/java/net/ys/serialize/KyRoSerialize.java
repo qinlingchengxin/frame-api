@@ -19,7 +19,7 @@ public class KyRoSerialize implements ISerialize {
         kryo = new Kryo();
     }
 
-    public static KyRoSerialize instance = null;
+    static KyRoSerialize instance = null;
 
     public static KyRoSerialize getInstance() {
         if (instance == null) {

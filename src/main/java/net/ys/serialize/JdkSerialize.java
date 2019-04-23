@@ -11,7 +11,7 @@ public class JdkSerialize implements ISerialize {
     private JdkSerialize() {
     }
 
-    public static JdkSerialize instance = null;
+    static JdkSerialize instance = null;
 
     public static JdkSerialize getInstance() {
         if (instance == null) {

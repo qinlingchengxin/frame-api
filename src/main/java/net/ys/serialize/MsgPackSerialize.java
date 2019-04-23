@@ -16,7 +16,7 @@ public class MsgPackSerialize implements ISerialize {
         msgPack = new MessagePack();
     }
 
-    public static MsgPackSerialize instance = null;
+    static MsgPackSerialize instance = null;
 
     public static MsgPackSerialize getInstance() {
         if (instance == null) {
