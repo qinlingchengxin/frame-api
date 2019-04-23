@@ -20,12 +20,13 @@ public class XmlUtilNew {
 
         xStream.alias("xmlBean", XmlBean.class);//给类名起个别名  <net.ys.utils.XmlUtilNew_-XmlBean> 变成 <xmlBean>
 
-        XmlBean xmlBean = new XmlBean(1, "hello", System.currentTimeMillis());
+        XmlBean xmlBean = new XmlBean(1, "hello world", System.currentTimeMillis());
         String s = xStream.toXML(xmlBean);
         System.out.println(s);
         System.out.println();
-        Object o = xStream.fromXML(s);
+        XmlBean o = (XmlBean) xStream.fromXML(s);
         System.out.println(o);
+        System.out.println(o.toJson());
     }
 
     static class XmlBean {
@@ -48,6 +49,14 @@ public class XmlUtilNew {
                     "id=" + id +
                     ", name='" + name + '\'' +
                     ", createTime=" + createTime +
+                    '}';
+        }
+
+        public String toJson() {
+            return "{" +
+                    "\"id\":" + id +
+                    ",\"name\":\"" + name + '\"' +
+                    ",\"createTime\":" + createTime +
                     '}';
         }
     }
