@@ -680,11 +680,13 @@
               <version>1.2.4</version>
           </dependency>-->
 
+        <!--xml bean translate-->
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
             <version>1.4.10</version>
         </dependency>
+        <!--xml bean translate-->
     </dependencies>
 
     <profiles>
