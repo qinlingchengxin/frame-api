@@ -47,4 +47,14 @@ public class Person implements Serializable {
     public void setCreateTime(long createTime) {
         this.createTime = createTime;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", createTime=" + createTime +
+                '}';
+    }
 }
