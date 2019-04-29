@@ -1,5 +1,7 @@
 package net.ys.utils.rsa;
 
+import net.ys.constant.X;
+
 import javax.crypto.Cipher;
 import java.io.ByteArrayOutputStream;
 import java.security.*;
@@ -54,7 +56,7 @@ public class RSAUtil {
         Key key = pair.getL();
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(Cipher.ENCRYPT_MODE, key);
-        byte[] dataBytes = data.getBytes();
+        byte[] dataBytes = data.getBytes(X.Code.U);
         int dataLen = dataBytes.length;
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         int offSet = 0;
@@ -106,7 +108,7 @@ public class RSAUtil {
         }
         byte[] decryptedData = out.toByteArray();
         out.close();
-        return new String(decryptedData);
+        return new String(decryptedData, X.Code.U);
     }
 
     /**
@@ -160,7 +162,7 @@ public class RSAUtil {
         System.out.println(publicKey);
         String privateKey = RSAUtil.getPrivateKey(pair);
         System.out.println(privateKey);
-        String str = "hello world";
+        String str = "中国";
 
         String encryptStr = encrypt(str, publicKey, true);
         System.out.println(encryptStr);

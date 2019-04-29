@@ -20,7 +20,7 @@ public class HowToUse {
 
     public void test() throws Exception {
         System.out.println("公钥加密，私钥解密");
-        String sourceString = "hi, RSA";
+        String sourceString = "hi, RSA中国";
 
         String encodedData = RSAUtil.encrypt(sourceString, publicKey, true);
         String decodedData = RSAUtil.decrypt(encodedData, privateKey, false);
@@ -50,7 +50,10 @@ public class HowToUse {
         System.out.println("加密前: " + sourceString + "，解密后: " + decodedData);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
+        HowToUse howToUse = new HowToUse();
+        howToUse.setUp();
+        howToUse.test();
     }
 }
