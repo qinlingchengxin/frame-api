@@ -1,8 +1,6 @@
 package net.ys.utils;
 
 import net.ys.constant.X;
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -32,7 +30,7 @@ public class AesUtil {
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
             byte[] encryptedBytes = cipher.doFinal(byteContent);
-            return new BASE64Encoder().encode(encryptedBytes);
+            return Base64Util.encode(encryptedBytes);
         } catch (Exception e) {
         }
         return "";
@@ -46,8 +44,7 @@ public class AesUtil {
      */
     public static String decryptAES(String content) {
         try {
-            BASE64Decoder decoder = new BASE64Decoder();
-            byte[] encryptedBytes = decoder.decodeBuffer(content);
+            byte[] encryptedBytes = Base64Util.decode(content.getBytes());
             byte[] enCodeFormat = KEY.getBytes();
             SecretKeySpec secretKey = new SecretKeySpec(enCodeFormat, "AES");
             byte[] initParam = IV_STRING.getBytes();
@@ -62,7 +59,7 @@ public class AesUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        String str = encryptAES("hello");
+        String str = encryptAES("1567629198000");
         System.out.println(str);
         System.out.println(decryptAES(str));
     }

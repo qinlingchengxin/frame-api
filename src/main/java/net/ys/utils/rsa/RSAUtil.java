@@ -1,6 +1,7 @@
 package net.ys.utils.rsa;
 
 import net.ys.constant.X;
+import net.ys.utils.Base64Util;
 
 import javax.crypto.Cipher;
 import java.io.ByteArrayOutputStream;
@@ -37,14 +38,14 @@ public class RSAUtil {
      * 取得公钥
      */
     public static String getPublicKey(MyPair<PublicKey, PrivateKey> pair) throws Exception {
-        return Base64Util.encryptBASE64(pair.getL().getEncoded()).replaceAll("\\s", "");
+        return Base64Util.encode(pair.getL().getEncoded()).replaceAll("\\s", "");
     }
 
     /**
      * 取得私钥
      */
     public static String getPrivateKey(MyPair<PublicKey, PrivateKey> pair) throws Exception {
-        return Base64Util.encryptBASE64(pair.getR().getEncoded()).replaceAll("\\s", "");
+        return Base64Util.encode(pair.getR().getEncoded()).replaceAll("\\s", "");
     }
 
     /**
@@ -75,7 +76,7 @@ public class RSAUtil {
         }
         byte[] encryptedData = out.toByteArray();
         out.close();
-        return Base64Util.encryptBASE64(encryptedData).replaceAll("\\s", "");
+        return Base64Util.encode(encryptedData).replaceAll("\\s", "");
     }
 
     /**
@@ -89,7 +90,7 @@ public class RSAUtil {
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(Cipher.DECRYPT_MODE, key);
 
-        byte[] dataBytes = Base64Util.decryptBASE64(data);
+        byte[] dataBytes = Base64Util.decode(data.getBytes());
 
         int inputLen = dataBytes.length;
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -115,7 +116,7 @@ public class RSAUtil {
      * 生成钥匙
      */
     public static MyPair<Key, KeyFactory> generateKeyAndFactory(String keyString, boolean isPublic) throws Exception {
-        byte[] keyBytes = Base64Util.decryptBASE64(keyString);
+        byte[] keyBytes = Base64Util.decode(keyString.getBytes());
         KeyFactory keyFactory = KeyFactory.getInstance(ENCRYPTION_ALGORITHM);
         Key key;
         if (isPublic) {
@@ -139,7 +140,7 @@ public class RSAUtil {
         Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);
         signature.initSign(privateKey);
         signature.update(data);
-        return Base64Util.encryptBASE64(signature.sign());
+        return Base64Util.encode(signature.sign());
     }
 
     /**
@@ -153,7 +154,7 @@ public class RSAUtil {
         Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);
         signature.initVerify(publicKey);
         signature.update(data);
-        return signature.verify(Base64Util.decryptBASE64(sign));
+        return signature.verify(Base64Util.decode(sign.getBytes()));
     }
 
     public static void main(String[] args) throws Exception {
