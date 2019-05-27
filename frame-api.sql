@@ -16,6 +16,21 @@ Date: 2018-11-10 11:38:00
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
+-- Table structure for `sms_log`
+-- ----------------------------
+DROP TABLE IF EXISTS `sms_log`;
+CREATE TABLE `sms_log` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `phone_num` VARCHAR(11) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '手机号码',
+  `create_time` bigint(20) NOT NULL DEFAULT '0' COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=651 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='短信发送记录';
+
+-- ----------------------------
+-- Records of sms_log
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `person`
 -- ----------------------------
 DROP TABLE IF EXISTS `person`;

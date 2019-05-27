@@ -1,6 +1,7 @@
 package net.ys.utils;
 
 import net.sf.json.JSONObject;
+import net.ys.constant.SysRegex;
 import net.ys.constant.X;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.PostMethod;
@@ -158,6 +159,19 @@ public class Tools {
             }
         }
         return null;
+    }
+
+    /**
+     * 校验手机号合法性
+     *
+     * @param phoneNumber
+     * @return
+     */
+    public static boolean validatePhoneNumber(String phoneNumber) {
+        if (phoneNumber != null && !"".equals(phoneNumber.trim())) {
+            return phoneNumber.matches(SysRegex.PHONE_NUMBER.regex);
+        }
+        return false;
     }
 
     public static void main(String[] args) throws IOException {

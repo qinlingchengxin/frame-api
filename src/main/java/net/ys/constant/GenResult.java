@@ -9,6 +9,8 @@ public enum GenResult {
 
     SUCCESS(1000, "request success"),
 
+    SUCCESS_SEND(1000, "send sms success"),
+
     FAILED(1001, "request failed"),
 
     PARAMS_ERROR(1002, "parameter error"),
@@ -16,6 +18,14 @@ public enum GenResult {
     REQUEST_METHOD_ERROR(1003, "request method error"),
 
     REQUEST_INVALID(1004, "request invalid"),
+
+    INVALID_PHONE(1005, "invalid phone"),
+
+    SMS_SEND_ERROR(1006, "sms send error"),
+
+    SMS_EXCEEDS_LIMIT(1007, "sms exceeds limit"),
+
+    SMS_SEND_FREQUENTLY(1008, "sms send frequently"),
 
     UNKNOWN_ERROR(9999, "unknown error"),;
 
