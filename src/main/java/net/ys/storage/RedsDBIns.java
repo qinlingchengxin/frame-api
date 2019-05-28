@@ -39,7 +39,7 @@ public enum RedsDBIns {
     public synchronized void init() {
         RedsServer[] ss = RedsServer.values();
         for (RedsServer rs : ss) {
-            final JedisPool p = new JedisPool(rs.getConfig(), rs.getHost(), rs.getPort(), rs.getTimeout());
+            final JedisPool p = new JedisPool(rs.getConfig(), rs.getHost(), rs.getPort(), rs.getTimeout(), rs.getPassword(), rs.getDatabase());
             redsPoolContainer.put(rs, p);
         }
     }
@@ -51,7 +51,7 @@ public enum RedsDBIns {
 
             if (pool == null) {
                 synchronized (this) {
-                    pool = new JedisPool(server.getConfig(), server.getHost(), server.getPort(), server.getTimeout(), server.getPassword());
+                    pool = new JedisPool(server.getConfig(), server.getHost(), server.getPort(), server.getTimeout(), server.getPassword(), server.getDatabase());
                     if (pool != null) {
                         j = pool.getResource();
                         redsPoolContainer.putIfAbsent(server, pool);

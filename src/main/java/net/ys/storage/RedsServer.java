@@ -6,19 +6,21 @@ import redis.clients.jedis.JedisPoolConfig;
 
 public enum RedsServer {
 
-    MASTER(PropertyUtil.get("reds.host"), Integer.parseInt(PropertyUtil.get("reds.port")), Integer.parseInt(PropertyUtil.get("reds.timeout")), PropertyUtil.get("reds.password"));
+    MASTER(PropertyUtil.get("reds.host"), Integer.parseInt(PropertyUtil.get("reds.port")), Integer.parseInt(PropertyUtil.get("reds.timeout")), PropertyUtil.get("reds.password"), Integer.parseInt(PropertyUtil.get("reds.database")));
 
     private String host;
     private int port;
     private int timeout;
     private String password;
+    private int database;
     private JedisPoolConfig config;
 
-    RedsServer(String hostName, int port, int timeout, String password) {
+    RedsServer(String hostName, int port, int timeout, String password, int database) {
         this.host = hostName;
         this.port = port;
         this.timeout = timeout;
         this.password = password;
+        this.database = database;
         this.config = new JedisPoolConfig();
         config.setMaxTotal(Integer.parseInt(PropertyUtil.get("reds.maxTotal")));
         config.setMaxIdle(Integer.parseInt(PropertyUtil.get("reds.maxIdle")));
@@ -52,4 +54,7 @@ public enum RedsServer {
         return this.config;
     }
 
+    public int getDatabase() {
+        return database;
+    }
 }

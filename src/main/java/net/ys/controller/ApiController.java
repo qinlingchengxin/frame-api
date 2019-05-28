@@ -27,7 +27,8 @@ public class ApiController {
 
     @RequestMapping(value = "persons", method = RequestMethod.GET, headers = "Accept=application/json")
     @ApiOperation(httpMethod = "GET", response = PersonResp.class, responseContainer = "PersonResp", value = "用户列表")
-    public Map<String, Object> persons(@ApiParam(required = true, value = "页码", defaultValue = "1") @RequestParam(required = true, value = "page", defaultValue = "1") int page, @ApiParam(required = true, value = "每页数量", defaultValue = "15") @RequestParam(required = true, value = "page_size", defaultValue = "15") int pageSize) {
+    public Map<String, Object> persons(@ApiParam(required = true, value = "页码", defaultValue = "1") @RequestParam(required = true, value = "page", defaultValue = "1") int page,
+                                       @ApiParam(required = true, value = "每页数量", defaultValue = "15") @RequestParam(required = true, value = "page_size", defaultValue = "15") int pageSize) {
         try {
             List<Person> persons = personService.queryPersons("", page, pageSize);
             return GenResult.SUCCESS.genResult(persons);
