@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
  * User: NMY
  * Date: 16-9-12
  */
+@SuppressWarnings("unchecked")
 @Component
 public class AppContextUtil implements ApplicationContextAware {
 

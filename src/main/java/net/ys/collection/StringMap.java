@@ -6,6 +6,7 @@ import java.util.HashMap;
  * User: NMY
  * Date: 18-12-17
  */
+@SuppressWarnings("unchecked")
 public class StringMap<K, V> extends HashMap<K, V> {
     @Override
     public V put(K key, V value) {

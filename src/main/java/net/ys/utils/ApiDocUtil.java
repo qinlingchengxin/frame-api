@@ -23,6 +23,7 @@ import java.util.Map;
  * User: NMY
  * Date: 18-12-15
  */
+@SuppressWarnings("unchecked")
 public class ApiDocUtil {
 
     /**
@@ -32,7 +33,7 @@ public class ApiDocUtil {
      */
     public static List<Map<String, String>> genRecords() throws Exception {
         List<Class> classes = ClassUtil.getClasses(GlobalController.class.getPackage().getName());
-        List<Map<String, String>> records = new ArrayList<>();
+        List<Map<String, String>> records = new ArrayList<Map<String, String>>();
         Map<String, String> record;
         for (Class clazz : classes) {
             if (clazz.isAnnotationPresent(Api.class)) {
@@ -62,7 +63,7 @@ public class ApiDocUtil {
                         if (parameters.length > 0) {
                             for (Parameter parameter : parameters) {
                                 if (parameter.isAnnotationPresent(ApiParam.class)) {
-                                    record = new StringMap<>();
+                                    record = new StringMap<String, String>();
                                     ApiParam paramAnnotation = parameter.getAnnotation(ApiParam.class);
                                     RequestParam reqAnnotation = parameter.getAnnotation(RequestParam.class);
                                     String param = reqAnnotation.value();
@@ -79,7 +80,7 @@ public class ApiDocUtil {
                                 }
                             }
                         } else {
-                            record = new StringMap<>();
+                            record = new StringMap<String, String>();
                             record.put("name", name);
                             record.put("url", url);
                             record.put("method", requestMethod);

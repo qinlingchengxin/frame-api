@@ -6,6 +6,7 @@ import java.io.*;
  * User: NMY
  * Date: 19-4-23
  */
+@SuppressWarnings("unchecked")
 public class JdkSerialize implements ISerialize {
 
     private JdkSerialize() {

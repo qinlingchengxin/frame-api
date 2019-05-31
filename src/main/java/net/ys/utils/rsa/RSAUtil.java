@@ -9,6 +9,7 @@ import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
+@SuppressWarnings("unchecked")
 public class RSAUtil {
 
     public static final String ENCRYPTION_ALGORITHM = "RSA";
