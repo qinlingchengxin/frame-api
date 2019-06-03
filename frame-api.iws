@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="update">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/listener/SystemSessionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/ApiDocUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/ApiDocUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DynamicCompileTest.java" afterPath="$PROJECT_DIR$/src/test/java/DynamicCompileTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/RSAUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/RSAUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/collection/StringMap.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/collection/StringMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iml" afterPath="$PROJECT_DIR$/frame-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.ipr" afterPath="$PROJECT_DIR$/frame-api.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="frame-api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,10 +17,10 @@
     <file path="/PersonDao.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1546997298528" ignored="false" />
     <file path="/list.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1546997078621" ignored="false" />
     <file path="/JobService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1550713914717" ignored="false" />
-    <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1558947564858" ignored="false" />
+    <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559569140060" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559287833011" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559565925363" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556935473858" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -299,6 +293,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -333,7 +328,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -343,107 +337,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SystemSessionListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/listener/SystemSessionListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="53" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringMap.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/collection/StringMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="94" selection-end="124" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#94#124#0" expanded="true" />
-              </folding>
-            </state>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="30" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#252#282#0" expanded="true" />
-              </folding>
-            </state>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppContextUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="30" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+            <state line="14" column="77" selection-start="600" selection-end="621" vertical-scroll-proportion="-13.461538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RSAUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/RSAUtil.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="30" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#270#300#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JdkSerialize.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.3868472">
-              <folding>
-                <element signature="e#84#114#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpClientUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/HttpClientUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="34" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
+            <state line="283" column="55" selection-start="10223" selection-end="10223" vertical-scroll-proportion="1.2615101">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicCompileTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DynamicCompileTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="42" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashMap.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="12" selection-start="5811" selection-end="5816" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiDocUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/ApiDocUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="30" selection-start="740" selection-end="740" vertical-scroll-proportion="-11.0">
-              <folding>
-                <element signature="e#710#740#0" expanded="true" />
-                <element signature="e#1050#1071#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -468,7 +384,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/storage/RedsServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/storage/RedsDBIns.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" />
@@ -484,6 +399,7 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/RSAUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -497,9 +413,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\apache\maven-repo" />
-        <option name="mavenHome" value="E:\apache\apache-maven-3.6.0" />
-        <option name="userSettingsFile" value="E:\apache\apache-maven-3.6.0\conf\settings.xml" />
+        <option name="localRepository" value="D:\repository" />
+        <option name="mavenHome" value="E:\apache\apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="E:\apache\apache-maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -520,34 +436,6 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="frame-api" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="frame-api" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Profiles" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
-        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
@@ -558,8 +446,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -575,6 +463,11 @@
             <id>Velocity inspections</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -606,144 +499,13 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="frame-api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rt.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -799,32 +561,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -902,81 +638,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listener" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="options.lastSelected" value="MavenSettings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frame-api.ipr" />
     <property name="project.structure.side.proportion" value="0.3135198" />
@@ -986,9 +661,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1019,107 +694,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.8080">
-    <configuration default="false" name="TTTTT" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TTTTT" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HttpsPostAccess" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="HttpsPostAccess" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ZLLicenceTwo" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="net.ys.right.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="net.ys.right.ZLLicenceTwo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TTT" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="TTT" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AesUtil" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="net.ys.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="net.ys.utils.AesUtil" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1155,19 +729,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1196,6 +757,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1209,13 +783,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1239,56 +806,18 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
       <deployment />
       <server-settings />
       <predefined_log_file id="Tomcat" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="false" name="DynamicCompileTest" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="DynamicCompileTest" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="XmlUtilNew" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="net.ys.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="net.ys.utils.XmlUtilNew" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="8080" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="8080">
@@ -1359,30 +888,12 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="frame-api" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
-    <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Application.DynamicCompileTest" />
-      <item index="1" class="java.lang.String" itemvalue="Application.XmlUtilNew" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TTTTT" />
-      <item index="3" class="java.lang.String" itemvalue="Application.HttpsPostAccess" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ZLLicenceTwo" />
-      <item index="5" class="java.lang.String" itemvalue="Application.TTT" />
-      <item index="6" class="java.lang.String" itemvalue="Application.AesUtil" />
-      <item index="7" class="java.lang.String" itemvalue="Tomcat Server.8080" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.8080" />
     </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TTT" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AesUtil" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ZLLicenceTwo" />
-        <item index="3" class="java.lang.String" itemvalue="Application.HttpsPostAccess" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TTTTT" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -1767,13 +1278,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25259516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35606936" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6578035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1782,18 +1292,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34566474" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43910807" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.10526316" sideWeight="0.58381504" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1590909" sideWeight="0.5608919" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23317014" sideWeight="0.58381504" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18237454" sideWeight="0.65433526" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18787879" sideWeight="0.5608919" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5202312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35606936" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18237454" sideWeight="0.65433526" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1894,6 +1405,88 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/listener/SystemSessionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="53" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DynamicCompileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="560" selection-end="560" vertical-scroll-proportion="0.49355432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.3/swagger-annotations-1.5.3.jar!/io/swagger/annotations/ApiOperation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="0.3482309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/collection/StringMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="125" selection-end="155" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/ApiDocUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="25" selection-start="766" selection-end="766" vertical-scroll-proportion="0.04496403">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="10" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/RSAUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="30" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/KyRoSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="281" selection-end="281" vertical-scroll-proportion="0.32014388">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/MsgPackSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.32014388">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/ISerialize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="82" selection-end="82" vertical-scroll-proportion="0.26978418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
@@ -1905,128 +1498,234 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="51" selection-start="90" selection-end="90" vertical-scroll-proportion="-0.96153843">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="12" selection-start="5811" selection-end="5816" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/javax/tools/StandardJavaFileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="37" selection-start="6048" selection-end="6062" vertical-scroll-proportion="0.33248731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/javax/tools/JavaCompiler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="61" selection-start="10943" selection-end="10957" vertical-scroll-proportion="0.48210025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/javax/tools/SimpleJavaFileObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="838" selection-end="858" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/javax/tools/JavaFileObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="23" selection-start="810" selection-end="810" vertical-scroll-proportion="0.33293557">
+        <state line="14" column="77" selection-start="600" selection-end="621" vertical-scroll-proportion="-13.461538">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/HttpClientUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/listener/SystemSessionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="53" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+        <state line="33" column="30" selection-start="1293" selection-end="1304" vertical-scroll-proportion="0.33256352">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DynamicCompileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="42" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="uml://MAVEN/net.ys:frame-api:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>net.ys:frame-api:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/commons-beanutils:commons-beanutils:jar:1.8.2</node>
+            <node x="" y="">org.springframework:spring-orm:jar:5.1.3.RELEASE/org.springframework:spring-tx:jar:5.1.3.RELEASE</node>
+            <node x="" y="">com.esotericsoftware:kryo:jar:4.0.0</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/org.aspectj:aspectjrt:jar:1.8.6</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-web:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework:spring-aop:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework.amqp:spring-rabbit:jar:1.4.5.RELEASE</node>
+            <node x="" y="">org.springframework:spring-orm:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2</node>
+            <node x="" y="">com.sun.mail:javax.mail:jar:1.6.0/javax.activation:activation:jar:1.1</node>
+            <node x="" y="">org.springframework:spring-context:jar:5.1.3.RELEASE/org.springframework:spring-aop:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jiguang-common:jar:1.0.3</node>
+            <node x="" y="">io.springfox:springfox-petstore:jar:2.2.2/org.springframework.hateoas:spring-hateoas:jar:0.18.0.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/io.swagger:swagger-models:jar:1.5.3</node>
+            <node x="" y="">org.springframework:spring-test:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/io.springfox:springfox-schema:jar:2.2.2</node>
+            <node x="" y="">commons-codec:commons-codec:jar:1.9</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:5.1.3.RELEASE/org.springframework:spring-tx:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.9.7/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-schema:jar:2.2.2</node>
+            <node x="" y="">javax.servlet:jsp-api:jar:2.0</node>
+            <node x="" y="">commons-fileupload:commons-fileupload:jar:1.3.1</node>
+            <node x="" y="">org.msgpack:msgpack:jar:0.6.11</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2/io.springfox:springfox-core:jar:2.2.2/org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE</node>
+            <node x="" y="">com.thoughtworks.xstream:xstream:jar:1.4.10/xmlpull:xmlpull:jar:1.1.3.1</node>
+            <node x="" y="">org.springframework:spring-context:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework.amqp:spring-rabbit:jar:1.4.5.RELEASE/org.springframework:spring-messaging:jar:4.1.6.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-petstore:jar:2.2.2/org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.google.guava:guava:jar:15.0</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.commons:commons-jexl:jar:2.0.1</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">com.itextpdf:itextpdf:jar:5.5.6</node>
+            <node x="" y="">org.apache.httpcomponents:httpmime:jar:4.5/org.apache.httpcomponents:httpclient:jar:4.5/commons-codec:commons-codec:jar:1.9</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jpush-client:jar:3.2.17/org.slf4j:slf4j-api:jar:1.7.7</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2/org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jiguang-common:jar:1.0.3/com.squareup.okhttp3:okhttp:jar:3.3.1</node>
+            <node x="" y="">org.springframework:spring-orm:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.mangofactory:swagger-models:jar:1.0.2</node>
+            <node x="" y="">org.apache.santuario:xmlsec:jar:1.5.1</node>
+            <node x="" y="">junit:junit:jar:4.12/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/org.springframework.hateoas:spring-hateoas:jar:0.18.0.RELEASE</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-expression:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2/org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE</node>
+            <node x="" y="">commons-dbcp:commons-dbcp:jar:1.4</node>
+            <node x="" y="">junit:junit:jar:4.12</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/org.springframework.hateoas:spring-hateoas:jar:0.18.0.RELEASE</node>
+            <node x="" y="">net.sourceforge.jexcelapi:jxl:jar:2.6</node>
+            <node x="" y="">cn.jpush.api:jiguang-common:jar:1.0.3/io.netty:netty-all:jar:4.1.6.Final</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2/io.springfox:springfox-core:jar:2.2.2/org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7/dom4j:dom4j:jar:1.6.1</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.mangofactory:swagger-models:jar:1.0.2/org.slf4j:slf4j-api:jar:1.7.7</node>
+            <node x="" y="">org.springframework:spring-context:jar:5.1.3.RELEASE/org.springframework:spring-expression:jar:5.1.3.RELEASE</node>
+            <node x="" y="">com.esotericsoftware:kryo:jar:4.0.0/com.esotericsoftware:minlog:jar:1.3.0</node>
+            <node x="" y="">javax.servlet:jsp-api:jar:2.0/javax.servlet:servlet-api:jar:2.4</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/org.aspectj:aspectjrt:jar:1.8.6</node>
+            <node x="" y="">org.springframework:spring-context-support:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework:spring-expression:jar:5.1.3.RELEASE</node>
+            <node x="" y="">net.sf.ezmorph:ezmorph:jar:1.0.6</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">net.sf.json-lib:json-lib:jar:jdk15:2.4</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:5.1.3.RELEASE/org.springframework:spring-tx:jar:5.1.3.RELEASE</node>
+            <node x="" y="">com.thoughtworks.xstream:xstream:jar:1.4.10/xpp3:xpp3_min:jar:1.1.4c</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.tuckey:urlrewritefilter:jar:4.0.3</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.mangofactory:swagger-models:jar:1.0.2/com.fasterxml:classmate:jar:1.1.0</node>
+            <node x="" y="">io.springfox:springfox-petstore:jar:2.2.2/io.swagger:swagger-annotations:jar:1.5.3</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.mangofactory:swagger-models:jar:1.0.2/com.google.guava:guava:jar:15.0</node>
+            <node x="" y="">commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">org.springframework:spring-test:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jiguang-common:jar:1.0.3/com.google.code.gson:gson:jar:2.8.0</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:5.1.3.RELEASE/org.springframework:spring-tx:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework:spring-context-support:jar:5.1.3.RELEASE/org.springframework:spring-context:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.apache.httpcomponents:httpmime:jar:4.5</node>
+            <node x="" y="">com.esotericsoftware:kryo:jar:4.0.0/com.esotericsoftware:reflectasm:jar:1.11.3</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/org.slf4j:slf4j-api:jar:1.7.7</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2/org.springframework.hateoas:spring-hateoas:jar:0.18.0.RELEASE</node>
+            <node x="" y="">com.itextpdf:itext-asian:jar:5.2.0</node>
+            <node x="" y="">net.ys:frame-api:1.0-SNAPSHOT</node>
+            <node x="" y="">org.springframework:spring-aspects:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-aop:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-schema:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2</node>
+            <node x="" y="">com.esotericsoftware:kryo:jar:4.0.0/com.esotericsoftware:reflectasm:jar:1.11.3/org.ow2.asm:asm:jar:5.0.4</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE</node>
+            <node x="" y="">commons-lang:commons-lang:jar:2.6</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2</node>
+            <node x="" y="">org.springframework:spring-expression:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7/org.apache.poi:poi-ooxml-schemas:jar:3.7/org.apache.geronimo.specs:geronimo-stax-api_1.0_spec:jar:1.0</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7/org.apache.poi:poi-ooxml-schemas:jar:3.7</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-web:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.lucee:commons-httpclient:jar:3.1</node>
+            <node x="" y="">org.springframework.amqp:spring-rabbit:jar:1.4.5.RELEASE/com.rabbitmq:amqp-client:jar:3.5.1</node>
+            <node x="" y="">aopalliance:aopalliance:jar:1.0</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.mangofactory:swagger-models:jar:1.0.2/joda-time:joda-time:jar:2.5</node>
+            <node x="" y="">commons-beanutils:commons-beanutils-core:jar:1.8.3</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/joda-time:joda-time:jar:2.5</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7/org.apache.poi:poi:jar:3.7</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.fasterxml:classmate:jar:1.1.0</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.9.7/com.fasterxml.jackson.core:jackson-core:jar:2.9.7</node>
+            <node x="" y="">cn.jpush.api:jiguang-common:jar:1.0.3/org.slf4j:slf4j-api:jar:1.7.7</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2/io.springfox:springfox-core:jar:2.2.2/org.aspectj:aspectjrt:jar:1.8.6</node>
+            <node x="" y="">javax.servlet:javax.servlet-api:jar:3.0.1</node>
+            <node x="" y="">cn.jpush.api:jpush-client:jar:3.2.17/io.netty:netty-all:jar:4.1.6.Final</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/commons-digester:commons-digester:jar:2.0</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7</node>
+            <node x="" y="">org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework:spring-core:jar:5.1.3.RELEASE/org.springframework:spring-jcl:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/io.swagger:swagger-annotations:jar:1.5.3</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.wordnik:swagger-annotations:jar:1.3.11</node>
+            <node x="" y="">org.springframework:spring-aop:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.msgpack:msgpack:jar:0.6.11/org.javassist:javassist:jar:3.18.1-GA</node>
+            <node x="" y="">cn.jpush.api:jiguang-common:jar:1.0.3/com.squareup.okhttp3:okhttp:jar:3.3.1/com.squareup.okio:okio:jar:1.8.0</node>
+            <node x="" y="">org.apache.httpcomponents:httpmime:jar:4.5/org.apache.httpcomponents:httpclient:jar:4.5</node>
+            <node x="" y="">commons-net:commons-net:jar:2.2</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/org.apache.commons:commons-jexl:jar:2.0.1</node>
+            <node x="" y="">org.apache.ant:ant:jar:1.8.2/org.apache.ant:ant-launcher:jar:1.8.2</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/commons-digester:commons-digester:jar:2.0</node>
+            <node x="" y="">org.springframework.amqp:spring-rabbit:jar:1.4.5.RELEASE/org.springframework.retry:spring-retry:jar:1.1.2.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2</node>
+            <node x="" y="">org.springframework:spring-context-support:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2/io.springfox:springfox-schema:jar:2.2.2</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2/io.springfox:springfox-core:jar:2.2.2</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.swagger:swagger-annotations:jar:1.5.3</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.freemarker:freemarker:jar:2.3.22</node>
+            <node x="" y="">com.mangofactory:swagger-springmvc:jar:1.0.2/com.mangofactory:swagger-models:jar:1.0.2/com.wordnik:swagger-annotations:jar:1.3.11</node>
+            <node x="" y="">commons-fileupload:commons-fileupload:jar:1.3.1/commons-io:commons-io:jar:2.2</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-context:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-petstore:jar:2.2.2/io.swagger:swagger-models:jar:1.5.3</node>
+            <node x="" y="">org.apache.santuario:xmlsec:jar:1.5.1/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1</node>
+            <node x="" y="">org.msgpack:msgpack-core:jar:0.8.2</node>
+            <node x="" y="">org.springframework:spring-aop:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE/org.springframework:spring-core:jar:5.1.3.RELEASE</node>
+            <node x="" y="">org.springframework.amqp:spring-rabbit:jar:1.4.5.RELEASE/org.springframework.amqp:spring-amqp:jar:1.4.5.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/commons-digester:commons-digester:jar:2.0/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE/org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.commons:commons-jexl:jar:2.0.1/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">redis.clients:jedis:jar:2.6.1</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7</node>
+            <node x="" y="">org.apache.ant:ant:jar:1.8.2</node>
+            <node x="" y="">redis.clients:jedis:jar:2.6.1/org.apache.commons:commons-pool2:jar:2.0</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2/org.aspectj:aspectjrt:jar:1.8.6</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE</node>
+            <node x="" y="">org.apache.poi:poi-scratchpad:jar:3.8-beta4</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7/org.apache.poi:poi-ooxml-schemas:jar:3.7/org.apache.xmlbeans:xmlbeans:jar:2.3.0</node>
+            <node x="" y="">org.msgpack:msgpack:jar:0.6.11/com.googlecode.json-simple:json-simple:jar:1.1.1</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:5.1.36</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:5.1.3.RELEASE/org.springframework:spring-web:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jpush-client:jar:3.2.17</node>
+            <node x="" y="">com.sun.mail:javax.mail:jar:1.6.0</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-core:jar:2.9.7</node>
+            <node x="" y="">org.springframework:spring-orm:jar:5.1.3.RELEASE/org.springframework:spring-jdbc:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.swagger:swagger-models:jar:1.5.3/io.swagger:swagger-annotations:jar:1.5.3</node>
+            <node x="" y="">com.esotericsoftware:kryo:jar:4.0.0/org.objenesis:objenesis:jar:2.2</node>
+            <node x="" y="">javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:jar:1.2.1</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.swagger:swagger-models:jar:1.5.3</node>
+            <node x="" y="">org.springframework:spring-context-support:jar:5.1.3.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jpush-client:jar:3.2.17/com.google.code.gson:gson:jar:2.8.0</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi-ooxml:jar:3.7/dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.0.b2</node>
+            <node x="" y="">log4j:log4j:jar:1.2.17</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/commons-beanutils:commons-beanutils:jar:1.8.2/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">jstl:jstl:jar:1.2</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2/io.springfox:springfox-core:jar:2.2.2/org.springframework.hateoas:spring-hateoas:jar:0.18.0.RELEASE</node>
+            <node x="" y="">org.springframework:spring-aspects:jar:5.1.3.RELEASE/org.aspectj:aspectjweaver:jar:1.9.2</node>
+            <node x="" y="">org.apache.httpcomponents:httpmime:jar:4.5/org.apache.httpcomponents:httpclient:jar:4.5/org.apache.httpcomponents:httpcore:jar:4.4.1</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/io.springfox:springfox-spi:jar:2.2.2</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2/io.springfox:springfox-spring-web:jar:2.2.2</node>
+            <node x="" y="">com.thoughtworks.xstream:xstream:jar:1.4.10</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.9.7</node>
+            <node x="" y="">org.springframework:spring-context:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-swagger-common:jar:2.2.2</node>
+            <node x="" y="">commons-beanutils:commons-beanutils-core:jar:1.8.3/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="" y="">io.springfox:springfox-petstore:jar:2.2.2/org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE</node>
+            <node x="" y="">org.springframework:spring-orm:jar:5.1.3.RELEASE</node>
+            <node x="" y="">net.sf.jxls:jxls-reader:jar:1.0.1/org.apache.poi:poi:jar:3.7</node>
+            <node x="" y="">org.springframework:spring-context:jar:5.1.3.RELEASE</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/io.springfox:springfox-schema:jar:2.2.2/io.springfox:springfox-core:jar:2.2.2</node>
+            <node x="" y="">net.sf.jxls:jxls-core:jar:1.0.1/org.apache.poi:poi:jar:3.7</node>
+            <node x="" y="">io.springfox:springfox-petstore:jar:2.2.2</node>
+            <node x="" y="">io.springfox:springfox-swagger2:jar:2.2.2/org.mapstruct:mapstruct:jar:1.0.0.CR1</node>
+            <node x="" y="">taglibs:standard:jar:1.1.2</node>
+            <node x="" y="">org.springframework:spring-aop:jar:5.1.3.RELEASE/org.springframework:spring-beans:jar:5.1.3.RELEASE</node>
+            <node x="" y="">cn.jpush.api:jpush-client:jar:3.2.17/cn.jpush.api:jiguang-common:jar:1.0.3</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.4576817180616743" x="296.572729161551" y="-15.27863929131334" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/swagger/swagger-annotations/1.5.3/swagger-annotations-1.5.3.jar!/io/swagger/annotations/ApiOperation.class">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="476" selection-end="476" vertical-scroll-proportion="0.3482309">
+        <state line="283" column="55" selection-start="10223" selection-end="10223" vertical-scroll-proportion="1.2615101">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/collection/StringMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="94" selection-end="124" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#94#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/ApiDocUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="740" selection-end="740" vertical-scroll-proportion="-11.0">
-          <folding>
-            <element signature="e#710#740#0" expanded="true" />
-            <element signature="e#1050#1071#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#252#282#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/rsa/RSAUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#270#300#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/serialize/JdkSerialize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.3868472">
-          <folding>
-            <element signature="e#84#114#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2036,7 +1735,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>frame-api</last-edited>
+          <last-edited>frame-api:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2072,7 +1771,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2084,7 +1783,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>frame-api</last-edited>
+          <last-edited>Web|frame-api</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
