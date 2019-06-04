@@ -8,7 +8,10 @@ import net.ys.constant.GenResult;
 import net.ys.mapper.resp.PersonResp;
 import net.ys.service.PersonService;
 import net.ys.utils.LogUtil;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -38,8 +41,7 @@ public class ApiController {
         }
     }
 
-    @ResponseBody
-    @RequestMapping(value = "upload", method = RequestMethod.POST)
+    @RequestMapping(value = "upload", method = RequestMethod.POST, headers = "Accept=application/json")
     @ApiOperation(httpMethod = "POST", response = Map.class, responseContainer = "Map", value = "上传文件")
     public Map<String, Object> upload(@RequestParam(required = true) MultipartFile file) {
         try {
@@ -58,8 +60,7 @@ public class ApiController {
         }
     }
 
-    @ResponseBody
-    @RequestMapping(value = "excel/import", method = RequestMethod.POST)
+    @RequestMapping(value = "excel/import", method = RequestMethod.POST, headers = "Accept=application/json")
     @ApiOperation(httpMethod = "POST", response = Map.class, responseContainer = "Map", value = "上传excel")
     public Map<String, Object> importPerson(@RequestParam(required = true) MultipartFile file) {
         try {
