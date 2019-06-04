@@ -72,4 +72,8 @@ public class Person implements Serializable {
                 ", createTime=" + createTime +
                 '}';
     }
+
+    public boolean checkEmpty() {
+        return this.id == 0 && this.name.equals("") && this.age == 0 && this.createTime == 0;
+    }
 }

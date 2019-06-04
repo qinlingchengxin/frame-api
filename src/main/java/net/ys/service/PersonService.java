@@ -97,7 +97,9 @@ public class PersonService {
                         LogUtil.info("excel format error!!!");
                 }
             }
-            persons.add(person);
+            if (!person.checkEmpty()) {
+                persons.add(person);
+            }
         }
         return persons;
     }
