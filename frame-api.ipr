@@ -116,6 +116,7 @@
             <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:3.3.1" />
             <element id="library" level="project" name="Maven: com.squareup.okio:okio:1.8.0" />
             <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.3" />
+            <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.4" />
             <element id="library" level="project" name="Maven: com.thoughtworks.xstream:xstream:1.4.10" />
             <element id="library" level="project" name="Maven: xmlpull:xmlpull:1.1.3.1" />
             <element id="library" level="project" name="Maven: xpp3:xpp3_min:1.1.4c" />
@@ -372,6 +373,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/cn/jpush/api/jpush-client/3.2.17/jpush-client-3.2.17-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.alibaba:fastjson:1.2.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.4/fastjson-1.2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.4/fastjson-1.2.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.4/fastjson-1.2.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: com.esotericsoftware:kryo:4.0.0">
