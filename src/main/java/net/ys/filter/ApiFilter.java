@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 
-@WebFilter(urlPatterns = "/api/*")
+//@WebFilter(urlPatterns = "/api/*")
 public final class ApiFilter implements Filter {
 
     String pk = "4c4e6c7120ad4748";

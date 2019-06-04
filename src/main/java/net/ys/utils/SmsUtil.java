@@ -2,6 +2,8 @@ package net.ys.utils;
 
 import net.sf.json.JSONObject;
 import net.ys.constant.X;
+import net.ys.utils.req.HttpResponse;
+import net.ys.utils.req.HttpUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,10 +33,12 @@ public class SmsUtil {
         String singStr = Tools.genMD5(builder.toString());
         map.put("signstr", singStr);
 
-        String returnStr = HttpClientUtils.post(X.SMS.URL, map);
-        JSONObject object = JSONObject.fromObject(returnStr);
-        if (object.getInt("status") == 200) {
-            return true;
+        HttpResponse response = HttpUtil.doPost(X.SMS.URL, map);
+        if (response.getCode() == 200) {
+            JSONObject object = JSONObject.fromObject(response.getValue());
+            if (object.getInt("status") == 200) {
+                return true;
+            }
         }
         return false;
     }
