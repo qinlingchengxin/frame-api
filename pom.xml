@@ -496,9 +496,9 @@
         </profile>
 
         <profile>
-            <id>product</id>
+            <id>prod</id>
             <properties>
-                <package.environment>product</package.environment>
+                <package.environment>prod</package.environment>
             </properties>
         </profile>
 
@@ -512,6 +512,17 @@
 
     <build>
         <finalName>frame-api</finalName>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>prod/*</exclude>
+                    <exclude>test/*</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
         <plugins>
 
             <!-- 打WAR包 -->
@@ -557,11 +568,8 @@
                             <outputDirectory>${project.build.outputDirectory}</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/env/${package.environment}</directory>
-                                    <filtering>false</filtering>
-                                    <includes>
-                                        <include>**/*</include>
-                                    </includes>
+                                    <directory>src/main/resources/${package.environment}</directory>
+                                    <filtering>true</filtering>
                                 </resource>
                             </resources>
                         </configuration>
