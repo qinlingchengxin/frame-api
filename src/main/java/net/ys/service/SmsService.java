@@ -30,7 +30,7 @@ public class SmsService {
      *
      * @param phoneNum
      */
-    public int sendSms(String phoneNum) throws Exception {
+    public int sendSms(String phoneNum) {
         String smsCode = smsCache.newSmsCode(phoneNum);
         if (smsCode == null) {
             return -1;

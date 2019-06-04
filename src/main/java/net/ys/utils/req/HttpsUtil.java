@@ -32,7 +32,7 @@ public class HttpsUtil {
     private static final String CONTENT_TYPE_APP_XML = "application/xml";
     private static final String CONTENT_TYPE_FORM_DATA = "multipart/form-data; boundary=" + BOUNDARY;
 
-    public static HttpResponse doGet(String address) throws IOException {
+    public static HttpResponse doGet(String address) {
 
         HttpsURLConnection connection = null;
         HttpResponse response = new HttpResponse();
@@ -51,7 +51,7 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpResponse doPost(String address, Map<String, Object> params) throws IOException {
+    public static HttpResponse doPost(String address, Map<String, Object> params) {
 
         HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
@@ -82,7 +82,7 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpResponse doPostTextXml(String address, String xml) throws IOException {
+    public static HttpResponse doPostTextXml(String address, String xml) {
         HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
@@ -110,7 +110,7 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpResponse doPostAppXml(String address, String xml) throws IOException {
+    public static HttpResponse doPostAppXml(String address, String xml) {
         HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
@@ -138,7 +138,7 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpResponse doPostJson(String address, String json) throws IOException {
+    public static HttpResponse doPostJson(String address, String json) {
         HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
@@ -166,7 +166,7 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpResponse doPostFormData(String address, Map<String, String> params) throws IOException {
+    public static HttpResponse doPostFormData(String address, Map<String, String> params) {
         HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;

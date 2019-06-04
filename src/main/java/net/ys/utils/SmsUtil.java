@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class SmsUtil {
 
-    public static boolean send(String phoneNumber, String code) throws Exception {
+    public static boolean send(String phoneNumber, String code) {
 
         String time = String.valueOf(System.currentTimeMillis());
         String content = String.format(X.SMS.CONTENT, code);
