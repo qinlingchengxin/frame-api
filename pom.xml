@@ -472,6 +472,14 @@
             <artifactId>kryo</artifactId>
             <version>4.0.0</version>
         </dependency>
+
+        <!-- POI  EXCEL 文件读写 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-excelant</artifactId>
+            <version>3.14</version>
+        </dependency>
+
     </dependencies>
 
     <profiles>

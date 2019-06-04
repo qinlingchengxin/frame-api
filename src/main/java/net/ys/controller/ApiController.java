@@ -57,4 +57,17 @@ public class ApiController {
             return GenResult.UNKNOWN_ERROR.genResult();
         }
     }
+
+    @ResponseBody
+    @RequestMapping(value = "excel/import", method = RequestMethod.POST)
+    @ApiOperation(httpMethod = "POST", response = Map.class, responseContainer = "Map", value = "上传excel")
+    public Map<String, Object> importPerson(@RequestParam(required = true) MultipartFile file) {
+        try {
+            List<Person> persons = personService.readExcelPersons(file);
+            return GenResult.SUCCESS.genResult(persons);
+        } catch (Exception e) {
+            LogUtil.error(e);
+            return GenResult.UNKNOWN_ERROR.genResult();
+        }
+    }
 }
