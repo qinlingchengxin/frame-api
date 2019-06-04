@@ -27,14 +27,14 @@ public class HttpsUtil {
     private static final String METHOD_POST = "POST";
 
     private static final String CONTENT_TYPE_URL_ENCODED = "application/x-www-form-urlencoded";
-    private static final String CONTENT_TYPE_TEXT_JSON = "text/json";
+    private static final String CONTENT_TYPE_APP_JSON = "application/json";
     private static final String CONTENT_TYPE_TEXT_XML = "text/xml";
     private static final String CONTENT_TYPE_APP_XML = "application/xml";
     private static final String CONTENT_TYPE_FORM_DATA = "multipart/form-data; boundary=" + BOUNDARY;
 
     public static HttpResponse doGet(String address) throws IOException {
 
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         HttpResponse response = new HttpResponse();
         try {
             connection = genConnection(address, METHOD_GET, CONTENT_TYPE_URL_ENCODED);
@@ -54,7 +54,7 @@ public class HttpsUtil {
     public static HttpResponse doPost(String address, Map<String, Object> params) throws IOException {
 
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_URL_ENCODED);
@@ -84,7 +84,7 @@ public class HttpsUtil {
 
     public static HttpResponse doPostTextXml(String address, String xml) throws IOException {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_TEXT_XML);
@@ -112,7 +112,7 @@ public class HttpsUtil {
 
     public static HttpResponse doPostAppXml(String address, String xml) throws IOException {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_APP_XML);
@@ -140,10 +140,10 @@ public class HttpsUtil {
 
     public static HttpResponse doPostJson(String address, String json) throws IOException {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
-            connection = genConnection(address, METHOD_POST, CONTENT_TYPE_TEXT_JSON);
+            connection = genConnection(address, METHOD_POST, CONTENT_TYPE_APP_JSON);
 
             byte[] data = json.getBytes(ENCODING);
             connection.setRequestProperty("Content-Length", String.valueOf(data.length));
@@ -168,7 +168,7 @@ public class HttpsUtil {
 
     public static HttpResponse doPostFormData(String address, Map<String, String> params) throws IOException {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_FORM_DATA);
@@ -198,7 +198,7 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpURLConnection genConnection(String address, String method, String contentType) throws IOException, NoSuchProviderException, NoSuchAlgorithmException, KeyManagementException {
+    public static HttpsURLConnection genConnection(String address, String method, String contentType) throws IOException, NoSuchProviderException, NoSuchAlgorithmException, KeyManagementException {
         URL url = new URL(address);
 
         HttpsURLConnection.setDefaultHostnameVerifier(ignoreHostnameVerifier);

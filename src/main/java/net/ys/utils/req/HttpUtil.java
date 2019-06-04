@@ -21,7 +21,7 @@ public class HttpUtil {
     private static final String METHOD_POST = "POST";
 
     private static final String CONTENT_TYPE_URL_ENCODED = "application/x-www-form-urlencoded";
-    private static final String CONTENT_TYPE_TEXT_JSON = "text/json";
+    private static final String CONTENT_TYPE_APP_JSON = "application/json";
     private static final String CONTENT_TYPE_TEXT_XML = "text/xml";
     private static final String CONTENT_TYPE_APP_XML = "application/xml";
     private static final String CONTENT_TYPE_FORM_DATA = "multipart/form-data; boundary=" + BOUNDARY;
@@ -137,7 +137,7 @@ public class HttpUtil {
         HttpURLConnection connection = null;
         OutputStream out = null;
         try {
-            connection = genConnection(address, METHOD_POST, CONTENT_TYPE_TEXT_JSON);
+            connection = genConnection(address, METHOD_POST, CONTENT_TYPE_APP_JSON);
 
             byte[] data = json.getBytes(ENCODING);
             connection.setRequestProperty("Content-Length", String.valueOf(data.length));
