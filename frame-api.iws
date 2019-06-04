@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="update">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtilProxy.java" />
+    <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpsUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/utils/SmsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/utils/SmsUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
     </list>
     <ignored path="frame-api.iws" />
@@ -21,7 +18,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628001584" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629139948" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629716093" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556935473858" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -267,7 +264,7 @@
     <file path="/SmsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628582995" ignored="false" />
     <file path="/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629086400" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559627186426" ignored="false" />
-    <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628290054" ignored="false" />
+    <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629681982" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628982676" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/SmsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629060478" ignored="false" />
     <file path="/HttpUtilProxy.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559627891613" ignored="false" />
@@ -277,6 +274,11 @@
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/LogUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628290054" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/HttpClientUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628290054" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/controller/UserController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628290054" ignored="false" />
+    <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/req/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629491704" ignored="false" />
+    <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/req/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629701392" ignored="false" />
+    <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/req/HttpUtilProxy.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629491704" ignored="false" />
+    <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/req/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629491704" ignored="false" />
+    <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/SmsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629568205" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +361,7 @@
       <file leaf-file-name="HttpUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="44" selection-start="7803" selection-end="7803" vertical-scroll-proportion="0.0">
+            <state line="206" column="51" selection-start="8189" selection-end="8189" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -374,10 +376,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmsUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SmsUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/SmsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="40" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.54545456">
+            <state line="35" column="51" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -392,10 +394,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpsUtil.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HttpsUtil.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="775" selection-end="816" vertical-scroll-proportion="0.0">
+            <state line="296" column="1" selection-start="11516" selection-end="11516" vertical-scroll-proportion="2.4545455">
               <folding />
             </state>
           </provider>
@@ -404,7 +406,7 @@
       <file leaf-file-name="HttpUtilProxy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtilProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="31" column="30" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -444,8 +446,8 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/SmsUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtilProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpsUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/TTT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java" />
       </list>
     </option>
   </component>
@@ -1576,7 +1578,11 @@
       <created>1559627421743</created>
       <updated>1559627421744</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="update">
+      <created>1559629151404</created>
+      <updated>1559629151404</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1798,27 +1804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="775" selection-end="816" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="44" selection-start="7803" selection-end="7803" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtilProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TTT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
@@ -1828,7 +1813,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/SmsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="40" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.54545456">
+        <state line="35" column="51" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtilProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="30" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="51" selection-start="8189" selection-end="8189" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/utils/req/HttpsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="296" column="1" selection-start="11516" selection-end="11516" vertical-scroll-proportion="2.4545455">
           <folding />
         </state>
       </provider>

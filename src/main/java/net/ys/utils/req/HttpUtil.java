@@ -204,7 +204,7 @@ public class HttpUtil {
         connection.setRequestProperty("Connection", "Keep-Alive");
         connection.setRequestProperty("ENCODING", ENCODING);
         connection.setRequestMethod(method);
-        connection.setRequestProperty("contentType", contentType);
+        connection.setRequestProperty("Content-Type", contentType);
         return connection;
     }
 
