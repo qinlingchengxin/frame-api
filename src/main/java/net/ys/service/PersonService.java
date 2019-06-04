@@ -48,8 +48,8 @@ public class PersonService {
         Workbook wb = new HSSFWorkbook(is);
         Sheet sheet = wb.getSheetAt(0);
         Person person;
-        int num = sheet.getLastRowNum();//默认第一行为标题
-        if (num < 2) {
+        int lastRowNum = sheet.getLastRowNum() + 1;//默认第一行为标题
+        if (lastRowNum < 2) {
             return null;
         }
 
@@ -63,7 +63,7 @@ public class PersonService {
         Cell cell;
         String val;
 
-        for (int k = 1, n = sheet.getLastRowNum(); k < n; k++) {
+        for (int k = 1; k < lastRowNum; k++) {
             person = new Person();
 
             row = sheet.getRow(k);
