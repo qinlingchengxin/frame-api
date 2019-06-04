@@ -16,6 +16,7 @@ public class HttpUtil {
     private static final String HH = "\r\n";
     private static final String HHM = "\r\n\r\n";
     private static final String HG = "--";
+    private static final int TIMEOUT = 20000;
 
     private static final String METHOD_GET = "GET";
     private static final String METHOD_POST = "POST";
@@ -26,7 +27,7 @@ public class HttpUtil {
     private static final String CONTENT_TYPE_APP_XML = "application/xml";
     private static final String CONTENT_TYPE_FORM_DATA = "multipart/form-data; boundary=" + BOUNDARY;
 
-    public static HttpResponse doGet(String address)   {
+    public static HttpResponse doGet(String address) {
 
         HttpURLConnection connection = null;
         HttpResponse response = new HttpResponse();
@@ -76,7 +77,7 @@ public class HttpUtil {
         return response;
     }
 
-    public static HttpResponse doPostTextXml(String address, String xml)   {
+    public static HttpResponse doPostTextXml(String address, String xml) {
         HttpResponse response = new HttpResponse();
         HttpURLConnection connection = null;
         OutputStream out = null;
@@ -104,7 +105,7 @@ public class HttpUtil {
         return response;
     }
 
-    public static HttpResponse doPostAppXml(String address, String xml)   {
+    public static HttpResponse doPostAppXml(String address, String xml) {
         HttpResponse response = new HttpResponse();
         HttpURLConnection connection = null;
         OutputStream out = null;
@@ -132,7 +133,7 @@ public class HttpUtil {
         return response;
     }
 
-    public static HttpResponse doPostJson(String address, String json)   {
+    public static HttpResponse doPostJson(String address, String json) {
         HttpResponse response = new HttpResponse();
         HttpURLConnection connection = null;
         OutputStream out = null;
@@ -160,7 +161,7 @@ public class HttpUtil {
         return response;
     }
 
-    public static HttpResponse doPostFormData(String address, Map<String, String> params)   {
+    public static HttpResponse doPostFormData(String address, Map<String, String> params) {
         HttpResponse response = new HttpResponse();
         HttpURLConnection connection = null;
         OutputStream out = null;
@@ -195,8 +196,8 @@ public class HttpUtil {
     public static HttpURLConnection genConnection(String address, String method, String contentType) throws IOException {
         URL url = new URL(address);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setConnectTimeout(20000);
-        connection.setReadTimeout(20000);
+        connection.setConnectTimeout(TIMEOUT);
+        connection.setReadTimeout(TIMEOUT);
         connection.setDoInput(true);
         connection.setDoOutput(true);
         connection.setUseCaches(false);

@@ -22,6 +22,7 @@ public class HttpsUtil {
     private static final String HH = "\r\n";
     private static final String HHM = "\r\n\r\n";
     private static final String HG = "--";
+    private static final int TIMEOUT = 20000;
 
     private static final String METHOD_GET = "GET";
     private static final String METHOD_POST = "POST";
@@ -209,15 +210,15 @@ public class HttpsUtil {
         SSLSocketFactory ssf = sslContext.getSocketFactory();
         connection.setSSLSocketFactory(ssf);
 
-        connection.setConnectTimeout(20000);
-        connection.setReadTimeout(20000);
+        connection.setConnectTimeout(TIMEOUT);
+        connection.setReadTimeout(TIMEOUT);
         connection.setDoInput(true);
         connection.setDoOutput(true);
         connection.setUseCaches(false);
         connection.setRequestProperty("Connection", "Keep-Alive");
         connection.setRequestProperty("ENCODING", ENCODING);
         connection.setRequestMethod(method);
-        connection.setRequestProperty("contentType", contentType);
+        connection.setRequestProperty("Content-Type", contentType);
         return connection;
     }
 
