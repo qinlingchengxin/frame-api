@@ -25,7 +25,7 @@ public class JobService {
     /**
      * 通过注解实现，此种方式不可配
      */
-    @Scheduled(cron = "0/5 */10 * * * ?")
+    @Scheduled(cron = "0 */10 * * * ?")
     public void code() {
         System.out.println("job code:" + System.currentTimeMillis());
     }

@@ -4,6 +4,7 @@ import net.ys.util.PropertyUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -20,9 +21,15 @@ public class SysConfig {
 
     public static String pushAppKey;
 
+    public static String dingTalkUrl;
+
+    public static String testPath;
+
     public static int apiAccessTimeLimit;
 
-    public static String dingTalkUrl;
+    public static int smsMaxNumDay;
+
+    public static int smsEffectiveTime;
 
     public static String[] testName;
 
@@ -46,9 +53,32 @@ public class SysConfig {
         this.apiAccessTimeLimit = apiAccessTimeLimit;
     }
 
+    @Value("${sms_max_num_day}")
+    public void setSmsMaxNumDay(int smsMaxNumDay) {
+        this.smsMaxNumDay = smsMaxNumDay;
+    }
+
+    @Value("${sms_effective_time}")
+    public void setSmsEffectiveTime(int smsEffectiveTime) {
+        this.smsEffectiveTime = smsEffectiveTime;
+    }
+
     @Value("${ding_talk_url}")
     public void setDingTalkUrl(String dingTalkUrl) {
         this.dingTalkUrl = dingTalkUrl;
+    }
+
+    @Value("${test_path}")
+    public void setTestPath(String testPath) {
+        this.testPath = testPath;
+        File file = new File(this.testPath);
+        if (!file.exists()) {
+            if (!file.mkdirs()) {
+                throw new RuntimeException("testPath is invalid");
+            }
+        }
+        String absolutePath = file.getAbsolutePath();
+        this.testPath = absolutePath.replaceAll("\\\\", "/") + "/";
     }
 
     @Value("${testName:test.name.*}")

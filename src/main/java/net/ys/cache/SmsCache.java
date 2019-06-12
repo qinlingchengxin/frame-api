@@ -1,11 +1,11 @@
 package net.ys.cache;
 
+import net.ys.component.SysConfig;
 import net.ys.constant.CacheKey;
 import net.ys.constant.X;
 import net.ys.storage.RedsExecutor;
 import net.ys.storage.RedsRunner;
 import net.ys.storage.RedsServer;
-import net.ys.util.PropertyUtil;
 import net.ys.util.TimeUtil;
 import net.ys.util.Tools;
 import org.springframework.stereotype.Repository;
@@ -13,23 +13,12 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 
-import javax.annotation.PostConstruct;
-
 /**
  * User: LiWenC
  * Date: 16-11-21
  */
 @Repository
 public class SmsCache {
-
-    public int phoneMaxNumDay;//每天发送限制
-    public int smsEffectiveTime;//短信有效时间
-
-    @PostConstruct
-    public void init() {
-        phoneMaxNumDay = Integer.parseInt(PropertyUtil.get("sms_max_num_day"));
-        smsEffectiveTime = Integer.parseInt(PropertyUtil.get("sms_effective_time")) * X.Time.MINUTE_SECOND;
-    }
 
     /**
      * 发送短信
@@ -44,7 +33,7 @@ public class SmsCache {
             public Boolean run(Jedis jedis) throws JedisConnectionException {
                 Pipeline pipeline = jedis.pipelined();
                 pipeline.set(CacheKey.PHONE_KEY + phone, smsCode);
-                pipeline.expire(CacheKey.PHONE_KEY + phone, smsEffectiveTime);
+                pipeline.expire(CacheKey.PHONE_KEY + phone, SysConfig.smsEffectiveTime);
                 pipeline.incr(CacheKey.PHONE_DAY_KEY + phone);
                 pipeline.expire(CacheKey.PHONE_DAY_KEY + phone, TimeUtil.todayRemainingSecond());
                 pipeline.sync();
@@ -64,7 +53,7 @@ public class SmsCache {
         RedsRunner<Boolean> rr = new RedsRunner<Boolean>() {
             @Override
             public Boolean run(Jedis jedis) throws JedisConnectionException {
-                return jedis.incr(CacheKey.PHONE_DAY_KEY + phone) <= phoneMaxNumDay;
+                return jedis.incr(CacheKey.PHONE_DAY_KEY + phone) <= SysConfig.smsMaxNumDay;
             }
         };
         return new RedsExecutor<Boolean>().exe(rr, RedsServer.MASTER);
