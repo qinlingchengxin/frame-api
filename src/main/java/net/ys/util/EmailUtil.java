@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;

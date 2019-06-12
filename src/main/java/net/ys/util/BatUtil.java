@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import org.apache.commons.net.telnet.TelnetClient;
 

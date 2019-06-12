@@ -1,9 +1,9 @@
-package net.ys.utils;
+package net.ys.util;
 
 import net.sf.json.JSONObject;
 import net.ys.constant.X;
-import net.ys.utils.req.HttpResponse;
-import net.ys.utils.req.HttpUtilProxy;
+import net.ys.util.req.HttpResponse;
+import net.ys.util.req.HttpUtilProxy;
 
 import java.util.HashMap;
 import java.util.Map;

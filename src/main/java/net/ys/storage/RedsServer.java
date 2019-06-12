@@ -1,6 +1,6 @@
 package net.ys.storage;
 
-import net.ys.utils.PropertyUtil;
+import net.ys.util.PropertyUtil;
 import redis.clients.jedis.JedisPoolConfig;
 
 

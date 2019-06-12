@@ -1,7 +1,7 @@
-package net.ys.utils.rsa;
+package net.ys.util.rsa;
 
 import net.ys.constant.X;
-import net.ys.utils.Base64Util;
+import net.ys.util.Base64Util;
 
 import javax.crypto.Cipher;
 import java.io.ByteArrayOutputStream;

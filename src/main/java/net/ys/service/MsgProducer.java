@@ -1,6 +1,6 @@
 package net.ys.service;
 
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 import org.msgpack.MessagePack;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Message;

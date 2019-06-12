@@ -1,4 +1,4 @@
-package net.ys.utils.req;
+package net.ys.util.req;
 
 /**
  * User: NMY

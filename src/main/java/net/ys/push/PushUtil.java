@@ -15,7 +15,7 @@ import cn.jpush.api.push.model.notification.AndroidNotification;
 import cn.jpush.api.push.model.notification.IosNotification;
 import cn.jpush.api.push.model.notification.Notification;
 import net.ys.component.SysConfig;
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpStatus;
 

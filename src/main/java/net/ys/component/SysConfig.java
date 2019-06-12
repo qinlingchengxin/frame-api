@@ -1,6 +1,6 @@
 package net.ys.component;
 
-import net.ys.utils.PropertyUtil;
+import net.ys.util.PropertyUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -22,6 +22,8 @@ public class SysConfig {
 
     public static int apiAccessTimeLimit;
 
+    public static String dingTalkUrl;
+
     public static String[] testName;
 
     @Value("${app.name}")
@@ -42,6 +44,11 @@ public class SysConfig {
     @Value("${api.access.time.limit}")
     public void setApiAccessTimeLimit(int apiAccessTimeLimit) {
         this.apiAccessTimeLimit = apiAccessTimeLimit;
+    }
+
+    @Value("${ding_talk_url}")
+    public void setDingTalkUrl(String dingTalkUrl) {
+        this.dingTalkUrl = dingTalkUrl;
     }
 
     @Value("${testName:test.name.*}")

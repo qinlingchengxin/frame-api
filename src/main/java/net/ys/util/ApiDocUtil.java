@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import com.google.common.collect.Maps;
 import io.swagger.annotations.Api;

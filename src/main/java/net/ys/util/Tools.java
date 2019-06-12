@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import net.sf.json.JSONObject;
 import net.ys.constant.SysRegex;

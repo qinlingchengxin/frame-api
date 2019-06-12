@@ -1,15 +1,21 @@
-package net.ys.utils.req;
+package net.ys.util.req;
 
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 
+import javax.net.ssl.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.Map;
 
-public class HttpUtil {
+public class HttpsUtil {
 
     private static final String BOUNDARY = "----------HV2ymHFg03ehbqgZCaKO6jyH";
     private static final String ENCODING = "UTF-8";
@@ -29,7 +35,7 @@ public class HttpUtil {
 
     public static HttpResponse doGet(String address) {
 
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         HttpResponse response = new HttpResponse();
         try {
             connection = genConnection(address, METHOD_GET, CONTENT_TYPE_URL_ENCODED);
@@ -49,7 +55,7 @@ public class HttpUtil {
     public static HttpResponse doPost(String address, Map<String, Object> params) {
 
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_URL_ENCODED);
@@ -79,7 +85,7 @@ public class HttpUtil {
 
     public static HttpResponse doPostTextXml(String address, String xml) {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_TEXT_XML);
@@ -107,7 +113,7 @@ public class HttpUtil {
 
     public static HttpResponse doPostAppXml(String address, String xml) {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_APP_XML);
@@ -135,7 +141,7 @@ public class HttpUtil {
 
     public static HttpResponse doPostJson(String address, String json) {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_APP_JSON);
@@ -163,7 +169,7 @@ public class HttpUtil {
 
     public static HttpResponse doPostFormData(String address, Map<String, String> params) {
         HttpResponse response = new HttpResponse();
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_FORM_DATA);
@@ -193,9 +199,17 @@ public class HttpUtil {
         return response;
     }
 
-    public static HttpURLConnection genConnection(String address, String method, String contentType) throws IOException {
+    public static HttpsURLConnection genConnection(String address, String method, String contentType) throws IOException, NoSuchProviderException, NoSuchAlgorithmException, KeyManagementException {
         URL url = new URL(address);
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        HttpsURLConnection.setDefaultHostnameVerifier(ignoreHostnameVerifier);
+        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+        TrustManager[] tm = {ignoreCertificationTrustManger};
+        SSLContext sslContext = SSLContext.getInstance("SSL", "SunJSSE");
+        sslContext.init(null, tm, new java.security.SecureRandom());
+        SSLSocketFactory ssf = sslContext.getSocketFactory();
+        connection.setSSLSocketFactory(ssf);
+
         connection.setConnectTimeout(TIMEOUT);
         connection.setReadTimeout(TIMEOUT);
         connection.setDoInput(true);
@@ -241,6 +255,43 @@ public class HttpUtil {
                 connection.disconnect();
             }
         } catch (Exception e) {
+        }
+    }
+
+    private static HostnameVerifier ignoreHostnameVerifier = new HostnameVerifier() {
+        public boolean verify(String s, SSLSession sslsession) {
+            return true;
+        }
+    };
+
+    private static TrustManager ignoreCertificationTrustManger = new X509TrustManager() {
+        private X509Certificate[] certificates;
+
+        @Override
+        public void checkClientTrusted(X509Certificate certificates[], String authType) throws CertificateException {
+            if (this.certificates == null) {
+                this.certificates = certificates;
+            }
+        }
+
+        @Override
+        public void checkServerTrusted(X509Certificate[] ax509certificate, String s) throws CertificateException {
+            if (this.certificates == null) {
+                this.certificates = ax509certificate;
+            }
+        }
+
+        @Override
+        public X509Certificate[] getAcceptedIssuers() {
+            return null;
+        }
+    };
+
+    public static void main(String[] args) throws IOException {
+        String urlString = "https://www.hbggzyfwpt.cn/admin/web/admin/login.do";
+        HttpResponse response = HttpsUtil.doGet(urlString);
+        if (response.getCode() == 200) {
+            System.out.println(response.getValue());
         }
     }
 }

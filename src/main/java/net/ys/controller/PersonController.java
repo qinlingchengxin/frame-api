@@ -3,7 +3,7 @@ package net.ys.controller;
 import net.ys.bean.Person;
 import net.ys.constant.GenResult;
 import net.ys.service.PersonService;
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

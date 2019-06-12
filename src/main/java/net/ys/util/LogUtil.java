@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import org.apache.log4j.Logger;
 

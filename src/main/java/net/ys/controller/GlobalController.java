@@ -2,8 +2,8 @@ package net.ys.controller;
 
 import net.sf.jxls.transformer.XLSTransformer;
 import net.ys.constant.GenResult;
-import net.ys.utils.ApiDocUtil;
-import net.ys.utils.LogUtil;
+import net.ys.util.ApiDocUtil;
+import net.ys.util.LogUtil;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

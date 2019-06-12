@@ -1,4 +1,4 @@
-package net.ys.utils.rsa;
+package net.ys.util.rsa;
 
 /**
  * User: NMY

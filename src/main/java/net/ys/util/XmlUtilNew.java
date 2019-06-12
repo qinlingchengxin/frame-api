@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import com.thoughtworks.xstream.XStream;
 
@@ -18,7 +18,7 @@ public class XmlUtilNew {
         XStream.setupDefaultSecurity(xStream);
         xStream.allowTypes(new Class[]{XmlBean.class});
 
-        xStream.alias("xmlBean", XmlBean.class);//给类名起个别名  <net.ys.utils.XmlUtilNew_-XmlBean> 变成 <xmlBean>
+        xStream.alias("xmlBean", XmlBean.class);//给类名起个别名
 
         XmlBean xmlBean = new XmlBean(1, "hello world", System.currentTimeMillis());
         String s = xStream.toXML(xmlBean);

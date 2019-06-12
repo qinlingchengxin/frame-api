@@ -1,4 +1,4 @@
-package net.ys.utils.rsa;
+package net.ys.util.rsa;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;

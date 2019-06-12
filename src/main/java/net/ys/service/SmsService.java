@@ -2,7 +2,7 @@ package net.ys.service;
 
 import net.ys.cache.SmsCache;
 import net.ys.dao.SmsDao;
-import net.ys.utils.SmsUtil;
+import net.ys.util.SmsUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

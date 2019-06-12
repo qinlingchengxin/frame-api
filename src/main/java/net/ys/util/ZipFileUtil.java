@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Zip;

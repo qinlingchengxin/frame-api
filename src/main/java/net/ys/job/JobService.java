@@ -1,7 +1,7 @@
 package net.ys.job;
 
 import net.ys.threadpool.ThreadPoolManager;
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 

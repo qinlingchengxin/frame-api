@@ -1,6 +1,6 @@
 package net.ys.storage;
 
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.exceptions.JedisException;

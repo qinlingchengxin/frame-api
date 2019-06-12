@@ -1,4 +1,4 @@
-package net.ys.utils;
+package net.ys.util;
 
 import java.util.ArrayList;
 import java.util.Enumeration;

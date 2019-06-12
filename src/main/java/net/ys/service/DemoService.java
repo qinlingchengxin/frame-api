@@ -2,7 +2,7 @@ package net.ys.service;
 
 import net.ys.constant.MsgKey;
 import net.ys.threadpool.ThreadPoolManager;
-import net.ys.utils.LogUtil;
+import net.ys.util.LogUtil;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.GetMethod;

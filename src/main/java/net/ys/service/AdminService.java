@@ -2,7 +2,7 @@ package net.ys.service;
 
 import net.ys.bean.SysAdmin;
 import net.ys.dao.SysAdminDao;
-import net.ys.utils.Tools;
+import net.ys.util.Tools;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
