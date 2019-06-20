@@ -4,15 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
-    <!--通过代码解决实现，不可配-->
+    <!--通过代码解决实现-->
     <task:annotation-driven/>
-    <!--通过代码解决实现，不可配-->
+    <!--通过代码解决实现-->
 
     <task:scheduler id="qbScheduler" pool-size="15"/>
 
     <task:scheduled-tasks scheduler="qbScheduler">
 
-        <task:scheduled ref="jobService" method="test" cron="5 1 0 * * ?"/>
+        <task:scheduled ref="jobService" method="test" cron="5 * * * * ?"/>
 
     </task:scheduled-tasks>
 </beans>

@@ -22,6 +22,6 @@
     <import resource="application-db.xml"/>
 
     <import resource="application-mq.xml"/>
-       
+
     <import resource="application-aop.xml"/>
 </beans>
