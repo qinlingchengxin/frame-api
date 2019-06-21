@@ -501,24 +501,14 @@
                 <package.environment>prod</package.environment>
             </properties>
         </profile>
-
-        <profile>
-            <id>test</id>
-            <properties>
-                <package.environment>test</package.environment>
-            </properties>
-        </profile>
     </profiles>
 
     <build>
-        <finalName>frame-api</finalName>
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <excludes>
                     <exclude>prod/*</exclude>
-                    <exclude>test/*</exclude>
                 </excludes>
             </resource>
         </resources>

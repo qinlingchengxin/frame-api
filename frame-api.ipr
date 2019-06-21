@@ -5,7 +5,7 @@
   </component>
   <component name="ArtifactManager">
     <artifact type="exploded-war" build-on-make="true" name="frame-api:war exploded">
-      <output-path>$PROJECT_DIR$/target/frame-api</output-path>
+      <output-path>$PROJECT_DIR$/target/frame-api-1.0-SNAPSHOT</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="frame-api/web/Web" />
         <element id="directory" name="WEB-INF">
@@ -132,7 +132,7 @@
     </artifact>
     <artifact type="war" name="frame-api:war">
       <output-path>$PROJECT_DIR$/target</output-path>
-      <root id="archive" name="frame-api.war">
+      <root id="archive" name="frame-api-1.0-SNAPSHOT.war">
         <element id="artifact" artifact-name="frame-api:war exploded" />
       </root>
     </artifact>

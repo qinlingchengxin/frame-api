@@ -33,22 +33,22 @@ public class SysConfig {
 
     public static String[] testName;
 
-    @Value("${app.name}")
+    @Value("${app_name}")
     public void setAppName(String appName) {
         this.appName = appName;
     }
 
-    @Value("${push.master.secret}")
+    @Value("${push_master_secret}")
     public void setPushMasterSecret(String pushMasterSecret) {
         this.pushMasterSecret = pushMasterSecret;
     }
 
-    @Value("${push.app.key}")
+    @Value("${push_app_key}")
     public void setPushAppKey(String pushAppKey) {
         this.pushAppKey = pushAppKey;
     }
 
-    @Value("${api.access.time.limit}")
+    @Value("${api_access_time_limit}")
     public void setApiAccessTimeLimit(int apiAccessTimeLimit) {
         this.apiAccessTimeLimit = apiAccessTimeLimit;
     }
@@ -81,7 +81,7 @@ public class SysConfig {
         this.testPath = absolutePath.replaceAll("\\\\", "/") + "/";
     }
 
-    @Value("${testName:test.name.*}")
+    @Value("${testName:test_name.*}")
     public void setTestName(String[] testName) {
         String prefix = testName[0];
         List<String> nameList = PropertyUtil.gets(prefix.substring(0, prefix.length() - 1));
