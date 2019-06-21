@@ -34,7 +34,7 @@ public class SysConfig {
 
     public static int smsEffectiveTime;
 
-    public static String[] testName;
+    public static List<String> testName;
 
     @Value("${app_name}")
     public void setAppName(String appName) {
@@ -87,8 +87,6 @@ public class SysConfig {
     @Value("${testName:test_name.*}")
     public void setTestName(String[] testName) {
         String prefix = testName[0];
-        List<String> nameList = PropertyUtil.gets(prefix.substring(0, prefix.length() - 1));
-        String[] names = new String[nameList.size()];
-        this.testName = nameList.toArray(names);
+        this.testName = PropertyUtil.gets(prefix.substring(0, prefix.length() - 1));
     }
 }

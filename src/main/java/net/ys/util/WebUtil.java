@@ -71,10 +71,9 @@ public class WebUtil {
      * 获取请求ip地址
      *
      * @param request
-     * @param transLocalIp whether to transfer 127.0.0.1 to real ip
      * @return
      */
-    public static String getClientIP(HttpServletRequest request, boolean transLocalIp) {
+    public static String getClientIP(HttpServletRequest request) {
         String ip = request.getHeader("x-forwarded-for");
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
             ip = request.getHeader("Proxy-Client-IP");
@@ -88,7 +87,7 @@ public class WebUtil {
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
             ip = request.getRemoteAddr();
         }
-        if ("127.0.0.1".equals(ip) && transLocalIp) {
+        if ("127.0.0.1".equals(ip)) {
             InetAddress inetAddress = null;
             try {
                 inetAddress = InetAddress.getLocalHost();

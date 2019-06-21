@@ -120,6 +120,35 @@ public class Tools {
     }
 
     /**
+     * 将下划线类型字符串转换为驼峰标识，eg: create_time -> createTime
+     *
+     * @param resource
+     * @return
+     */
+    public static String camelFormat(String resource) {
+        if (resource != null && resource.trim().length() > 0) {
+            String[] strings = resource.split("_");
+            if (strings.length > 1) {
+                StringBuffer sb = new StringBuffer();
+                sb.append(strings[0].toLowerCase());
+                for (int i = 1; i < strings.length; i++) {
+                    sb.append(firstToUpperCase(strings[i]));
+                }
+                return sb.toString();
+            } else {
+                return strings[0].toLowerCase();
+            }
+        }
+        return "";
+    }
+
+    public static String firstToUpperCase(String str) {
+        char[] chars = str.toCharArray();
+        chars[0] -= 32;
+        return String.valueOf(chars);
+    }
+
+    /**
      * 转换文件大小
      *
      * @param fileSize 字节
