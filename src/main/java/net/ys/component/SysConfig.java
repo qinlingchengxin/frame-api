@@ -1,5 +1,6 @@
 package net.ys.component;
 
+import net.ys.constant.X;
 import net.ys.util.PropertyUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,8 @@ import java.util.List;
  */
 @Component
 public class SysConfig {
+
+    public static boolean validApiParameter = false;//是否对api参数进行安全校验
 
     public static String appName;
 
@@ -50,7 +53,7 @@ public class SysConfig {
 
     @Value("${api_access_time_limit}")
     public void setApiAccessTimeLimit(int apiAccessTimeLimit) {
-        this.apiAccessTimeLimit = apiAccessTimeLimit;
+        this.apiAccessTimeLimit = apiAccessTimeLimit * X.Time.MINUTE_SECOND;
     }
 
     @Value("${sms_max_num_day}")

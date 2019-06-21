@@ -2,7 +2,7 @@ package net.ys.constant;
 
 /**
  * 系统正则
- * User: LiWenC
+ * User: NMY
  * Date: 17-6-20
  */
 public enum SysRegex {

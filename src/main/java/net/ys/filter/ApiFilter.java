@@ -8,24 +8,19 @@ import net.ys.constant.X;
 import net.ys.util.Tools;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
 
-//@WebFilter(urlPatterns = "/api/*")
+@WebFilter(urlPatterns = "/api/*")
 public final class ApiFilter implements Filter {
 
     String pk = "4c4e6c7120ad4748";
 
     BaseCache baseCache;
-    int timeLimit;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         baseCache = AppContextUtil.getBean("baseCache", BaseCache.class);
-        timeLimit = SysConfig.apiAccessTimeLimit * X.Time.MINUTE_SECOND;
     }
 
     @Override
@@ -41,45 +36,23 @@ public final class ApiFilter implements Filter {
     }
 
     boolean validParams(ServletRequest request) {
-        List<String> params = new ArrayList<String>();
 
-        Enumeration<String> names = request.getParameterNames();
-        String name;
-        int count = 0;
-        while (names.hasMoreElements()) {
-            name = names.nextElement();
-            if (!"sign".equals(name)) {
-                params.add(name);
-            }
-            if ("t".equals(name) || "sign".equals(name)) {//必须存在
-                count++;
-            }
-        }
-        if (count != 2) {
-            return false;
-        }
-        Collections.sort(params);
-
-        String src = "";
-        String value;
-        for (int i = 0; i < params.size(); i++) {
-
-            value = request.getParameter(params.get(i));
-            if (i % 2 == 0) {
-                src += value;
-            } else {
-                src = value + src;
-            }
+        if (!SysConfig.validApiParameter) {
+            return true;
         }
 
-        String md = Tools.genMD5(pk + src + pk);
+        String k = request.getParameter("k");
+        String t = request.getParameter("t");
         String sign = request.getParameter("sign");
 
+        if (!Tools.isNotEmpty(k, t, sign)) {
+            return false;
+        }
+        String md = Tools.genMD5(pk + k + t + pk);
         if (!md.equals(sign)) {
             return false;
         }
-
-        return baseCache.getAccessCount(sign, timeLimit) == 1;
+        return baseCache.getAccessCount(sign, SysConfig.apiAccessTimeLimit) == 1;
     }
 
     @Override

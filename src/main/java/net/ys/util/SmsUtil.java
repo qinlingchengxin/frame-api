@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * 短信工具
- * User: LiWenC
+ * User: NMY
  * Date: 17-5-22
  */
 

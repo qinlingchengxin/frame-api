@@ -2,7 +2,7 @@ package net.ys.constant;
 
 /**
  * 缓存的key键
- * User: LiWenC
+ * User: NMY
  * Date: 17-9-21
  */
 public interface CacheKey {

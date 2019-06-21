@@ -14,7 +14,7 @@ import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 
 /**
- * User: LiWenC
+ * User: NMY
  * Date: 16-11-21
  */
 @Repository
