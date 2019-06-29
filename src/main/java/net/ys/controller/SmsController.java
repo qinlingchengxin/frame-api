@@ -26,7 +26,7 @@ public class SmsController {
     private SmsService smsService;
 
     @ResponseBody
-    @RequestMapping(method = RequestMethod.POST, headers = "Accept=application/json")
+    @RequestMapping(value = "send", method = RequestMethod.POST, headers = "Accept=application/json")
     @ApiOperation(httpMethod = "POST", response = Map.class, responseContainer = "Map", value = "发送短信")
     public Map<String, Object> sendSms(@ApiParam(value = "手机号码", required = true) @RequestParam(value = "phone_num", required = true) String phoneNum) {
         try {
