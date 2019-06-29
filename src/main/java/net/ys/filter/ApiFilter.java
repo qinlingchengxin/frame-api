@@ -5,10 +5,13 @@ import net.ys.component.AppContextUtil;
 import net.ys.component.SysConfig;
 import net.ys.constant.GenResult;
 import net.ys.constant.X;
+import net.ys.util.LogUtil;
 import net.ys.util.Tools;
+import net.ys.util.WebUtil;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @WebFilter(urlPatterns = "/api/*")
@@ -25,14 +28,33 @@ public final class ApiFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        boolean flag = validParams(request);
-        if (!flag) {
+
+        boolean flag = validClient(request);
+
+        if (flag) {
+            flag = validParams(request);
+            if (!flag) {
+                response.setCharacterEncoding(X.Code.U);
+                response.setContentType("application/json; charset=" + X.Code.U);
+                response.getWriter().write(GenResult.REQUEST_INVALID.toJson());
+            } else {
+                chain.doFilter(request, response);
+            }
+        } else {
             response.setCharacterEncoding(X.Code.U);
             response.setContentType("application/json; charset=" + X.Code.U);
-            response.getWriter().write(GenResult.REQUEST_INVALID.toJson());
-        } else {
-            chain.doFilter(request, response);
+            response.getWriter().write(GenResult.REQUEST_IP_INVALID.toJson());
         }
+    }
+
+    private boolean validClient(ServletRequest request) {//ip校验
+        String clientIP = WebUtil.getClientIP((HttpServletRequest) request);
+        LogUtil.debug("access client ip:" + clientIP);
+
+        if (SysConfig.enableWhiteList == 0 || SysConfig.backupServerIp.contains(clientIP)) {
+            return true;
+        }
+        return false;
     }
 
     boolean validParams(ServletRequest request) {

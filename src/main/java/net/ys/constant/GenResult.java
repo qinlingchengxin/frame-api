@@ -27,6 +27,8 @@ public enum GenResult {
 
     SMS_SEND_FREQUENTLY(1008, "sms send frequently"),
 
+    REQUEST_IP_INVALID(1006, "ip not on the list"),
+
     UNKNOWN_ERROR(9999, "unknown error"),;
 
     public int msgCode;

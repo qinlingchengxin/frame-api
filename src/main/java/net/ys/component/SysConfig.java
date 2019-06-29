@@ -18,6 +18,10 @@ public class SysConfig {
 
     public static boolean validApiParameter = false;//是否对api参数进行安全校验
 
+    public static int enableWhiteList;
+
+    public static List<String> backupServerIp;
+
     public static String redsHost;
 
     public static int redsPort;
@@ -43,6 +47,22 @@ public class SysConfig {
     public static int smsEffectiveTime;
 
     public static List<String> testName;
+
+    @Value("${enable.white.list}")
+    public void setEnableWhiteList(int enableWhiteList) {
+        this.enableWhiteList = enableWhiteList;
+    }
+
+    @Value("${valid.api.parameter}")
+    public void setValidApiParameter(int validApiParameter) {
+        this.validApiParameter = validApiParameter == 1;
+    }
+
+    @Value("${backupServerIp:backup.server.ip.*}")
+    public void setBackupServerIp(String[] backupServerIp) {
+        String prefix = backupServerIp[0];
+        this.backupServerIp = PropertyUtil.gets(prefix.substring(0, prefix.length() - 1));
+    }
 
     @Value("${app_name}")
     public void setAppName(String appName) {
