@@ -18,6 +18,14 @@ public class SysConfig {
 
     public static boolean validApiParameter = false;//是否对api参数进行安全校验
 
+    public static String redsHost;
+
+    public static int redsPort;
+
+    public static int redsDatabase;
+
+    public static String redsPassword;
+
     public static String appName;
 
     public static String pushMasterSecret;
@@ -39,6 +47,26 @@ public class SysConfig {
     @Value("${app_name}")
     public void setAppName(String appName) {
         this.appName = appName;
+    }
+
+    @Value("${reds.host}")
+    public void setRedsHost(String redsHost) {
+        this.redsHost = redsHost;
+    }
+
+    @Value("${reds.password}")
+    public void setRedsPassword(String redsPassword) {
+        this.redsPassword = redsPassword;
+    }
+
+    @Value("${reds.port}")
+    public void setRedsPort(int redsPort) {
+        this.redsPort = redsPort;
+    }
+
+    @Value("${reds.database}")
+    public void setRedsDatabase(int redsDatabase) {
+        this.redsDatabase = redsDatabase;
     }
 
     @Value("${push_master_secret}")

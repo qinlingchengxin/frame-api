@@ -1,12 +1,12 @@
 package net.ys.storage;
 
-import net.ys.util.PropertyUtil;
+import net.ys.component.SysConfig;
 import redis.clients.jedis.JedisPoolConfig;
 
 
 public enum RedsServer {
 
-    MASTER(PropertyUtil.get("reds.host"), Integer.parseInt(PropertyUtil.get("reds.port")), Integer.parseInt(PropertyUtil.get("reds.timeout")), PropertyUtil.get("reds.password"), Integer.parseInt(PropertyUtil.get("reds.database")));
+    MASTER(SysConfig.redsHost, SysConfig.redsPort, 3000, SysConfig.redsPassword, SysConfig.redsDatabase);
 
     private String host;
     private int port;
@@ -22,9 +22,9 @@ public enum RedsServer {
         this.password = password;
         this.database = database;
         this.config = new JedisPoolConfig();
-        config.setMaxTotal(Integer.parseInt(PropertyUtil.get("reds.maxTotal")));
-        config.setMaxIdle(Integer.parseInt(PropertyUtil.get("reds.maxIdle")));
-        config.setMaxWaitMillis(Integer.parseInt(PropertyUtil.get("reds.maxWait")));
+        config.setMaxTotal(256);
+        config.setMaxIdle(300);
+        config.setMaxWaitMillis(1000);
         config.setTestOnBorrow(true);
         config.setTestWhileIdle(true);
         config.setTestOnReturn(true);
