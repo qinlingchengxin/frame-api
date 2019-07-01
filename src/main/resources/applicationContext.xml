@@ -15,6 +15,8 @@
         <property name="locations">
             <value>classpath:config.properties</value>
         </property>
+        <!--默认以UTF-8编码读取配置文件-->
+        <property name="fileEncoding" value="UTF-8"/>
     </bean>
 
     <import resource="application-quartz.xml"/>
