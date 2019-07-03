@@ -129,7 +129,7 @@ public class SysConfig {
             }
         }
         String absolutePath = file.getAbsolutePath();
-        this.testPath = absolutePath.replaceAll("\\\\", "/") + "/";
+        this.testPath = absolutePath.replace('\\', '/') + "/";
     }
 
     @Value("${testName:test_name.*}")
