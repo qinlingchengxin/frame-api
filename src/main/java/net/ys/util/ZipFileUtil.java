@@ -1,14 +1,15 @@
 package net.ys.util;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Zip;
 import org.apache.tools.ant.types.FileSet;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class ZipFileUtil {
@@ -146,6 +147,37 @@ public class ZipFileUtil {
         File[] files = dir.listFiles();
         for (File file : files) {
             compress(file, out, basedir + dir.getName() + "/");
+        }
+    }
+
+    /**
+     * 读取zip文件并拷贝到指定目录
+     *
+     * @param srcPath
+     * @param desPath
+     */
+    public static void readZipFile(String srcPath, String desPath) {
+        try {
+            ZipFile zf = new ZipFile(srcPath);
+            Charset gbk = Charset.forName("gbk");
+            ZipInputStream zin = new ZipInputStream(new FileInputStream(srcPath), gbk);
+            ZipEntry ze;
+            String tempPath;
+            while ((ze = zin.getNextEntry()) != null) {
+                tempPath = desPath + "/" + ze.toString();
+                File file = new File(tempPath);
+                if (tempPath.endsWith("/")) {
+                    if (!file.exists()) {
+                        file.mkdirs();
+                    }
+                    continue;
+                }
+                InputStream stream = zf.getInputStream(ze);
+                FileUtils.copyInputStreamToFile(stream, file);
+            }
+            zin.closeEntry();
+        } catch (Exception e) {
+            LogUtil.error(e);
         }
     }
 
