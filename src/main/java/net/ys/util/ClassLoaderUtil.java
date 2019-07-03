@@ -1,5 +1,7 @@
 package net.ys.util;
 
+import net.ys.bean.Person;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -34,14 +36,21 @@ public class ClassLoaderUtil extends ClassLoader {
             fullName = fullName.replaceAll("\\.", "/");
             FileInputStream is = new FileInputStream(new File(path + fullName + ".class"));
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
-            int b;
-            while ((b = is.read()) != -1) {
-                bos.write(b);
+            byte[] bytes = new byte[1024];
+            int len;
+            while ((len = is.read(bytes)) > 0) {
+                bos.write(bytes, 0, len);
             }
             is.close();
             return bos.toByteArray();
         } catch (Exception e) {
         }
         return null;
+    }
+
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        Class<?> person = getInstance().loadClass(Person.class.getName());
+        Object o = person.newInstance();
+        System.out.println(o.toString());
     }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/ClassLoaderUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/ClassLoaderUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/ClassLoaderUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
     </list>
     <ignored path="frame-api.iws" />
@@ -18,7 +18,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562124424450" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562123706164" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562126504070" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559641047642" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -331,7 +331,7 @@
     <file path="$PROJECT_DIR$/../encode/src/main/resources/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561951339419" ignored="false" />
     <file path="$PROJECT_DIR$/../encode/encode.iws" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561949694368" ignored="false" />
     <file path="$PROJECT_DIR$/../encode/src/main/java/Test.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561951657148" ignored="false" />
-    <file path="/ClassLoaderUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562126224881" ignored="false" />
+    <file path="/ClassLoaderUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562127072775" ignored="false" />
     <file path="/ClassUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562124027976" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/transfer/src/test/java/MyClassLoader.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562125659709" ignored="false" />
     <file path="/MyClassLoader.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562125010039" ignored="false" />
@@ -478,7 +478,7 @@
       <file leaf-file-name="ClassLoaderUtil.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/ClassLoaderUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="9" selection-start="1367" selection-end="1367" vertical-scroll-proportion="1.4144737">
+            <state line="52" column="40" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.95791245">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -949,7 +949,7 @@
       <recent name="E:\workspace_idea\frame-api\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClassUtil">
+  <component name="RunManager" selected="Application.ClassLoaderUtil">
     <configuration default="false" name="TTT" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TTT" />
@@ -970,28 +970,6 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HttpUtilProxy" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="net.ys.utils.req.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="net.ys.utils.req.HttpUtilProxy" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="frame-api" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1058,6 +1036,28 @@
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClassLoaderUtil" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="net.ys.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="net.ys.util.ClassLoaderUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="frame-api" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1261,18 +1261,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.8080" />
       <item index="1" class="java.lang.String" itemvalue="Application.TTT" />
-      <item index="2" class="java.lang.String" itemvalue="Application.HttpUtilProxy" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TTTT" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Tools" />
-      <item index="5" class="java.lang.String" itemvalue="Application.ClassUtil" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TTTT" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Tools" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ClassUtil" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ClassLoaderUtil" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ClassUtil" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TTT" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Tools" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TTTT" />
-        <item index="4" class="java.lang.String" itemvalue="Application.HttpUtilProxy" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ClassLoaderUtil" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ClassUtil" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TTT" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Tools" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TTTT" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1747,7 +1747,11 @@
       <created>1562119273366</created>
       <updated>1562119273366</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="&lt;!--默认以UTF-8编码读取配置文件--&gt;&#10;        &lt;property name=&quot;fileEncoding&quot; value=&quot;UTF-8&quot;/&gt;">
+      <created>1562126507513</created>
+      <updated>1562126507513</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1779,7 +1783,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09017341" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09017341" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1792,8 +1796,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15361077" sideWeight="0.84890425" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19645043" sideWeight="0.9098266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28208092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19645043" sideWeight="0.71791905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28208092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28323698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2015,7 +2019,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/ClassLoaderUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="9" selection-start="1367" selection-end="1367" vertical-scroll-proportion="1.4144737">
+        <state line="52" column="40" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.95791245">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
