@@ -1,6 +1,7 @@
 package net.ys.util;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Zip;
 import org.apache.tools.ant.types.FileSet;
@@ -157,10 +158,14 @@ public class ZipFileUtil {
      * @param desPath
      */
     public static void readZipFile(String srcPath, String desPath) {
+        FileInputStream fileInputStream = null;
+        ZipInputStream zin = null;
+        ZipFile zf = null;
         try {
-            ZipFile zf = new ZipFile(srcPath);
+            zf = new ZipFile(srcPath);
             Charset gbk = Charset.forName("gbk");
-            ZipInputStream zin = new ZipInputStream(new FileInputStream(srcPath), gbk);
+            fileInputStream = new FileInputStream(srcPath);
+            zin = new ZipInputStream(fileInputStream, gbk);
             ZipEntry ze;
             String tempPath;
             while ((ze = zin.getNextEntry()) != null) {
@@ -175,9 +180,20 @@ public class ZipFileUtil {
                 InputStream stream = zf.getInputStream(ze);
                 FileUtils.copyInputStreamToFile(stream, file);
             }
-            zin.closeEntry();
         } catch (Exception e) {
             LogUtil.error(e);
+        } finally {
+            try {
+                IOUtils.closeQuietly(fileInputStream);
+                if (zin != null) {
+                    zin.closeEntry();
+                    zin.close();
+                }
+                if (zf != null) {
+                    zf.close();
+                }
+            } catch (Exception e) {
+            }
         }
     }
 
