@@ -1,5 +1,7 @@
 package net.ys.util.req;
 
+import net.ys.util.LogUtil;
+
 import java.util.Map;
 
 /**
@@ -9,7 +11,7 @@ import java.util.Map;
 public class HttpUtilProxy {
 
     public static HttpResponse doGet(String address) {
-        String protocol = address.substring(0, 5).toLowerCase();
+        String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
             return HttpsUtil.doGet(address);
         }
@@ -17,7 +19,7 @@ public class HttpUtilProxy {
     }
 
     public static HttpResponse doPost(String address, Map<String, Object> params) {
-        String protocol = address.substring(0, 5).toLowerCase();
+        String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
             return HttpsUtil.doPost(address, params);
         }
@@ -25,7 +27,8 @@ public class HttpUtilProxy {
     }
 
     public static HttpResponse doPostTextXml(String address, String xml) {
-        String protocol = address.substring(0, 5).toLowerCase();
+        LogUtil.debug(xml);
+        String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
             return HttpsUtil.doPostTextXml(address, xml);
         }
@@ -33,7 +36,8 @@ public class HttpUtilProxy {
     }
 
     public static HttpResponse doPostAppXml(String address, String xml) {
-        String protocol = address.substring(0, 5).toLowerCase();
+        LogUtil.debug(xml);
+        String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
             return HttpsUtil.doPostAppXml(address, xml);
         }
@@ -41,7 +45,8 @@ public class HttpUtilProxy {
     }
 
     public static HttpResponse doPostJson(String address, String json) {
-        String protocol = address.substring(0, 5).toLowerCase();
+        LogUtil.debug(json);
+        String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
             return HttpsUtil.doPostJson(address, json);
         }
@@ -49,7 +54,7 @@ public class HttpUtilProxy {
     }
 
     public static HttpResponse doPostFormData(String address, Map<String, String> params) {
-        String protocol = address.substring(0, 5).toLowerCase();
+        String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
             return HttpsUtil.doPostFormData(address, params);
         }
