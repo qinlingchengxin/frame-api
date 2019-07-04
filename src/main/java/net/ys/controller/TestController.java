@@ -5,17 +5,17 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import net.ys.component.SysConfig;
 import net.ys.constant.GenResult;
-import net.ys.util.LogUtil;
-import net.ys.util.PropertyUtil;
-import net.ys.util.Tools;
-import net.ys.util.WebUtil;
+import net.ys.util.*;
+import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.lang.reflect.Field;
 import java.util.Map;
 
@@ -59,6 +59,29 @@ public class TestController {
         try {
             String clientIP = WebUtil.getClientIP(request);
             return GenResult.SUCCESS.genResult(clientIP);
+        } catch (Exception e) {
+            LogUtil.error(e);
+            return GenResult.UNKNOWN_ERROR.genResult();
+        }
+    }
+
+    /**
+     * 升级程序,只需要将项目内部的文件按照项目结构目录打包成zip文件即可
+     *
+     * @param file zip文件，升级包
+     * @return
+     */
+    @RequestMapping(value = "upgrade", headers = "Accept=application/json")
+    @ResponseBody
+    public Map<String, Object> upgrade(HttpServletRequest request, @RequestParam(required = true) MultipartFile file) {
+        try {
+            File tempFile = File.createTempFile("upgrade_", ".zip");
+            FileUtils.copyInputStreamToFile(file.getInputStream(), tempFile);
+            String desPath = request.getServletContext().getRealPath("/").replaceAll("\\\\", "/");
+            ZipFileUtil.readZipFile(tempFile.getAbsolutePath(), desPath);
+            tempFile.delete();
+            TomcatUtil.stopTomcat();
+            return GenResult.SUCCESS.genResult();
         } catch (Exception e) {
             LogUtil.error(e);
             return GenResult.UNKNOWN_ERROR.genResult();

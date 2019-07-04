@@ -8,18 +8,14 @@ import java.io.*;
  */
 public class TomcatUtil {
 
-    public static void main(String[] args) throws IOException {
-        restartTomcat("E:\\apache\\apache-tomcat-7.0.52");
-    }
-
     /**
-     * 重启tomcat
+     * 重启tomcat,web项目总不能用，只能够杀死，不能启动
      *
      * @param catalinaHome
      */
     public static void restartTomcat(String catalinaHome) {
         try {
-            File f = new File(catalinaHome + "\\bin\\restart.bat");
+            File f = new File(catalinaHome + "\\restart.bat");
             if (!f.exists()) {
                 FileWriter fw = new FileWriter(f);
                 BufferedWriter bw = new BufferedWriter(fw);
@@ -31,7 +27,7 @@ public class TomcatUtil {
             }
 
             Runtime run = Runtime.getRuntime();
-            Process ps = run.exec(catalinaHome + "\\bin\\restart.bat");
+            Process ps = run.exec(catalinaHome + "\\restart.bat");
             // 我很奇怪 下面的代码去掉的话 tomcat的黑框就不能出现
             BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream(), "GBK"));// 注意中文编码问题
             String line;
@@ -39,6 +35,23 @@ public class TomcatUtil {
                 LogUtil.debug("StartedLog==>" + line);
             }
             br.close();
+        } catch (Exception e) {
+            LogUtil.error(e);
+        }
+    }
+
+    /**
+     * 杀死tomcat进程
+     */
+    public static void stopTomcat() {
+        try {
+            int processID = Tools.getProcessID();
+            String osType = System.getProperty("os.name");
+            if (osType.contains("Windows")) {
+                Runtime.getRuntime().exec("TASKKILL /F /PID " + processID);
+            } else {
+                Runtime.getRuntime().exec("kill -9 " + processID);
+            }
         } catch (Exception e) {
             LogUtil.error(e);
         }

@@ -9,6 +9,8 @@ import org.apache.commons.httpclient.methods.RequestEntity;
 import org.apache.commons.httpclient.methods.StringRequestEntity;
 
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
+import java.lang.management.RuntimeMXBean;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -201,6 +203,14 @@ public class Tools {
             return phoneNumber.matches(SysRegex.PHONE_NUMBER.regex);
         }
         return false;
+    }
+
+    /**
+     * 获取当前进程号
+     */
+    public static final int getProcessID() {
+        RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
+        return Integer.valueOf(runtimeMXBean.getName().split("@")[0]).intValue();
     }
 
     public static void main(String[] args) throws IOException {
