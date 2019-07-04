@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/TomcatUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
     </list>
     <ignored path="frame-api.iws" />
@@ -18,7 +18,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129943575" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562132659840" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562207320911" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559641047642" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -280,7 +280,7 @@
     <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/req/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629491704" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_ca/api/src/main/java/net/ys/utils/SmsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629568205" ignored="false" />
     <file path="/DataSourceService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559637320798" ignored="false" />
-    <file path="$PROJECT_DIR$/../backup/backup.iws" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561802330344" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/backup.iws" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562207385738" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_ca/api/src/main/resources/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559640788690" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_ca/api/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559640852081" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_ca/api/src/main/resources/prod/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559640788690" ignored="false" />
@@ -340,6 +340,7 @@
     <file path="$PROJECT_DIR$/../cert-tw/src/main/java/net/ys/controller/CertController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129899639" ignored="false" />
     <file path="$PROJECT_DIR$/../cert-tw/src/main/java/net/ys/utils/req/HttpUtilProxy.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129911215" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_ca/src/main/java/net/ys/utils/req/HttpUtilProxy.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129943891" ignored="false" />
+    <file path="/TomcatUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562207383682" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,22 +360,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" line="67" class="net.ys.component.SysConfig" package="net.ys.component">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -410,6 +395,22 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" line="67" class="net.ys.component.SysConfig" package="net.ys.component">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -419,15 +420,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HttpUtilProxy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtilProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="45" selection-start="1752" selection-end="1766" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FileUploadUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/FileUploadUtil.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -441,6 +433,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TomcatUtil.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/TomcatUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="41" selection-start="1392" selection-end="1402" vertical-scroll-proportion="0.621118">
               <folding />
             </state>
           </provider>
@@ -500,10 +501,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysConfig.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SysConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="33" selection-start="3145" selection-end="3145" vertical-scroll-proportion="2.4669926">
+            <state line="16" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -531,7 +532,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/constant/GenResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/filter/ApiFilter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/prod/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/controller/SmsController.java" />
@@ -547,6 +547,7 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/ClassLoaderUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtilProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/TomcatUtil.java" />
       </list>
     </option>
   </component>
@@ -680,7 +681,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -870,40 +870,6 @@
               <option name="myItemId" value="ys" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="req" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frame-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -967,6 +933,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -988,9 +955,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1166,6 +1133,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1194,19 +1174,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1220,6 +1187,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1241,13 +1215,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1830,7 +1797,11 @@
       <created>1562129873326</created>
       <updated>1562129873326</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="&lt;!--默认以UTF-8编码读取配置文件--&gt;&#10;        &lt;property name=&quot;fileEncoding&quot; value=&quot;UTF-8&quot;/&gt;">
+      <created>1562132688793</created>
+      <updated>1562132688793</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1874,7 +1845,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15361077" sideWeight="0.84890425" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19461444" sideWeight="0.71791905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19400245" sideWeight="0.71791905" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28208092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1982,11 +1953,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Java/jdk1.8.0_91/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="41" selection-start="13507" selection-end="13511" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/ApiDocUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="13" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
@@ -2038,13 +2004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/ZipFileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="13" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
@@ -2089,10 +2048,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="33" selection-start="3145" selection-end="3145" vertical-scroll-proportion="2.4669926">
+        <state line="16" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/TomcatUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="1392" selection-end="1402" vertical-scroll-proportion="0.621118">
+          <folding />
         </state>
       </provider>
     </entry>
