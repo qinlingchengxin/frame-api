@@ -213,6 +213,33 @@ public class Tools {
         return Integer.valueOf(runtimeMXBean.getName().split("@")[0]).intValue();
     }
 
+    /**
+     * 佛祖保佑
+     */
+    public static void godBless() {
+        System.out.println("" +
+                "                    _ooOoo_\n" +
+                "                   o8888888o\n" +
+                "                   88\" . \"88\n" +
+                "                   (| -_- |)\n" +
+                "                   O\\  =  /O\n" +
+                "                ____/`---'\\____\n" +
+                "              .'  \\\\|     |//  `.\n" +
+                "             /  \\\\|||  :  |||//  \\\n" +
+                "            /  _||||| -:- |||||-  \\\n" +
+                "            |   | \\\\\\  -  /// |   |\n" +
+                "            | \\_|  ''\\---/''  |   |\n" +
+                "            \\  .-\\__  `-`  ___/-. /\n" +
+                "          ___`. .'  /--.--\\  `. . __\n" +
+                "       .\"\" '<  `.___\\_<|>_/___.'  >'\"\".\n" +
+                "      | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\n" +
+                "      \\  \\ `-.   \\_ __\\ /__ _/   .-` /  /\n" +
+                " ======`-.____`-.___\\_____/___.-`____.-'======\n" +
+                "                    `=---='\n" +
+                "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n" +
+                "              Buddha Bless, No Bug !");
+    }
+
     public static void main(String[] args) throws IOException {
         String url = "https://www.cnblogs.com/Smileing/p/7207646.html";
         System.out.println(genShortUrl(url));

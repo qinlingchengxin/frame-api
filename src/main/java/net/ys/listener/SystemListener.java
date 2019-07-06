@@ -1,5 +1,7 @@
 package net.ys.listener;
 
+import net.ys.util.Tools;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -18,6 +20,6 @@ public class SystemListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        System.out.println("contextInitialized");
+        Tools.godBless();
     }
 }
