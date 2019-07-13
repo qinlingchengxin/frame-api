@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/listener/SystemListener.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/listener/SystemListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
     </list>
     <ignored path="frame-api.iws" />
@@ -19,7 +19,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129943575" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391232759" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562993014511" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559641047642" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -48,7 +48,7 @@
     <file path="$PROJECT_DIR$/../frame-mvc/frame-mvc.iws" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544852389798" ignored="false" />
     <file path="/ApplicationSwaggerConfig.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1546851833501" ignored="false" />
     <file path="/applicationContext.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561951815672" ignored="false" />
-    <file path="/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391354007" ignored="false" />
+    <file path="/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391512287" ignored="false" />
     <file path="/left.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1544683012364" ignored="false" />
     <file path="/main.html" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547706962312" ignored="false" />
     <file path="/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561951791094" ignored="false" />
@@ -143,7 +143,7 @@
     <file path="$PROJECT_DIR$/../backup/transfer/src/main/java/net/ys/controller/FileController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547018344860" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/client-db/src/main/java/net/ys/utils/FileUploadUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547019831635" ignored="false" />
     <file path="/FileUploadUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547019811194" ignored="false" />
-    <file path="$PROJECT_DIR$/../backup/transfer/src/main/java/net/ys/util/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547019419919" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/transfer/src/main/java/net/ys/util/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391500035" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/client/src/main/java/net/ys/utils/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547019525746" ignored="false" />
     <file path="/XmlUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547018957720" ignored="false" />
     <file path="/FileService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1547107537442" ignored="false" />
@@ -260,10 +260,10 @@
     <file path="/HttpClientUtils.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559616014323" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559616274178" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/HttpClientUtils.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628290054" ignored="false" />
-    <file path="/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628689996" ignored="false" />
+    <file path="/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562993258844" ignored="false" />
     <file path="/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559623789659" ignored="false" />
     <file path="/SmsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628582995" ignored="false" />
-    <file path="/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629086400" ignored="false" />
+    <file path="/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562993161501" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559627186426" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559629681982" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628982676" ignored="false" />
@@ -325,7 +325,7 @@
     <file path="$PROJECT_DIR$/../cert-tw/src/main/java/net/ys/storage/RedsExecutor.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561778032423" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/cloud/src/main/java/net/ys/filter/ApiFilter.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561800888159" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/cloud/src/main/java/net/ys/controller/TestController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561800891912" ignored="false" />
-    <file path="$PROJECT_DIR$/../backup/cloud/src/main/java/net/ys/util/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561800901139" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/cloud/src/main/java/net/ys/util/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391532666" ignored="false" />
     <file path="/SmsController.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561802659806" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/client-db/src/main/resources/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561947349050" ignored="false" />
     <file path="$PROJECT_DIR$/../backup/client/src/main/resources/config.properties" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1561947349049" ignored="false" />
@@ -342,6 +342,12 @@
     <file path="$PROJECT_DIR$/../cert-tw/src/main/java/net/ys/utils/req/HttpUtilProxy.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129911215" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_ca/src/main/java/net/ys/utils/req/HttpUtilProxy.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562129943891" ignored="false" />
     <file path="/TomcatUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562207383682" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/transfer/src/main/java/net/ys/listener/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391514872" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/client-db/src/main/java/net/ys/util/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391541973" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/client/src/main/java/net/ys/util/Tools.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391550288" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/cloud/src/main/java/net/ys/listener/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391562034" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/client-db/src/main/java/net/ys/listener/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391570315" ignored="false" />
+    <file path="$PROJECT_DIR$/../backup/client/src/main/java/net/ys/listener/SystemListener.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562391576607" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,6 +367,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java" line="67" class="net.ys.component.SysConfig" package="net.ys.component">
         <option name="ENABLED" value="true" />
@@ -411,7 +418,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -421,10 +427,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Tools.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tools.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="242" column="0" selection-start="7298" selection-end="7298" vertical-scroll-proportion="1.7019439">
+            <state line="26" column="6" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="31" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpsUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="240" column="5" selection-start="8972" selection-end="9638" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpUtil.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="223" column="18" selection-start="8683" selection-end="8689" vertical-scroll-proportion="0.5341615">
               <folding />
             </state>
           </provider>
@@ -484,33 +517,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TomcatUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/TomcatUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppContextUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/AppContextUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/component/SysConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="13" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -531,8 +537,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/controller/GlobalController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/aop/AnnotationAop.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/aop/XmlAop.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/LogUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
@@ -547,6 +551,8 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/listener/SystemListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" />
       </list>
     </option>
   </component>
@@ -787,6 +793,40 @@
               <option name="myItemId" value="ys" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="req" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -840,9 +880,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1018,19 +1058,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1059,6 +1086,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1072,13 +1112,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1100,6 +1133,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1694,7 +1734,11 @@
       <created>1562217723736</created>
       <updated>1562217723736</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="&lt;!--默认以UTF-8编码读取配置文件--&gt;&#10;        &lt;property name=&quot;fileEncoding&quot; value=&quot;UTF-8&quot;/&gt;">
+      <created>1562391484677</created>
+      <updated>1562391484677</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1718,7 +1762,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25259516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1726,24 +1770,24 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4080925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4080925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32601157" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15361077" sideWeight="0.84890425" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19277845" sideWeight="0.5919075" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16462669" sideWeight="0.5919075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28208092" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28323698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32601157" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18237454" sideWeight="0.65433526" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1846,27 +1890,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/FileUploadUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="39" selection-start="1310" selection-end="1310" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/XmlUtilNew.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/WebUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="70" selection-start="376" selection-end="400" vertical-scroll-proportion="0.0">
@@ -1953,7 +1976,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="0" selection-start="7298" selection-end="7298" vertical-scroll-proportion="1.7019439">
+        <state line="26" column="6" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="31" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="240" column="5" selection-start="8972" selection-end="9638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="18" selection-start="8683" selection-end="8689" vertical-scroll-proportion="0.5341615">
           <folding />
         </state>
       </provider>
