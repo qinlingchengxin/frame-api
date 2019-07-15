@@ -114,9 +114,9 @@ public class SysConfig {
         this.smsEffectiveTime = smsEffectiveTime;
     }
 
-    @Value("${ding_talk_url}")
-    public void setDingTalkUrl(String dingTalkUrl) {
-        this.dingTalkUrl = dingTalkUrl;
+    @Value("${ding_talk_access_token}")
+    public void setDingTalkUrl(String dingTalkAccessToken) {
+        this.dingTalkUrl = "https://oapi.dingtalk.com/robot/send?" + dingTalkAccessToken;
     }
 
     @Value("${test_path}")
