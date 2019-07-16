@@ -216,18 +216,11 @@ public class HttpUtil {
      * @throws IOException
      */
     public static String genResult(InputStream inputStream) throws IOException {
-        int available = inputStream.available();
         StringBuffer result = new StringBuffer();
-        if (available < 1024) {
-            byte[] bytes = new byte[available];
-            inputStream.read(bytes);
-            result.append(new String(bytes, 0, bytes.length, ENCODING));
-        } else {
-            int len;
-            byte[] bytes = new byte[1024];
-            while ((len = inputStream.read(bytes)) > 0) {
-                result.append(new String(bytes, 0, len, ENCODING));
-            }
+        int len;
+        byte[] bytes = new byte[1024];
+        while ((len = inputStream.read(bytes)) > 0) {
+            result.append(new String(bytes, 0, len, ENCODING));
         }
         inputStream.close();
         return result.toString();
