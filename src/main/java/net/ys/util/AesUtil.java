@@ -1,7 +1,5 @@
 package net.ys.util;
 
-import net.ys.constant.X;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
@@ -11,8 +9,12 @@ import javax.crypto.spec.SecretKeySpec;
  */
 public class AesUtil {
 
-    private static final String IV_STRING = "6868688xy8686866";
-    private static final String KEY = "8686866xy6868688";
+    private static final String IV_STRING = "6868688xy8686866";//偏移量
+    private static final String KEY = "8686866xy6868688"; //密码
+    private static final String ALGORITHM = "AES";//算法
+    private static final String ENCRYPTION_MODE = "CBC";//加密模式，数据块128
+    private static final String FILL_TYPE = "PKCS5Padding";//填充
+    private static final String CODING = "UTF-8";
 
     /**
      * 加密
@@ -22,12 +24,12 @@ public class AesUtil {
      */
     public static String encryptAES(String content) {
         try {
-            byte[] byteContent = content.getBytes(X.Code.U);
+            byte[] byteContent = content.getBytes(CODING);
             byte[] enCodeFormat = KEY.getBytes();
-            SecretKeySpec secretKeySpec = new SecretKeySpec(enCodeFormat, "AES");
+            SecretKeySpec secretKeySpec = new SecretKeySpec(enCodeFormat, ALGORITHM);
             byte[] initParam = IV_STRING.getBytes();
             IvParameterSpec ivParameterSpec = new IvParameterSpec(initParam);
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            Cipher cipher = Cipher.getInstance(ALGORITHM + "/" + ENCRYPTION_MODE + "/" + FILL_TYPE);
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
             byte[] encryptedBytes = cipher.doFinal(byteContent);
             return Base64Util.encode(encryptedBytes);
@@ -46,13 +48,13 @@ public class AesUtil {
         try {
             byte[] encryptedBytes = Base64Util.decode(content.getBytes());
             byte[] enCodeFormat = KEY.getBytes();
-            SecretKeySpec secretKey = new SecretKeySpec(enCodeFormat, "AES");
+            SecretKeySpec secretKey = new SecretKeySpec(enCodeFormat, ALGORITHM);
             byte[] initParam = IV_STRING.getBytes();
             IvParameterSpec ivParameterSpec = new IvParameterSpec(initParam);
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+            Cipher cipher = Cipher.getInstance(ALGORITHM + "/" + ENCRYPTION_MODE + "/" + FILL_TYPE);
             cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
             byte[] result = cipher.doFinal(encryptedBytes);
-            return new String(result, X.Code.U);
+            return new String(result, CODING);
         } catch (Exception e) {
         }
         return "";
