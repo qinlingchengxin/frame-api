@@ -21,10 +21,10 @@ import java.util.Map;
  */
 public class GenerateDoc {
 
-    static final String DB_NAME = "sign";
-    static final String URL = "jdbc:mysql://10.10.10.51:3306/" + DB_NAME;
+    static final String DB_NAME = "cert-tw";
+    static final String URL = "jdbc:mysql://10.40.40.139:3306/" + DB_NAME;
     static final String USER_NAME = "root";
-    static final String PASSWORD = "zhulong123321";
+    static final String PASSWORD = "root";
     static final String DOC_PATH = "D:/bean/";
 
     public static void main(String[] args) {
