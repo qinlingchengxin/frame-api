@@ -11,6 +11,8 @@ import org.apache.commons.httpclient.methods.StringRequestEntity;
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
+import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -238,6 +240,34 @@ public class Tools {
                 "                    `=---='\n" +
                 "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n" +
                 "              Buddha Bless, No Bug !");
+    }
+
+    /**
+     * 生成toString，json格式，目前只支持int/long/String/BigDecimal
+     *
+     * @param clazz
+     * @return
+     */
+    public static String genToString(Class clazz) {
+        Field[] fields = clazz.getDeclaredFields();
+        if (fields.length == 0) {
+            return "";
+        }
+
+        StringBuffer sb = new StringBuffer("\"{");
+        for (Field field : fields) {
+            sb.append("\\\"").append(field.getName()).append("\\\":");
+
+            Class<?> type = field.getType();
+            if (int.class == type || long.class == type || BigDecimal.class == type) {
+                sb.append("\"+").append(field.getName()).append("+");
+            } else if (String.class == type) {
+                sb.append("\\\"\"+").append(field.getName()).append("+").append("\"\\");
+            }
+            sb.append("\",");
+        }
+        sb.deleteCharAt(sb.length() - 1).append("}\"");
+        return sb.toString();
     }
 
     public static void main(String[] args) throws IOException {

@@ -3,7 +3,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GenerateTools {
 
@@ -25,11 +27,11 @@ public class GenerateTools {
     static String oneTabStr = "\t";
     static String twoTabStr = "\t\t";
 
-    static final String DB_NAME = "sign";
-    static final String TABLE_NAME = "sys_admin";
-    static final String URL = "jdbc:mysql://10.10.10.51:3306/" + DB_NAME;
+    static final String DB_NAME = "cert-tw";
+    static final String TABLE_NAME = "push_cert";
+    static final String URL = "jdbc:mysql://10.40.40.139:3306/" + DB_NAME;
     static final String USER_NAME = "root";
-    static final String PASSWORD = "zhulong123321";
+    static final String PASSWORD = "root";
     static final String BEAN_PATH = "D:/bean/";
     static final String MAPPER_PATH = "D:/bean/mapper/";
     static final String RESP_MAPPER_PATH = "D:/bean/ResponseMapper/";
@@ -116,6 +118,8 @@ public class GenerateTools {
 
                 rs = statement.executeQuery(String.format(sql, table));
 
+                Map<String, String> fields = new LinkedHashMap<>();
+
                 while (rs.next()) {
                     columnName = rs.getString("COLUMN_NAME").toLowerCase();
                     columnClassName = rs.getString("DATA_TYPE");
@@ -136,11 +140,39 @@ public class GenerateTools {
                     fileWriter.write(twoTabStr + "this." + columnField + " = " + columnField + ";" + oneEnter + "    }" + twoEnter);
                     fileWriter.write(oneTabStr + "public " + attributeType + " get" + columnClass + "() {" + oneEnter);
                     fileWriter.write(twoTabStr + "return this." + columnField + ";" + oneEnter + "    }" + twoEnter);
+                    fields.put(columnField, attributeType);
                 }
+                fileWriter.write(genToString(fields));
                 fileWriter.write("}");
                 fileWriter.close();
             }
         }
+    }
+
+    /**
+     * 生成toString，json格式，目前只支持int/long/String/BigDecimal
+     */
+    public static String genToString(Map<String, String> fieldMap) {
+        StringBuffer sb = new StringBuffer(oneTabStr + "@Override" + oneEnter);
+        sb.append(oneTabStr + "public String toString() {" + oneEnter);
+        sb.append(twoTabStr + "return ");
+        sb.append("\"{");
+
+        for (Map.Entry<String, String> entry : fieldMap.entrySet()) {
+            String fieldName = entry.getKey();
+            String fieldType = entry.getValue();
+            sb.append("\\\"").append(fieldName).append("\\\":");
+
+            if ("int".equals(fieldType) || "long".equals(fieldType) || "BigDecimal".equals(fieldType)) {
+                sb.append("\"+").append(fieldName).append("+");
+            } else if ("String".equals(fieldType)) {
+                sb.append("\\\"\"+").append(fieldName).append("+").append("\"\\");
+            }
+            sb.append("\",");
+        }
+        sb.deleteCharAt(sb.length() - 1).append("}\";" + oneEnter);
+        sb.append(oneTabStr + "}" + oneEnter);
+        return sb.toString();
     }
 
     public static void generateRespMapper() throws SQLException, IOException {
