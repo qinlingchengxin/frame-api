@@ -146,6 +146,13 @@ public class Tools {
         return "";
     }
 
+    /**
+     * 将驼峰标识转化成数据库存储格式，eg: createTime -> create_time
+     */
+    public static String camelToDb(String resource) {
+        return resource.replaceAll("[A-Z]", "_$0").toLowerCase();
+    }
+
     public static String firstToUpperCase(String str) {
         char[] chars = str.toCharArray();
         chars[0] -= 32;
@@ -271,7 +278,6 @@ public class Tools {
     }
 
     public static void main(String[] args) throws IOException {
-        String url = "https://www.cnblogs.com/Smileing/p/7207646.html";
-        System.out.println(genShortUrl(url));
+        System.out.println(camelToDb("deleteCharAt"));
     }
 }
