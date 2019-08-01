@@ -1,14 +1,13 @@
 package net.ys.util;
 
-import org.apache.log4j.Logger;
-
 /**
  * User: NMY
  * Date: 18-4-26
  */
 public class LogUtil {
 
-    private static Logger log = Logger.getLogger(LogUtil.class);
+    private static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(LogUtil.class);
+    private static java.util.logging.Logger jdkLog = java.util.logging.Logger.getLogger(LogUtil.class.getName());
 
     public static void error(Exception e) {
         log.error(e, e);
@@ -23,8 +22,9 @@ public class LogUtil {
     }
 
     public static void debug(Object... messages) {
+        jdkLog.info("\n");
         for (Object msg : messages) {
-            System.out.println(System.currentTimeMillis() + " debug-msg: " + msg.toString());
+            jdkLog.info("debug-msg: " + msg.toString());
         }
     }
 }
