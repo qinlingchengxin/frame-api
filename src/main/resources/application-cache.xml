@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="redis.clients.jedis.JedisPoolConfig" id="redsPoolConfig">
+        <property name="maxIdle" value="${reds.maxIdle}"/>
+        <property name="maxTotal" value="${reds.maxTotal}"/>
+        <property name="maxWaitMillis" value="${reds.maxWait}"/>
+        <property name="testOnBorrow" value="${reds.testOnBorrow}"/>
+        <property name="blockWhenExhausted" value="${reds.blockWhenExhausted}"/>
+    </bean>
+
+    <bean class="redis.clients.jedis.JedisPool" id="redsPool">
+        <constructor-arg name="poolConfig" ref="redsPoolConfig"/>
+        <constructor-arg name="host" value="${reds.host}"/>
+        <constructor-arg name="port" value="${reds.port}"/>
+        <constructor-arg name="timeout" value="${reds.timeout}"/>
+        <constructor-arg name="password" value="${reds.password}"/>
+        <constructor-arg name="database" value="${reds.database}"/>
+    </bean>
+</beans>

@@ -26,4 +26,6 @@
     <import resource="application-mq.xml"/>
 
     <import resource="application-aop.xml"/>
+
+    <import resource="application-cache.xml"/>
 </beans>

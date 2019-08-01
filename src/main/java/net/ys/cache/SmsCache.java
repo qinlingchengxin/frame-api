@@ -3,15 +3,14 @@ package net.ys.cache;
 import net.ys.component.SysConfig;
 import net.ys.constant.CacheKey;
 import net.ys.constant.X;
-import net.ys.storage.RedsExecutor;
-import net.ys.storage.RedsRunner;
-import net.ys.storage.RedsServer;
 import net.ys.util.TimeUtil;
 import net.ys.util.Tools;
 import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.Pipeline;
-import redis.clients.jedis.exceptions.JedisConnectionException;
+
+import javax.annotation.Resource;
 
 /**
  * User: NMY
@@ -19,6 +18,9 @@ import redis.clients.jedis.exceptions.JedisConnectionException;
  */
 @Repository
 public class SmsCache {
+
+    @Resource
+    private JedisPool redsPool;
 
     /**
      * 发送短信
@@ -28,19 +30,22 @@ public class SmsCache {
      * @return
      */
     public boolean sendSms(final String phone, final String smsCode) {
-        RedsRunner<Boolean> rr = new RedsRunner<Boolean>() {
-            @Override
-            public Boolean run(Jedis jedis) throws JedisConnectionException {
-                Pipeline pipeline = jedis.pipelined();
-                pipeline.set(CacheKey.PHONE_KEY + phone, smsCode);
-                pipeline.expire(CacheKey.PHONE_KEY + phone, SysConfig.smsEffectiveTime);
-                pipeline.incr(CacheKey.PHONE_DAY_KEY + phone);
-                pipeline.expire(CacheKey.PHONE_DAY_KEY + phone, TimeUtil.todayRemainingSecond());
-                pipeline.sync();
-                return true;
-            }
-        };
-        return new RedsExecutor<Boolean>().exe(rr, RedsServer.MASTER);
+        Jedis reds = null;
+        try {
+            reds = redsPool.getResource();
+            Pipeline pipeline = reds.pipelined();
+            pipeline.set(CacheKey.PHONE_KEY + phone, smsCode);
+            pipeline.expire(CacheKey.PHONE_KEY + phone, SysConfig.smsEffectiveTime);
+            pipeline.incr(CacheKey.PHONE_DAY_KEY + phone);
+            pipeline.expire(CacheKey.PHONE_DAY_KEY + phone, TimeUtil.todayRemainingSecond());
+            pipeline.sync();
+            return true;
+
+        } catch (Exception e) {
+        } finally {
+            this.close(reds);
+        }
+        return false;
     }
 
     /**
@@ -50,13 +55,15 @@ public class SmsCache {
      * @return
      */
     public boolean validateSmsDay(final String phone) {
-        RedsRunner<Boolean> rr = new RedsRunner<Boolean>() {
-            @Override
-            public Boolean run(Jedis jedis) throws JedisConnectionException {
-                return jedis.incr(CacheKey.PHONE_DAY_KEY + phone) <= SysConfig.smsMaxNumDay;
-            }
-        };
-        return new RedsExecutor<Boolean>().exe(rr, RedsServer.MASTER);
+        Jedis reds = null;
+        try {
+            reds = redsPool.getResource();
+            return reds.incr(CacheKey.PHONE_DAY_KEY + phone) <= SysConfig.smsMaxNumDay;
+        } catch (Exception e) {
+        } finally {
+            this.close(reds);
+        }
+        return false;
     }
 
     /**
@@ -66,13 +73,15 @@ public class SmsCache {
      * @return
      */
     public String getSmsCode(final String phone) {
-        RedsRunner<String> rr = new RedsRunner<String>() {
-            @Override
-            public String run(Jedis jedis) throws JedisConnectionException {
-                return jedis.get(CacheKey.PHONE_KEY + phone);
-            }
-        };
-        return new RedsExecutor<String>().exe(rr, RedsServer.MASTER);
+        Jedis reds = null;
+        try {
+            reds = redsPool.getResource();
+            return reds.get(CacheKey.PHONE_KEY + phone);
+        } catch (Exception e) {
+        } finally {
+            this.close(reds);
+        }
+        return null;
     }
 
     /**
@@ -82,16 +91,37 @@ public class SmsCache {
      * @return
      */
     public String newSmsCode(final String phone) {
-        RedsRunner<String> rr = new RedsRunner<String>() {
-            @Override
-            public String run(Jedis jedis) throws JedisConnectionException {
-                long expire = jedis.ttl(CacheKey.PHONE_KEY + phone);
-                if (expire > X.Time.MINUTE_SECOND * 4) {//5分钟有效期，但是1分钟内不得重发
-                    return null;
-                }
-                return Integer.toString(Tools.randomInt()).substring(0, 4);
+        Jedis reds = null;
+        try {
+            reds = redsPool.getResource();
+            long expire = reds.ttl(CacheKey.PHONE_KEY + phone);
+            if (expire > X.Time.MINUTE_SECOND * 4) {//5分钟有效期，但是1分钟内不得重发
+                return null;
             }
-        };
-        return new RedsExecutor<String>().exe(rr, RedsServer.MASTER);
+            return Integer.toString(Tools.randomInt()).substring(0, 4);
+
+        } catch (Exception e) {
+        } finally {
+            this.close(reds);
+        }
+        return null;
+    }
+
+    /**
+     * 释放连接
+     *
+     * @param reds
+     */
+    public void close(Jedis reds) {
+        if (reds != null) {
+            reds.close();
+            if (reds.isConnected()) {
+                try {
+                    reds.disconnect();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }

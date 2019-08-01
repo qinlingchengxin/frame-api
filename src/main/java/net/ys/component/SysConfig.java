@@ -16,7 +16,7 @@ import java.util.List;
 @Component
 public class SysConfig {
 
-    public static boolean validApiParameter = false;//是否对api参数进行安全校验
+    public static boolean validApiParameter;//是否对api参数进行安全校验
 
     public static int enableWhiteList;
 
