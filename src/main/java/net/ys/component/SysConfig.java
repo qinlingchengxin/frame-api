@@ -121,15 +121,13 @@ public class SysConfig {
 
     @Value("${test_path}")
     public void setTestPath(String testPath) {
-        this.testPath = testPath;
-        File file = new File(this.testPath);
+        File file = new File(testPath);
         if (!file.exists()) {
             if (!file.mkdirs()) {
                 throw new RuntimeException("testPath is invalid");
             }
         }
-        String absolutePath = file.getAbsolutePath();
-        this.testPath = absolutePath.replace('\\', '/') + "/";
+        this.testPath = file.getAbsolutePath().replace('\\', '/') + "/";
     }
 
     @Value("${testName:test_name.*}")
