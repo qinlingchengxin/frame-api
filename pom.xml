@@ -482,6 +482,14 @@
             <version>3.14</version>
         </dependency>
 
+        <!--sm4加密-->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.59</version>
+        </dependency>
+        <!--sm4加密-->
+
     </dependencies>
 
     <profiles>
