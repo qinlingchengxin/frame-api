@@ -14,7 +14,7 @@ public class AesUtil {
     private static final String ALGORITHM = "AES";//算法
     private static final String ENCRYPTION_MODE = "CBC";//加密模式，数据块128
     private static final String FILL_TYPE = "PKCS5Padding";//填充
-    private static final String CODING = "UTF-8";
+    private static final String ENCODING = "UTF-8";
 
     /**
      * 加密
@@ -24,10 +24,10 @@ public class AesUtil {
      */
     public static String encryptAES(String content) {
         try {
-            byte[] byteContent = content.getBytes(CODING);
-            byte[] enCodeFormat = KEY.getBytes();
+            byte[] byteContent = content.getBytes(ENCODING);
+            byte[] enCodeFormat = KEY.getBytes(ENCODING);
             SecretKeySpec secretKeySpec = new SecretKeySpec(enCodeFormat, ALGORITHM);
-            byte[] initParam = IV_STRING.getBytes();
+            byte[] initParam = IV_STRING.getBytes(ENCODING);
             IvParameterSpec ivParameterSpec = new IvParameterSpec(initParam);
             Cipher cipher = Cipher.getInstance(ALGORITHM + "/" + ENCRYPTION_MODE + "/" + FILL_TYPE);
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
@@ -46,15 +46,15 @@ public class AesUtil {
      */
     public static String decryptAES(String content) {
         try {
-            byte[] encryptedBytes = Base64Util.decode(content.getBytes());
-            byte[] enCodeFormat = KEY.getBytes();
+            byte[] encryptedBytes = Base64Util.decode(content.getBytes(ENCODING));
+            byte[] enCodeFormat = KEY.getBytes(ENCODING);
             SecretKeySpec secretKey = new SecretKeySpec(enCodeFormat, ALGORITHM);
-            byte[] initParam = IV_STRING.getBytes();
+            byte[] initParam = IV_STRING.getBytes(ENCODING);
             IvParameterSpec ivParameterSpec = new IvParameterSpec(initParam);
             Cipher cipher = Cipher.getInstance(ALGORITHM + "/" + ENCRYPTION_MODE + "/" + FILL_TYPE);
             cipher.init(Cipher.DECRYPT_MODE, secretKey, ivParameterSpec);
             byte[] result = cipher.doFinal(encryptedBytes);
-            return new String(result, CODING);
+            return new String(result, ENCODING);
         } catch (Exception e) {
         }
         return "";

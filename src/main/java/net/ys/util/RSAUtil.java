@@ -1,7 +1,4 @@
-package net.ys.util.rsa;
-
-import net.ys.constant.X;
-import net.ys.util.Base64Util;
+package net.ys.util;
 
 import javax.crypto.Cipher;
 import java.io.ByteArrayOutputStream;
@@ -14,6 +11,7 @@ public class RSAUtil {
 
     public static final String ENCRYPTION_ALGORITHM = "RSA";
     public static final String SIGNATURE_ALGORITHM = "MD5withRSA";
+    public static final String ENCODING = "UTF-8";
 
     /**
      * RSA最大加密明文大小《规定》
@@ -58,7 +56,7 @@ public class RSAUtil {
         Key key = pair.getL();
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(Cipher.ENCRYPT_MODE, key);
-        byte[] dataBytes = data.getBytes(X.Code.U);
+        byte[] dataBytes = data.getBytes(ENCODING);
         int dataLen = dataBytes.length;
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         int offSet = 0;
@@ -91,7 +89,7 @@ public class RSAUtil {
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(Cipher.DECRYPT_MODE, key);
 
-        byte[] dataBytes = Base64Util.decode(data.getBytes());
+        byte[] dataBytes = Base64Util.decode(data.getBytes(ENCODING));
 
         int inputLen = dataBytes.length;
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -110,14 +108,14 @@ public class RSAUtil {
         }
         byte[] decryptedData = out.toByteArray();
         out.close();
-        return new String(decryptedData, X.Code.U);
+        return new String(decryptedData, ENCODING);
     }
 
     /**
      * 生成钥匙
      */
     public static MyPair<Key, KeyFactory> generateKeyAndFactory(String keyString, boolean isPublic) throws Exception {
-        byte[] keyBytes = Base64Util.decode(keyString.getBytes());
+        byte[] keyBytes = Base64Util.decode(keyString.getBytes(ENCODING));
         KeyFactory keyFactory = KeyFactory.getInstance(ENCRYPTION_ALGORITHM);
         Key key;
         if (isPublic) {
@@ -155,11 +153,11 @@ public class RSAUtil {
         Signature signature = Signature.getInstance(SIGNATURE_ALGORITHM);
         signature.initVerify(publicKey);
         signature.update(data);
-        return signature.verify(Base64Util.decode(sign.getBytes()));
+        return signature.verify(Base64Util.decode(sign.getBytes(ENCODING)));
     }
 
     public static void main(String[] args) throws Exception {
-        MyPair<PublicKey, PrivateKey> pair = RSAUtil.genKeyPair();//公钥私钥
+        MyPair<PublicKey, PrivateKey> pair = RSAUtil.genKeyPair();//获取公钥私钥
         String publicKey = RSAUtil.getPublicKey(pair);
         System.out.println(publicKey);
         String privateKey = RSAUtil.getPrivateKey(pair);
@@ -171,5 +169,23 @@ public class RSAUtil {
 
         String decryptStr = decrypt(encryptStr, privateKey, false);
         System.out.println(decryptStr);
+    }
+}
+
+class MyPair<T, K> {
+    private T l;
+    private K r;
+
+    public MyPair(T l, K r) {
+        this.l = l;
+        this.r = r;
+    }
+
+    public T getL() {
+        return l;
+    }
+
+    public K getR() {
+        return r;
     }
 }
