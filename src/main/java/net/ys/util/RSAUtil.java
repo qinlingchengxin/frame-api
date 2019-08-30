@@ -13,6 +13,16 @@ public class RSAUtil {
     public static final String SIGNATURE_ALGORITHM = "MD5withRSA";
     public static final String ENCODING = "UTF-8";
 
+    static MyPair<PublicKey, PrivateKey> pair;
+
+    static {
+        try {
+            pair = genKeyPair();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * RSA最大加密明文大小《规定》
      */
@@ -36,14 +46,14 @@ public class RSAUtil {
     /**
      * 取得公钥
      */
-    public static String getPublicKey(MyPair<PublicKey, PrivateKey> pair) throws Exception {
+    public static String getPublicKey() throws Exception {
         return Base64Util.encode(pair.getL().getEncoded()).replaceAll("\\s", "");
     }
 
     /**
      * 取得私钥
      */
-    public static String getPrivateKey(MyPair<PublicKey, PrivateKey> pair) throws Exception {
+    public static String getPrivateKey() throws Exception {
         return Base64Util.encode(pair.getR().getEncoded()).replaceAll("\\s", "");
     }
 
@@ -157,10 +167,9 @@ public class RSAUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        MyPair<PublicKey, PrivateKey> pair = RSAUtil.genKeyPair();//获取公钥私钥
-        String publicKey = RSAUtil.getPublicKey(pair);
+        String publicKey = RSAUtil.getPublicKey();
         System.out.println(publicKey);
-        String privateKey = RSAUtil.getPrivateKey(pair);
+        String privateKey = RSAUtil.getPrivateKey();
         System.out.println(privateKey);
         String str = "中国";
 
