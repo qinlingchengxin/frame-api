@@ -18,7 +18,7 @@ public class RSAUtil {
     static {
         try {
             pair = genKeyPair();
-        } catch (Exception e) {
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
     }
@@ -36,7 +36,7 @@ public class RSAUtil {
     /**
      * 生成密钥
      */
-    public static MyPair<PublicKey, PrivateKey> genKeyPair() throws Exception {
+    public static MyPair<PublicKey, PrivateKey> genKeyPair() throws NoSuchAlgorithmException {
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(ENCRYPTION_ALGORITHM);
         keyPairGenerator.initialize(1024);
         KeyPair keyPair = keyPairGenerator.generateKeyPair();
@@ -46,14 +46,14 @@ public class RSAUtil {
     /**
      * 取得公钥
      */
-    public static String getPublicKey() throws Exception {
+    public static String getPublicKey() {
         return Base64Util.encode(pair.getL().getEncoded()).replaceAll("\\s", "");
     }
 
     /**
      * 取得私钥
      */
-    public static String getPrivateKey() throws Exception {
+    public static String getPrivateKey() {
         return Base64Util.encode(pair.getR().getEncoded()).replaceAll("\\s", "");
     }
 
