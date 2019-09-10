@@ -47,7 +47,7 @@ public enum ThreadPoolManager {
          * @param workQueue ：线程池所使用的缓冲队列
          * @param  handler ： 线程池对拒绝任务的处理策略
          * */
-        complexPool = new TPool(100, 500, 3, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(1000), null);
+        complexPool = new TPool(20, 100, 3, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(1000), null);
         /**
          * 20个线程
          */
