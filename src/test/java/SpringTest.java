@@ -36,6 +36,13 @@ public class SpringTest {
         }
     }
 
+    /**
+     * 这种方式不能测试注入的方法
+     *
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws InvocationTargetException
+     */
     @Test
     public void testApi() throws IllegalAccessException, InstantiationException, InvocationTargetException {
         Class clazz = CheckController.class;
