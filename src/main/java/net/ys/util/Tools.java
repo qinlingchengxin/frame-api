@@ -304,6 +304,20 @@ public class Tools {
         return arrayClass.getComponentType();
     }
 
+    /**
+     * 判断是否是基本类型的包装类
+     *
+     * @param clz
+     * @return
+     */
+    public static boolean isWrapClass(Class clz) {
+        try {
+            return ((Class) clz.getField("TYPE").get(null)).isPrimitive();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println(camelToDb("deleteCharAt"));
     }
