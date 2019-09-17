@@ -283,7 +283,7 @@ public class Tools {
      */
     public static int getDataType(Class clazz) {
         String name = clazz.getName().toLowerCase();
-        if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean).*")) {
+        if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean|decimal).*")) {
             return 0;
         } else if (name.matches(".*(map|list|set)")) {
             return 1;
