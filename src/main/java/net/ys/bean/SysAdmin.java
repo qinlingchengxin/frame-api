@@ -7,6 +7,8 @@ import java.io.Serializable;
  */
 public class SysAdmin implements Serializable {
 
+    private static final long serialVersionUID = 5017328858200144596L;
+
     private String id;    //主键
 
     private int magType;    //类型 0-普通管理员/1-超级管理员
