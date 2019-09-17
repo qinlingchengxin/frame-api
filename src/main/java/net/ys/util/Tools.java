@@ -277,6 +277,33 @@ public class Tools {
         return sb.toString();
     }
 
+    /**
+     * @param clazz
+     * @return 0：基础类型、1：集合类型、2：数组、3：对象类型
+     */
+    public static int getDataType(Class clazz) {
+        String name = clazz.getName().toLowerCase();
+        if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean).*")) {
+            return 0;
+        } else if (name.matches(".*(map|list|set)")) {
+            return 1;
+        } else if (name.startsWith("[")) {
+            return 2;
+        } else {
+            return 3;
+        }
+    }
+
+    /**
+     * 获取数组类元素的类型
+     *
+     * @param arrayClass
+     * @return
+     */
+    public static Class<?> getComponentType(Class<?> arrayClass) {
+        return arrayClass.getComponentType();
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println(camelToDb("deleteCharAt"));
     }
