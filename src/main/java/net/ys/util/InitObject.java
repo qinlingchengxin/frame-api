@@ -304,9 +304,9 @@ public class InitObject {
         String name = clazz.getName().toLowerCase();
         if (name.startsWith("[")) {
             return 0;
-        } else if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean|decimal).*")) {
+        } else if (name.matches("^(java\\.(lang|math)\\.)?(string|integer|double|float|long|char|short|int|byte|boolean|character|bigdecimal)")) {
             return 1;
-        } else if (name.matches(".*(map|list|set)")) {
+        } else if (name.matches("^(java\\.util\\.).*(map|list|set)&")) {
             return 2;
         } else {
             return 3;
