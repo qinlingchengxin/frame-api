@@ -15,8 +15,7 @@ import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * User: NMY
@@ -285,9 +284,9 @@ public class Tools {
         String name = clazz.getName().toLowerCase();
         if (name.startsWith("[")) {
             return 0;
-        } else if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean|decimal).*")) {
+        } else if (name.matches("^(java\\.(lang|math)\\.)?(string|integer|double|float|long|char|short|int|byte|boolean|character|bigdecimal)")) {
             return 1;
-        } else if (name.matches(".*(map|list|set)")) {
+        } else if (name.matches("^(java\\.util\\.).*(map|list|set)&")) {
             return 2;
         } else {
             return 3;
@@ -307,18 +306,29 @@ public class Tools {
     /**
      * 判断是否是基本类型的包装类
      *
-     * @param clz
+     * @param clazz
      * @return
      */
-    public static boolean isWrapClass(Class clz) {
-        try {
-            return ((Class) clz.getField("TYPE").get(null)).isPrimitive();
-        } catch (Exception e) {
-            return false;
-        }
+    public static boolean isWrapClass(Class clazz) {
+        String name = clazz.getName().toLowerCase();
+        return name.matches("^(java\\.lang\\.)(integer|double|float|long|short|byte|boolean|character)");
+    }
+
+    /**
+     * 是否为四类八种原始类：boolean、char、byte、short、int、long、float、double
+     *
+     * @param clazz
+     * @return
+     */
+    public static boolean isPrimitive(Class clazz) {
+        return clazz.isPrimitive();
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println(camelToDb("deleteCharAt"));
+        System.out.println(getDataType(Long.class));
+        System.out.println(getDataType(List.class));
+        System.out.println(getDataType(Map.class));
+        System.out.println(getDataType(Set.class));
+        System.out.println(getDataType(int.class));
     }
 }
