@@ -279,15 +279,15 @@ public class Tools {
 
     /**
      * @param clazz
-     * @return 0：基础类型、1：集合类型、2：数组、3：对象类型
+     * @return 0：数组、1：基础类型、2：集合类型、3：对象类型
      */
     public static int getDataType(Class clazz) {
         String name = clazz.getName().toLowerCase();
-        if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean|decimal).*")) {
+        if (name.startsWith("[")) {
             return 0;
-        } else if (name.matches(".*(map|list|set)")) {
+        } else if (name.matches(".*(string|double|float|long|char|short|int|byte|boolean|decimal).*")) {
             return 1;
-        } else if (name.startsWith("[")) {
+        } else if (name.matches(".*(map|list|set)")) {
             return 2;
         } else {
             return 3;
