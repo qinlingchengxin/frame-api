@@ -47,46 +47,22 @@ public class InitObject {
                 ParameterizedType listType = (ParameterizedType) field.getGenericType();
                 Class<?> listClass = (Class<?>) listType.getActualTypeArguments()[0];
                 List list = new ArrayList<>();
-                if (listClass == String.class) {
-                    list.add("list_string_val");
-                } else if (listClass == Integer.class || listClass == Long.class) {
-                    list.add(1);
-                } else if (listClass == BigDecimal.class) {
-                    list.add(new BigDecimal(1));
-                } else {
-                    Object listObj = initBaseBean(listClass);
-                    list.add(listObj);
-                }
+                Object val = genCollectionValue(listClass);
+                list.add(val);
                 field.set(o, list);
             } else if (type == Set.class) {
                 ParameterizedType setType = (ParameterizedType) field.getGenericType();
                 Class<?> setClass = (Class<?>) setType.getActualTypeArguments()[0];
                 Set set = new HashSet();
-                if (setClass == String.class) {
-                    set.add("set_string_val");
-                } else if (setClass == Integer.class || setClass == Long.class) {
-                    set.add(1);
-                } else if (setClass == BigDecimal.class) {
-                    set.add(new BigDecimal(1));
-                } else {
-                    Object setObj = initBaseBean(setClass);
-                    set.add(setObj);
-                }
+                Object val = genCollectionValue(setClass);
+                set.add(val);
                 field.set(o, set);
             } else if (type == Map.class) {
                 ParameterizedType mapType = (ParameterizedType) field.getGenericType();
                 Class<?> valueClass = (Class<?>) mapType.getActualTypeArguments()[1];
                 Map map = new HashMap();
-                if (valueClass == String.class) {
-                    map.put("key", "map_string_val");
-                } else if (valueClass == Integer.class || valueClass == Long.class) {
-                    map.put("key", 1);
-                } else if (valueClass == BigDecimal.class) {
-                    map.put("key", new BigDecimal(1));
-                } else {
-                    Object valObj = initBaseBean(valueClass);
-                    map.put("key", valObj);
-                }
+                Object val = genCollectionValue(valueClass);
+                map.put("key", val);
                 field.set(o, map);
             } else {
                 Object obj = initBaseBean(type);
@@ -94,6 +70,26 @@ public class InitObject {
             }
         }
         return o;
+    }
+
+    /**
+     * 生成集合值
+     *
+     * @param clazz
+     * @return
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     */
+    public static Object genCollectionValue(Class clazz) throws InstantiationException, IllegalAccessException {
+        if (clazz == String.class) {
+            return "map_string_val";
+        } else if (clazz == Integer.class || clazz == Long.class) {
+            return 1;
+        } else if (clazz == BigDecimal.class) {
+            return new BigDecimal(1);
+        } else {
+            return initBaseBean(clazz);
+        }
     }
 
     /**
