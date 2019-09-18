@@ -166,6 +166,24 @@ public class RSAUtil {
         return signature.verify(Base64Util.decode(sign.getBytes(ENCODING)));
     }
 
+    static class MyPair<T, K> {
+        private T l;
+        private K r;
+
+        public MyPair(T l, K r) {
+            this.l = l;
+            this.r = r;
+        }
+
+        public T getL() {
+            return l;
+        }
+
+        public K getR() {
+            return r;
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         String publicKey = RSAUtil.getPublicKey();
         System.out.println(publicKey);
@@ -181,20 +199,3 @@ public class RSAUtil {
     }
 }
 
-class MyPair<T, K> {
-    private T l;
-    private K r;
-
-    public MyPair(T l, K r) {
-        this.l = l;
-        this.r = r;
-    }
-
-    public T getL() {
-        return l;
-    }
-
-    public K getR() {
-        return r;
-    }
-}
