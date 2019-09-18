@@ -15,7 +15,10 @@ import java.lang.reflect.Field;
 import java.math.BigDecimal;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
-import java.util.*;
+import java.util.Random;
+import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * User: NMY
@@ -149,7 +152,20 @@ public class Tools {
      * 将驼峰标识转化成数据库存储格式，eg: createTime -> create_time
      */
     public static String camelToDb(String resource) {
-        return resource.replaceAll("[A-Z]", "_$0").toLowerCase();
+        return resource.replaceAll("[A-Z]+", "_$0").toLowerCase();
+    }
+
+    /**
+     * 将数据库存储格式转化成驼峰标识，eg: create_time -> createTime
+     */
+    public static String dbToCamel(String resource) {
+        Matcher matcher = Pattern.compile("_[a-z0-9]").matcher(resource);
+        StringBuffer result = new StringBuffer();
+        while (matcher.find()) {
+            matcher.appendReplacement(result, matcher.group(0).replace("_", "").toUpperCase());
+        }
+        matcher.appendTail(result);
+        return result.toString();
     }
 
     public static String firstToUpperCase(String str) {
@@ -325,10 +341,6 @@ public class Tools {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println(getDataType(Long.class));
-        System.out.println(getDataType(List.class));
-        System.out.println(getDataType(Map.class));
-        System.out.println(getDataType(Set.class));
-        System.out.println(getDataType(int.class));
+        System.out.println(dbToCamel("create_time_hello_world"));
     }
 }

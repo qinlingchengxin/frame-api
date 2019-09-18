@@ -8,7 +8,7 @@ package net.ys.constant;
 public enum SysRegex {
 
     PASSWORD("[0-9a-zA-Z]{6,12}", "密码"),
-    PHONE_NUMBER("^((19[0-9])|(13[0-9])|(15[^4])|(18[0-9])|(17[0-8])|147|145)\\d{8}$", "手机号码"),
+    PHONE_NUMBER("^1(3|4|5|7|8|9)\\d{9}$", "手机号码"),
     COMMA_LIST("(\\d+,)*\\d+", "逗号隔开的数字字符串"),;
 
     public String regex;
