@@ -13,6 +13,8 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.RuntimeMXBean;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -338,6 +340,25 @@ public class Tools {
      */
     public static boolean isPrimitive(Class clazz) {
         return clazz.isPrimitive();
+    }
+
+    /**
+     * 获取文件 Content-Type
+     *
+     * @param filePath
+     * @return
+     */
+    public static String getContentType(String filePath) {
+        String type = null;
+        try {
+            type = Files.probeContentType(Paths.get(filePath));
+        } catch (IOException e) {
+        }
+
+        if (type == null) {//无法获取的均按照流文件处理
+            type = "application/octet-stream";
+        }
+        return type;
     }
 
     public static void main(String[] args) throws IOException {

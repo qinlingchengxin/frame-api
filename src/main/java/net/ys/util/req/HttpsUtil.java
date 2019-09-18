@@ -3,11 +3,11 @@ package net.ys.util.req;
 import net.ys.util.LogUtil;
 
 import javax.net.ssl.*;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -167,22 +167,46 @@ public class HttpsUtil {
         return response;
     }
 
-    public static HttpResponse doPostFormData(String address, Map<String, String> params) {
+    public static HttpResponse doPostFormData(String address, Map<String, String> texts, Map<String, File> files) {
         HttpResponse response = new HttpResponse();
-        HttpsURLConnection connection = null;
+        HttpURLConnection connection = null;
         OutputStream out = null;
         try {
             connection = genConnection(address, METHOD_POST, CONTENT_TYPE_FORM_DATA);
-
-            StringBuffer contentBody = new StringBuffer();
-            for (Map.Entry<String, String> entry : params.entrySet()) {
-                contentBody.append(HG + BOUNDARY).append(HH).append("Content-Disposition: form-data; name=\"").append(entry.getKey()).append("\"").append(HHM).append(entry.getValue()).append(HH);
-            }
-            contentBody.append(HG).append(BOUNDARY).append(HG).append(HH);
-
-            String content = contentBody.toString();
             out = connection.getOutputStream();
-            out.write(content.getBytes(ENCODING));
+            StringBuffer contentBody = new StringBuffer();
+
+            if (texts != null && !texts.isEmpty()) {
+                for (String key : texts.keySet()) {//text
+                    contentBody.append(HG + BOUNDARY).append(HH).append("Content-Disposition: form-data; name=\"").append(key).append("\"").append(HHM).append(texts.get(key)).append(HH);
+                }
+                out.write(contentBody.toString().getBytes(ENCODING));
+            }
+
+            if (files != null && !files.isEmpty()) {
+                for (String key : files.keySet()) {//file
+                    File file = files.get(key);
+                    contentBody = new StringBuffer();
+                    InputStream inputStream = new FileInputStream(file);
+                    contentBody.append(HG + BOUNDARY).append(HH).append("Content-Disposition: form-data; name=\"").append(key).append("\"").append("; filename=\"").append(file.getName()).append("\"").append(HH);
+                    contentBody.append("Content-Type:").append(getContentType(file.getAbsolutePath())).append("\"").append(HHM);
+                    out.write(contentBody.toString().getBytes(ENCODING));
+
+                    int len;
+                    byte[] bytes = new byte[1024];
+                    while ((len = inputStream.read(bytes)) > 0) {
+                        out.write(bytes, 0, len);
+                    }
+                    out.write(HH.getBytes(ENCODING));
+                    out.flush();
+                    inputStream.close();
+                }
+            }
+
+            contentBody = new StringBuffer();
+            contentBody.append(HG).append(BOUNDARY).append(HG).append(HH);
+            out.write(contentBody.toString().getBytes(ENCODING));
+
             out.flush();
 
             int responseCode = connection.getResponseCode();
@@ -192,6 +216,7 @@ public class HttpsUtil {
             response.setValue(result);
 
         } catch (Exception e) {
+            e.printStackTrace();
             response = HttpResponse.error(e.getMessage());
         } finally {
             close(connection, out);
@@ -286,11 +311,22 @@ public class HttpsUtil {
         }
     };
 
-    public static void main(String[] args) throws IOException {
-        String urlString = "https://www.hbggzyfwpt.cn/admin/web/admin/login.do";
-        HttpResponse response = HttpsUtil.doGet(urlString);
-        if (response.getCode() == 200) {
-            System.out.println(response.getValue());
+    /**
+     * 获取文件 Content-Type
+     *
+     * @param filePath
+     * @return
+     */
+    public static String getContentType(String filePath) {
+        String type = null;
+        try {
+            type = Files.probeContentType(Paths.get(filePath));
+        } catch (IOException e) {
         }
+
+        if (type == null) {//无法获取的均按照流文件处理
+            type = "application/octet-stream";
+        }
+        return type;
     }
 }

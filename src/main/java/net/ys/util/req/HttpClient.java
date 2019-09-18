@@ -2,13 +2,14 @@ package net.ys.util.req;
 
 import net.ys.util.LogUtil;
 
+import java.io.File;
 import java.util.Map;
 
 /**
  * User: NMY
  * Date: 19-6-4
  */
-public class HttpUtilProxy {
+public class HttpClient {
 
     public static HttpResponse doGet(String address) {
         String protocol = address.substring(0, 6).toLowerCase();
@@ -53,11 +54,11 @@ public class HttpUtilProxy {
         return HttpUtil.doPostJson(address, json);
     }
 
-    public static HttpResponse doPostFormData(String address, Map<String, String> params) {
+    public static HttpResponse doPostFormData(String address, Map<String, String> texts, Map<String, File> files) {
         String protocol = address.substring(0, 6).toLowerCase();
         if ("https:".equals(protocol)) {
-            return HttpsUtil.doPostFormData(address, params);
+            return HttpsUtil.doPostFormData(address, texts, files);
         }
-        return HttpUtil.doPostFormData(address, params);
+        return HttpUtil.doPostFormData(address, texts, files);
     }
 }

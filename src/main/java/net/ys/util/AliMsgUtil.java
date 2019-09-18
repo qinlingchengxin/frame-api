@@ -1,7 +1,7 @@
 package net.ys.util;
 
 import net.ys.component.SysConfig;
-import net.ys.util.req.HttpUtilProxy;
+import net.ys.util.req.HttpClient;
 
 /**
  * 钉钉机器人
@@ -15,6 +15,6 @@ public class AliMsgUtil {
      */
     public static void sendText(String content) {
         String msg = "{\"msgtype\":\"text\",\"text\":{\"content\":\"" + content + "\"},\"at\":{\"isAtAll\":true}}";
-        HttpUtilProxy.doPostJson(SysConfig.dingTalkUrl, msg);
+        HttpClient.doPostJson(SysConfig.dingTalkUrl, msg);
     }
 }
