@@ -361,7 +361,41 @@ public class Tools {
         return type;
     }
 
+    /**
+     * 中文字符转unicode
+     *
+     * @param str
+     * @return
+     */
+    public static String stringToUnicode(String str) {
+        StringBuffer sb = new StringBuffer();
+        char[] chars = str.toCharArray();
+        for (char c : chars) {
+            sb.append("\\u" + Integer.toHexString(c));
+        }
+        return sb.toString();
+    }
+
+    /**
+     * unicode转字符串
+     *
+     * @param unicode
+     * @return
+     */
+    public static String unicodeToString(String unicode) {
+        StringBuffer sb = new StringBuffer();
+        String[] hex = unicode.split("\\\\u");
+        for (int i = 1; i < hex.length; i++) {
+            sb.append((char) Integer.parseInt(hex[i], 16));
+        }
+
+        return sb.toString();
+    }
+
     public static void main(String[] args) throws IOException {
-        System.out.println(dbToCamel("create_time_hello_world"));
+        String str = "hello world 你好 中国" ;
+        String s = stringToUnicode(str);
+        System.out.println(s);
+        System.out.println(unicodeToString(s));
     }
 }
