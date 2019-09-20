@@ -19,7 +19,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568710524158" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568955393918" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568955540834" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568773381369" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -546,10 +546,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HttpsUtil.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HttpsUtil.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="193" column="58" selection-start="8125" selection-end="8125" vertical-scroll-proportion="0.0">
+            <state line="288" column="3" selection-start="11712" selection-end="11712" vertical-scroll-proportion="3.782071">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10807#10937#0" expanded="true" />
@@ -568,10 +568,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HttpUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="187" column="58" selection-start="7866" selection-end="7866" vertical-scroll-proportion="0.4636785">
+            <state line="245" column="3" selection-start="10019" selection-end="10019" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -620,8 +620,8 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
       </list>
     </option>
   </component>
@@ -1932,7 +1932,11 @@
       <created>1568955396201</created>
       <updated>1568955396201</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="update encrypt method">
+      <created>1568955543191</created>
+      <updated>1568955543191</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -2179,21 +2183,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="3" selection-start="10019" selection-end="10019" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="58" selection-start="8125" selection-end="8125" vertical-scroll-proportion="0.0">
+        <state line="288" column="3" selection-start="11712" selection-end="11712" vertical-scroll-proportion="3.782071">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#10807#10937#0" expanded="true" />
             <element signature="e#10930#10931#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="58" selection-start="7866" selection-end="7866" vertical-scroll-proportion="0.4636785">
-          <folding />
         </state>
       </provider>
     </entry>

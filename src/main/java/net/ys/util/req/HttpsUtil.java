@@ -286,12 +286,6 @@ public class HttpsUtil {
         }
     };
 
-    /**
-     * 获取文件 Content-Type
-     *
-     * @param filePath
-     * @return
-     */
     public static String getContentType(String filePath) {
         String type = null;
         try {

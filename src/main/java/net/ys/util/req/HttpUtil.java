@@ -208,13 +208,6 @@ public class HttpUtil {
         return connection;
     }
 
-    /**
-     * 大部分情况下返回结果长度不超过1024，所以可以先判断，这样可以省内存开销
-     *
-     * @param inputStream
-     * @return
-     * @throws IOException
-     */
     public static String genResult(InputStream inputStream) throws IOException {
         StringBuffer result = new StringBuffer();
         int len;
@@ -250,12 +243,6 @@ public class HttpUtil {
         }
     }
 
-    /**
-     * 获取文件 Content-Type
-     *
-     * @param filePath
-     * @return
-     */
     public static String getContentType(String filePath) {
         String type = null;
         try {
