@@ -35,7 +35,7 @@ public class HttpUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            return new HttpResponse(connection.getResponseCode(), result);
+            return new HttpResponse(responseCode, result);
         } catch (Exception e) {
             return new HttpResponse(9999, e.getMessage());
         } finally {
@@ -61,7 +61,7 @@ public class HttpUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            return new HttpResponse(connection.getResponseCode(), result);
+            return new HttpResponse(responseCode, result);
         } catch (Exception e) {
             return new HttpResponse(9999, e.getMessage());
         } finally {
@@ -85,7 +85,7 @@ public class HttpUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            return new HttpResponse(connection.getResponseCode(), result);
+            return new HttpResponse(responseCode, result);
         } catch (Exception e) {
             return new HttpResponse(9999, e.getMessage());
         } finally {
@@ -109,7 +109,7 @@ public class HttpUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            return new HttpResponse(connection.getResponseCode(), result);
+            return new HttpResponse(responseCode, result);
         } catch (Exception e) {
             return new HttpResponse(9999, e.getMessage());
         } finally {
@@ -133,7 +133,7 @@ public class HttpUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            return new HttpResponse(connection.getResponseCode(), result);
+            return new HttpResponse(responseCode, result);
         } catch (Exception e) {
             return new HttpResponse(9999, e.getMessage());
         } finally {
@@ -185,7 +185,7 @@ public class HttpUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            return new HttpResponse(connection.getResponseCode(), result);
+            return new HttpResponse(responseCode, result);
         } catch (Exception e) {
             return new HttpResponse(9999, e.getMessage());
         } finally {
