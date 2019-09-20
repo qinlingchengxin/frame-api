@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" afterPath="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frame-api.iws" afterPath="$PROJECT_DIR$/frame-api.iws" />
@@ -19,7 +20,7 @@
     <file path="/fragment.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568710524158" ignored="false" />
     <file path="/DemoService.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1545014333549" ignored="false" />
     <file path="/HowToUse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1556443906069" ignored="false" />
-    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568954427697" ignored="false" />
+    <file path="/Dummy.txt" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568954470708" ignored="false" />
     <file path="/pom.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568773381369" ignored="false" />
     <file path="D:/Program Files/maven/conf/settings.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541824649749" ignored="false" />
     <file path="$PROJECT_DIR$/../demo/web/WEB-INF/web.xml" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1541985530883" ignored="false" />
@@ -260,8 +261,8 @@
     <file path="/HttpClientUtils.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559616014323" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559616274178" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/HttpClientUtils.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628290054" ignored="false" />
-    <file path="/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568776863611" ignored="false" />
-    <file path="/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559623789659" ignored="false" />
+    <file path="/HttpUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568954928405" ignored="false" />
+    <file path="/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1568954858253" ignored="false" />
     <file path="/SmsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559628582995" ignored="false" />
     <file path="/HttpsUtil.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1562993161501" ignored="false" />
     <file path="$PROJECT_DIR$/../cert_tw/api/src/main/java/net/ys/utils/req/HttpResponse.java" changelist="6151bf2b-0bd6-4fb8-a27d-e339ca1f7b37" time="1559627186426" ignored="false" />
@@ -546,19 +547,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HttpsUtil.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HttpsUtil.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="322" column="28" selection-start="12687" selection-end="12696" vertical-scroll-proportion="-19.28">
+            <state line="164" column="52" selection-start="6694" selection-end="6694" vertical-scroll-proportion="0.5409583">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10903#11033#0" expanded="true" />
+                <element signature="e#11026#11027#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HttpUtil.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HttpUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="32" selection-start="8614" selection-end="8614" vertical-scroll-proportion="0.55425906">
+            <state line="91" column="33" selection-start="3668" selection-end="3671" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -584,7 +607,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/controller/CheckController.java" />
         <option value="$PROJECT_DIR$/src/test/java/SpringTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/bean/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/constant/SysRegex.java" />
@@ -598,8 +620,9 @@
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtilProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/Tools.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java" />
       </list>
     </option>
   </component>
@@ -639,7 +662,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1902,7 +1925,11 @@
       <created>1568889259206</created>
       <updated>1568889259206</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="update encrypt method">
+      <created>1568954474980</created>
+      <updated>1568954474980</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1926,12 +1953,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32218507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23240224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986537" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3944134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1940,18 +1968,17 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206704" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14727855" sideWeight="0.8670391" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18877006" sideWeight="0.6882682" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18836713" sideWeight="0.7675978" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31173185" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23240224" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206704" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18237454" sideWeight="0.65433526" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2079,11 +2106,6 @@
         <state line="89" column="19" selection-start="2408" selection-end="2408" vertical-scroll-proportion="0.3321739" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/BatUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="30" selection-start="397" selection-end="397" vertical-scroll-proportion="0.04244482">
@@ -2128,11 +2150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="36" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.533107" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/TomcatUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="91" selection-end="91" vertical-scroll-proportion="0.33333334">
@@ -2145,17 +2162,35 @@
         <state line="39" column="20" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.04244482" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="28" selection-start="12687" selection-end="12696" vertical-scroll-proportion="-19.28">
+        <state line="6" column="13" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="32" selection-start="8614" selection-end="8614" vertical-scroll-proportion="0.55425906">
+        <state line="91" column="33" selection-start="3668" selection-end="3671" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/ys/util/req/HttpsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="52" selection-start="6694" selection-end="6694" vertical-scroll-proportion="0.5409583">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10903#11033#0" expanded="true" />
+            <element signature="e#11026#11027#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

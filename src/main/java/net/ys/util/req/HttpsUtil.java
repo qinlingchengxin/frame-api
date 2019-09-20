@@ -36,25 +36,21 @@ public class HttpsUtil {
     public static HttpResponse doGet(String address) {
 
         HttpsURLConnection connection = null;
-        HttpResponse response = new HttpResponse();
         try {
             connection = genConnection(address, METHOD_GET, CONTENT_TYPE_URL_ENCODED);
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            response.setCode(connection.getResponseCode());
-            response.setValue(result);
+            return new HttpResponse(connection.getResponseCode(), result);
         } catch (Exception e) {
-            response = HttpResponse.error(e.getMessage());
+            return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, null);
         }
-        return response;
     }
 
     public static HttpResponse doPost(String address, Map<String, Object> params) {
 
-        HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
@@ -71,20 +67,15 @@ public class HttpsUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            response.setCode(connection.getResponseCode());
-            response.setValue(result);
-
+            return new HttpResponse(connection.getResponseCode(), result);
         } catch (Exception e) {
-            response = HttpResponse.error(e.getMessage());
+            return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
         }
-
-        return response;
     }
 
     public static HttpResponse doPostTextXml(String address, String xml) {
-        HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
@@ -100,19 +91,15 @@ public class HttpsUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            response.setCode(connection.getResponseCode());
-            response.setValue(result);
-
+            return new HttpResponse(connection.getResponseCode(), result);
         } catch (Exception e) {
-            response = HttpResponse.error(e.getMessage());
+            return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
         }
-        return response;
     }
 
     public static HttpResponse doPostAppXml(String address, String xml) {
-        HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
@@ -128,19 +115,15 @@ public class HttpsUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            response.setCode(connection.getResponseCode());
-            response.setValue(result);
-
+            return new HttpResponse(connection.getResponseCode(), result);
         } catch (Exception e) {
-            response = HttpResponse.error(e.getMessage());
+            return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
         }
-        return response;
     }
 
     public static HttpResponse doPostJson(String address, String json) {
-        HttpResponse response = new HttpResponse();
         HttpsURLConnection connection = null;
         OutputStream out = null;
         try {
@@ -156,19 +139,15 @@ public class HttpsUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            response.setCode(connection.getResponseCode());
-            response.setValue(result);
-
+            return new HttpResponse(connection.getResponseCode(), result);
         } catch (Exception e) {
-            response = HttpResponse.error(e.getMessage());
+            return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
         }
-        return response;
     }
 
     public static HttpResponse doPostFormData(String address, Map<String, String> texts, Map<String, File> files) {
-        HttpResponse response = new HttpResponse();
         HttpURLConnection connection = null;
         OutputStream out = null;
         try {
@@ -212,15 +191,12 @@ public class HttpsUtil {
             int responseCode = connection.getResponseCode();
             String result = genResult(connection.getInputStream());
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
-            response.setCode(connection.getResponseCode());
-            response.setValue(result);
-
+            return new HttpResponse(connection.getResponseCode(), result);
         } catch (Exception e) {
-            response = HttpResponse.error(e.getMessage());
+            return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
         }
-        return response;
     }
 
     public static HttpsURLConnection genConnection(String address, String method, String contentType) throws IOException, NoSuchProviderException, NoSuchAlgorithmException, KeyManagementException {
