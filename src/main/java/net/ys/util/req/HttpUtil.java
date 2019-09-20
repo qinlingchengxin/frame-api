@@ -210,7 +210,6 @@ public class HttpUtil {
             response.setValue(result);
 
         } catch (Exception e) {
-            e.printStackTrace();
             response = HttpResponse.error(e.getMessage());
         } finally {
             close(connection, out);
