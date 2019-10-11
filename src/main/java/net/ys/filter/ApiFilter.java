@@ -13,6 +13,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.util.Enumeration;
 
 @WebFilter(urlPatterns = "/api/*")
 public final class ApiFilter implements Filter {
@@ -38,6 +39,7 @@ public final class ApiFilter implements Filter {
                 response.setContentType("application/json; charset=" + X.Code.U);
                 response.getWriter().write(GenResult.REQUEST_INVALID.toJson());
             } else {
+                log(request);
                 chain.doFilter(request, response);
             }
         } else {
@@ -79,5 +81,19 @@ public final class ApiFilter implements Filter {
 
     @Override
     public void destroy() {
+    }
+
+    private void log(ServletRequest servletRequest) {
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        String uri = request.getRequestURI();
+        Enumeration<String> names = request.getParameterNames();
+        String name;
+        String newLine = "\r\n";
+        StringBuffer sb = new StringBuffer("request uri-->" + uri + newLine);
+        while (names.hasMoreElements()) {
+            name = names.nextElement();
+            sb.append(name + "->" + request.getParameter(name) + newLine);
+        }
+        LogUtil.info(sb.toString());
     }
 }
