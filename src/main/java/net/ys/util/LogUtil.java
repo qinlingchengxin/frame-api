@@ -23,9 +23,8 @@ public class LogUtil {
     }
 
     public static void debug(Object... messages) {
-        System.out.println();
         for (Object msg : messages) {
-            System.out.println("debug-msg: " + msg.toString());
+            log.debug(msg);
         }
     }
 }
