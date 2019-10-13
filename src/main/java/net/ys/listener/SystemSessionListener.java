@@ -10,12 +10,12 @@ public class SystemSessionListener implements HttpSessionListener {
     public void sessionCreated(HttpSessionEvent event) {
         HttpSession session = event.getSession();
         String id = session.getId();
-        System.out.println("sessionCreated---" + id);
+        System.out.println("--- sessionCreated ---" + id);
     }
 
     public void sessionDestroyed(HttpSessionEvent event) {
         HttpSession session = event.getSession();
         String id = session.getId();
-        System.out.println("sessionDestroyed----" + id);
+        System.out.println("--- sessionDestroyed ---" + id);
     }
 }

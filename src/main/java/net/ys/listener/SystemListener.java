@@ -30,11 +30,13 @@ public class SystemListener implements ServletContextListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("contextDestroyed");
+        System.out.println("--- contextDestroyed ---");
+
     }
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
+        System.out.println("--- contextInitialized ---");
         Tools.godBless();
     }
 }
