@@ -26,7 +26,7 @@ public class Log4jController {
         try {
             Properties properties = new Properties();
             properties.load(Log4jController.class.getClassLoader().getResourceAsStream("log4j.properties"));
-            String tmp = properties.getProperty("root-path");
+            String tmp = properties.getProperty("root");
             String home = System.getProperty("catalina.home").replace('\\', '/');
             logRoot = tmp.replace("${catalina.home}", home);
         } catch (Exception e) {
