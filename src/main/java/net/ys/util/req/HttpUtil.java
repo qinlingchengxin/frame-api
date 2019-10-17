@@ -1,9 +1,12 @@
 package net.ys.util.req;
 
+import net.ys.component.SysConfig;
 import net.ys.util.LogUtil;
 
 import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -195,7 +198,16 @@ public class HttpUtil {
 
     public static HttpURLConnection genConnection(String address, String method, String contentType) throws IOException {
         URL url = new URL(address);
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+        HttpURLConnection connection;
+        if (SysConfig.enableProxy == 1) {
+            System.out.println("enableProxy ---------------");
+            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(SysConfig.proxyHost, SysConfig.proxyPort));
+            connection = (HttpURLConnection) url.openConnection(proxy);
+        } else {
+            connection = (HttpURLConnection) url.openConnection();
+        }
+
         connection.setConnectTimeout(TIMEOUT);
         connection.setReadTimeout(TIMEOUT);
         connection.setDoInput(true);

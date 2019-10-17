@@ -6,6 +6,8 @@ import io.swagger.annotations.ApiParam;
 import net.ys.component.SysConfig;
 import net.ys.constant.GenResult;
 import net.ys.util.*;
+import net.ys.util.req.HttpClient;
+import net.ys.util.req.HttpResponse;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -82,6 +84,19 @@ public class TestController {
             tempFile.delete();
             TomcatUtil.stopTomcat();
             return GenResult.SUCCESS.genResult();
+        } catch (Exception e) {
+            LogUtil.error(e);
+            return GenResult.UNKNOWN_ERROR.genResult();
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "proxy", method = RequestMethod.GET, headers = "Accept=application/json")
+    @ApiOperation(httpMethod = "GET", response = Map.class, responseContainer = "Map", value = "测试代理")
+    public Map<String, Object> proxy(HttpServletRequest request) {
+        try {
+            HttpResponse httpResponse = HttpClient.doGet("https://www.baidu.com");
+            return GenResult.SUCCESS.genResult(httpResponse);
         } catch (Exception e) {
             LogUtil.error(e);
             return GenResult.UNKNOWN_ERROR.genResult();

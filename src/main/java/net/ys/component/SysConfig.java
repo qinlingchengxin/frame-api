@@ -46,19 +46,25 @@ public class SysConfig {
 
     public static int smsEffectiveTime;
 
+    public static int enableProxy;
+
+    public static String proxyHost;
+
+    public static int proxyPort;
+
     public static List<String> testName;
 
-    @Value("${enable.white.list}")
+    @Value("${enable_white_list}")
     public void setEnableWhiteList(int enableWhiteList) {
         this.enableWhiteList = enableWhiteList;
     }
 
-    @Value("${valid.api.parameter}")
+    @Value("${valid_api_parameter}")
     public void setValidApiParameter(int validApiParameter) {
         this.validApiParameter = validApiParameter == 1;
     }
 
-    @Value("${backupServerIp:backup.server.ip.*}")
+    @Value("${backupServerIp:backup_server_ip_*}")
     public void setBackupServerIp(String[] backupServerIp) {
         String prefix = backupServerIp[0];
         this.backupServerIp = PropertyUtil.gets(prefix.substring(0, prefix.length() - 1));
@@ -128,6 +134,21 @@ public class SysConfig {
             }
         }
         this.testPath = file.getAbsolutePath().replace('\\', '/') + "/";
+    }
+
+    @Value("${enable_proxy}")
+    public void setEnableProxy(int enableProxy) {
+        this.enableProxy = enableProxy;
+    }
+
+    @Value("${proxy_host}")
+    public void setProxyHost(String proxyHost) {
+        this.proxyHost = proxyHost;
+    }
+
+    @Value("${proxy_port}")
+    public void setProxyPort(int proxyPort) {
+        this.proxyPort = proxyPort;
     }
 
     @Value("${testName:test_name.*}")

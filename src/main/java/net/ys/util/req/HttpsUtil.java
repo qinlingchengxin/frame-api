@@ -1,10 +1,13 @@
 package net.ys.util.req;
 
+import net.ys.component.SysConfig;
 import net.ys.util.LogUtil;
 
 import javax.net.ssl.*;
 import java.io.*;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -203,7 +206,16 @@ public class HttpsUtil {
         URL url = new URL(address);
 
         HttpsURLConnection.setDefaultHostnameVerifier(ignoreHostnameVerifier);
-        HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
+
+        HttpsURLConnection connection;
+        if (SysConfig.enableProxy == 1) {
+            System.out.println("enableProxy ---------------");
+            Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(SysConfig.proxyHost, SysConfig.proxyPort));
+            connection = (HttpsURLConnection) url.openConnection(proxy);
+        } else {
+            connection = (HttpsURLConnection) url.openConnection();
+        }
+
         TrustManager[] tm = {ignoreCertificationTrustManger};
         SSLContext sslContext = SSLContext.getInstance("SSL", "SunJSSE");
         sslContext.init(null, tm, new java.security.SecureRandom());
