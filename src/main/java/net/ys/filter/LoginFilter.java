@@ -16,6 +16,7 @@ public final class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
+        request = new XssRequestWrapper(request);
         String uri = request.getRequestURI();
         Object admin = request.getSession().getAttribute("admin");
         if (admin == null) {

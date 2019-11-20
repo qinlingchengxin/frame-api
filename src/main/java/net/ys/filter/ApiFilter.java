@@ -28,7 +28,9 @@ public final class ApiFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest request = (HttpServletRequest) servletRequest;
+        request = new XssRequestWrapper(request);
 
         boolean flag = validClient(request);
 
@@ -51,10 +53,10 @@ public final class ApiFilter implements Filter {
 
     private boolean validClient(ServletRequest request) {//ip校验
         String clientIP = WebUtil.getClientIP((HttpServletRequest) request);
-        LogUtil.debug("access client ip:" + clientIP);
-
         if (SysConfig.enableWhiteList == 0 || SysConfig.backupServerIp.contains(clientIP)) {
             return true;
+        } else {
+            LogUtil.debug("access client ip:" + clientIP);
         }
         return false;
     }
