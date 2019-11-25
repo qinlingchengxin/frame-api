@@ -41,7 +41,7 @@ public final class ApiFilter implements Filter {
                 response.setContentType("application/json; charset=" + X.Code.U);
                 response.getWriter().write(GenResult.REQUEST_INVALID.toJson());
             } else {
-                log(request);
+                logParam(request);
                 chain.doFilter(request, response);
             }
         } else {
@@ -85,7 +85,7 @@ public final class ApiFilter implements Filter {
     public void destroy() {
     }
 
-    private void log(ServletRequest servletRequest) {
+    private void logParam(ServletRequest servletRequest) {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         String uri = request.getRequestURI();
         Enumeration<String> names = request.getParameterNames();
