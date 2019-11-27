@@ -9,14 +9,6 @@
     <link rel="stylesheet" type="text/css" href="${baseUrl}/css/topAndBottom.css">
     <script type="text/javascript" src="${baseUrl}/js/jquery.min.js"></script>
     <script type="text/javascript" src="${baseUrl}/My97DatePicker/WdatePicker.js"></script>
-
-    <script type="text/javascript">
-
-        function searchData() {
-            var name = document.getElementById("name").value;
-            window.location = "${baseUrl}/web/persons?name=" + name;
-        }
-    </script>
 </head>
 <body>
 
@@ -31,11 +23,11 @@
         </div>
 
         <div class="second">
-            <form>
+            <form action="${baseUrl}/web/persons" method="post">
                 <span>用户名：</span>
-                <input style="width: 120px; height: 26px;background-color: #ffffff;color:#000;border: 1px solid #EAEBE8;cursor: auto;" type="text" id="name" value="${name}"/>
+                <input style="width: 120px; height: 26px;background-color: #ffffff;color:#000;border: 1px solid #EAEBE8;cursor: auto;" type="text" id="name" name="name" value="${name}"/>
 
-                <input type="button" onclick="searchData();" value="搜索"/>
+                <input type="submit" value="搜索"/>
             </form>
         </div>
 
