@@ -8,7 +8,7 @@ public class InitTable {
 
     public static void main(String[] args) throws Exception {
         Map<String, String> tables = new HashMap<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 2; i++) {
             tables.put("animal" + i, "宠物表" + i);
         }
 
@@ -30,6 +30,7 @@ public class InitTable {
                     "\t`create_time` BIGINT (20) NOT NULL DEFAULT 0 COMMENT '创建时间',\n" +
                     "\t`update_time` BIGINT (20) NOT NULL DEFAULT 0 COMMENT '修改时间',\n" +
                     "\t`is_deleted` INT (1) NOT NULL DEFAULT 1 COMMENT '是否删除：0-无效/1-有效',\n" +
+                    "\t`sys_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP COMMENT '系统变更时间',\n" +
                     "\tPRIMARY KEY (`id`)\n" +
                     ") COMMENT = '" + comment + "';\n";
             Statement statement = connection.createStatement();
