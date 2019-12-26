@@ -73,21 +73,19 @@ public class Tools {
     /**
      * 获取指定长度随机字符串
      *
-     * @param len
+     * @param len       指定长度
+     * @param needNum   是否需要数字
+     * @param upperCase 是否需要大写
      * @return
      */
-    public static String randomString(int len) {
-        return UUID.randomUUID().toString().replaceAll("-", "").substring(0, len);
-    }
-
-    /**
-     * 获取随机数字
-     *
-     * @return
-     */
-    public static int randomInt(int num) {
-        Random rand = new Random();
-        return rand.nextInt(num);
+    public static String randomString(int len, boolean needNum, boolean upperCase) {
+        StringBuffer sb = new StringBuffer();
+        String regex = needNum ? "-" : "\\d|-";
+        while (sb.length() < len) {
+            sb.append(UUID.randomUUID().toString().replaceAll(regex, ""));
+        }
+        String result = sb.toString().substring(0, len);
+        return upperCase ? result.toUpperCase() : result;
     }
 
     /**
@@ -393,9 +391,7 @@ public class Tools {
     }
 
     public static void main(String[] args) throws IOException {
-        String str = "hello world 你好 中国" ;
-        String s = stringToUnicode(str);
-        System.out.println(s);
-        System.out.println(unicodeToString(s));
+        int i = randomInt();
+        System.out.println(i);
     }
 }
