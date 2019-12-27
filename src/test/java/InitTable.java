@@ -7,15 +7,15 @@ import java.util.Map;
 public class InitTable {
 
     public static void main(String[] args) throws Exception {
-        //        initMysqlTable();
-        initOracleTable();
+        initMysqlTable();
+        //initOracleTable();
     }
 
     private static void initMysqlTable() {
         try {
             Map<String, String> tables = new HashMap<>();
-            for (int i = 0; i < 2; i++) {
-                tables.put("animal" + i, "宠物表" + i);
+            for (int i = 0; i < 20; i++) {
+                tables.put("animal_" + i, "宠物表" + i);
             }
             String url = "jdbc:mysql://10.40.40.139:3306/test_one";
             String userName = "root";
@@ -25,7 +25,7 @@ public class InitTable {
             Connection connection = DriverManager.getConnection(url, userName, password);
             Statement statement = connection.createStatement();
 
-            String sqlTemp = "CREATE TABLE `%s` (" +
+            String sqlTemp = "CREATE TABLE IF NOT EXISTS `%s` (" +
                     "`id` BIGINT (20) NOT NULL AUTO_INCREMENT COMMENT '主键'," +
                     "`create_time` BIGINT (20) NOT NULL DEFAULT 0 COMMENT '创建时间(13位Long类型时间戳)'," +
                     "`update_time` BIGINT (20) NOT NULL DEFAULT 0 COMMENT '修改时间(13位Long类型时间戳)'," +
