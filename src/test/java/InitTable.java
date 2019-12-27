@@ -29,7 +29,7 @@ public class InitTable {
                     "`id` BIGINT (20) NOT NULL AUTO_INCREMENT COMMENT '主键'," +
                     "`create_time` BIGINT (20) NOT NULL DEFAULT 0 COMMENT '创建时间(13位Long类型时间戳)'," +
                     "`update_time` BIGINT (20) NOT NULL DEFAULT 0 COMMENT '修改时间(13位Long类型时间戳)'," +
-                    "`is_deleted` INT (1) NOT NULL DEFAULT 1 COMMENT '是否删除：0-无效/1-有效'," +
+                    "`is_deleted` INT (1) NOT NULL DEFAULT 1 COMMENT '是否删除：0-未删除/1-已删除'," +
                     "`sys_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP COMMENT '系统变更时间'," +
                     "PRIMARY KEY (`id`)" +
                     ") COMMENT = '%s';";
