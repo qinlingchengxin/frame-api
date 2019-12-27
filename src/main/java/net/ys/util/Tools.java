@@ -159,7 +159,7 @@ public class Tools {
      * 将数据库存储格式转化成驼峰标识，eg: create_time -> createTime
      */
     public static String dbToCamel(String resource) {
-        Matcher matcher = Pattern.compile("_[a-z0-9]").matcher(resource);
+        Matcher matcher = Pattern.compile("_+[a-z0-9]").matcher(resource);
         StringBuffer result = new StringBuffer();
         while (matcher.find()) {
             matcher.appendReplacement(result, matcher.group(0).replace("_", "").toUpperCase());
@@ -391,7 +391,7 @@ public class Tools {
     }
 
     public static void main(String[] args) throws IOException {
-        int i = randomInt();
-        System.out.println(i);
+        String create_time = dbToCamel("sys__create_time");
+        System.out.println(create_time);
     }
 }

@@ -105,6 +105,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.36</version>
         </dependency>
+
+        <dependency>
+            <groupId>oracle</groupId>
+            <artifactId>oracle</artifactId>
+            <version>jdbc6</version>
+        </dependency>
         <!--db-->
 
         <!--other-->

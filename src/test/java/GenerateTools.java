@@ -89,9 +89,12 @@ public class GenerateTools {
                 }
                 rs = statement.executeQuery("SELECT TABLE_COMMENT FROM information_schema.`TABLES` WHERE TABLE_SCHEMA = '" + DB_NAME + "' AND TABLE_NAME = '" + table + "';");
                 String tableComment = "";
-                if (rs.first()) {
+
+                while (rs.next()) {
                     tableComment = rs.getString("TABLE_COMMENT");
+                    break;
                 }
+
                 fileWriter.write("import java.io.Serializable;" + twoEnter);
                 fileWriter.write("/**" + oneEnter);
                 fileWriter.write("* " + tableComment + oneEnter);
@@ -377,7 +380,7 @@ public class GenerateTools {
 
     public static String camelFormat(String resource, boolean isClass) {
         if (resource != null && resource.trim().length() > 0) {
-            String[] strings = resource.split("_");
+            String[] strings = resource.toLowerCase().split("_+");
             if (strings.length > 1) {
                 StringBuffer sb = new StringBuffer();
                 if (isClass) {
