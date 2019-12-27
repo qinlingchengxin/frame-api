@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class ExportExcel {
 
-    public static final String EXPORT_PATH = "E:/excel/";
+    public static final String EXPORT_PATH = "E:/";
 
     public static void main(String[] args) {
         export();

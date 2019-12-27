@@ -65,12 +65,10 @@ public class GenerateOracleTools {
                     break;
                 }
 
-                fileWriter.write("import java.io.Serializable;" + twoEnter);
-                fileWriter.write("import lombok.Data;" + twoEnter);
+                fileWriter.write("import java.io.Serializable;" + oneEnter);
                 fileWriter.write("/**" + oneEnter);
                 fileWriter.write("* " + tableComment + oneEnter);
                 fileWriter.write("*/" + oneEnter);
-                fileWriter.write("@Data" + oneEnter);
                 fileWriter.write("public class " + fileName + " implements Serializable {" + twoEnter);
 
                 rs = statement.executeQuery(String.format(sql, table));
@@ -100,7 +98,7 @@ public class GenerateOracleTools {
         rs = statement.executeQuery(sql);
         List<String> tables = new ArrayList<String>();
         while (rs.next()) {
-            tables.add(rs.getString("TABLE_NAME"));
+            tables.add(rs.getString("TABLE_NAME").toLowerCase());
         }
         return tables;
     }

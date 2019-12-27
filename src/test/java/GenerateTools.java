@@ -3,9 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class GenerateTools {
 
@@ -73,9 +71,7 @@ public class GenerateTools {
             String columnComment;
             String fileName;
             FileWriter fileWriter;
-            String columnField;
-            String columnClass;
-            String attributeType = "";
+            String attributeType;
             for (String table : tables) {
                 fileName = camelFormat(table, true);
 
@@ -92,10 +88,11 @@ public class GenerateTools {
 
                 while (rs.next()) {
                     tableComment = rs.getString("TABLE_COMMENT");
+                    tableComment = tableComment == null ? "" : tableComment;
                     break;
                 }
 
-                fileWriter.write("import java.io.Serializable;" + twoEnter);
+                fileWriter.write("import java.io.Serializable;" + oneEnter);
                 fileWriter.write("/**" + oneEnter);
                 fileWriter.write("* " + tableComment + oneEnter);
                 fileWriter.write("*/" + oneEnter);
@@ -103,79 +100,27 @@ public class GenerateTools {
 
                 rs = statement.executeQuery(String.format(sql, table));
                 while (rs.next()) {
-                    columnName = camelFormat(rs.getString("COLUMN_NAME"), false);
+                    columnName = camelFormat(rs.getString("COLUMN_NAME").toLowerCase(), false);
                     columnClassName = rs.getString("DATA_TYPE");
                     columnComment = rs.getString("COLUMN_COMMENT");
+                    columnComment = columnComment == null ? "" : columnComment;
 
-                    if ("varchar".equals(columnClassName) || "mediumtext".equals(columnClassName)) {
-                        attributeType = "String";
-                    } else if ("int".equals(columnClassName)) {
+                    if ("int".equals(columnClassName)) {
                         attributeType = "int";
                     } else if ("bigint".equals(columnClassName)) {
                         attributeType = "long";
                     } else if ("decimal".equals(columnClassName)) {
                         attributeType = "BigDecimal";
+                    } else {
+                        attributeType = "String";
                     }
                     fileWriter.write(oneTabStr + "private " + attributeType + " " + columnName + ";\t//" + columnComment + twoEnter);
                 }
 
-                rs = statement.executeQuery(String.format(sql, table));
-
-                Map<String, String> fields = new LinkedHashMap<>();
-
-                while (rs.next()) {
-                    columnName = rs.getString("COLUMN_NAME").toLowerCase();
-                    columnClassName = rs.getString("DATA_TYPE");
-                    columnField = camelFormat(columnName, false);
-                    columnClass = camelFormat(columnName, true);
-
-                    if ("varchar".equals(columnClassName) || "mediumtext".equals(columnClassName)) {
-                        attributeType = "String";
-                    } else if ("int".equals(columnClassName)) {
-                        attributeType = "int";
-                    } else if ("bigint".equals(columnClassName)) {
-                        attributeType = "long";
-                    } else if ("decimal".equals(columnClassName)) {
-                        attributeType = "BigDecimal";
-                    }
-
-                    fileWriter.write(oneTabStr + "public void set" + columnClass + "(" + attributeType + " " + columnField + ") {" + oneEnter);
-                    fileWriter.write(twoTabStr + "this." + columnField + " = " + columnField + ";" + oneEnter + "    }" + twoEnter);
-                    fileWriter.write(oneTabStr + "public " + attributeType + " get" + columnClass + "() {" + oneEnter);
-                    fileWriter.write(twoTabStr + "return this." + columnField + ";" + oneEnter + "    }" + twoEnter);
-                    fields.put(columnField, attributeType);
-                }
-                fileWriter.write(genToString(fields));
                 fileWriter.write("}");
                 fileWriter.close();
             }
         }
-    }
-
-    /**
-     * 生成toString，json格式，目前只支持int/long/String/BigDecimal
-     */
-    public static String genToString(Map<String, String> fieldMap) {
-        StringBuffer sb = new StringBuffer(oneTabStr + "@Override" + oneEnter);
-        sb.append(oneTabStr + "public String toString() {" + oneEnter);
-        sb.append(twoTabStr + "return ");
-        sb.append("\"{");
-
-        for (Map.Entry<String, String> entry : fieldMap.entrySet()) {
-            String fieldName = entry.getKey();
-            String fieldType = entry.getValue();
-            sb.append("\\\"").append(fieldName).append("\\\":");
-
-            if ("int".equals(fieldType) || "long".equals(fieldType) || "BigDecimal".equals(fieldType)) {
-                sb.append("\"+").append(fieldName).append("+");
-            } else if ("String".equals(fieldType)) {
-                sb.append("\\\"\"+").append(fieldName).append("+").append("\"\\");
-            }
-            sb.append("\",");
-        }
-        sb.deleteCharAt(sb.length() - 1).append("}\";" + oneEnter);
-        sb.append(oneTabStr + "}" + oneEnter);
-        return sb.toString();
     }
 
     public static void generateRespMapper() throws SQLException, IOException {
@@ -188,8 +133,7 @@ public class GenerateTools {
             String columnComment;
             String fileName;
             FileWriter fileWriter;
-            String columnClass;
-            String attributeType = "";
+            String attributeType;
             for (String table : tables) {
                 fileName = camelFormat(table, true);
 
@@ -203,42 +147,22 @@ public class GenerateTools {
                     columnName = rs.getString("COLUMN_NAME").toLowerCase();
                     columnClassName = rs.getString("DATA_TYPE");
                     columnComment = rs.getString("COLUMN_COMMENT");
+                    columnComment = columnComment == null ? "" : columnComment;
 
-                    if ("varchar".equals(columnClassName) || "mediumtext".equals(columnClassName)) {
-                        attributeType = "String";
-                    } else if ("int".equals(columnClassName)) {
+                    if ("int".equals(columnClassName)) {
                         attributeType = "int";
                     } else if ("bigint".equals(columnClassName)) {
                         attributeType = "long";
                     } else if ("decimal".equals(columnClassName)) {
                         attributeType = "BigDecimal";
+                    } else {
+                        attributeType = "String";
                     }
+
                     fileWriter.write(oneTabStr + "@ApiModelProperty(value = \"" + columnComment + "\")" + oneEnter);
                     fileWriter.write(oneTabStr + "private " + attributeType + " " + columnName + ";" + twoEnter);
                 }
 
-                rs = statement.executeQuery(String.format(sql, table));
-
-                while (rs.next()) {
-                    columnName = rs.getString("COLUMN_NAME").toLowerCase();
-                    columnClassName = rs.getString("DATA_TYPE");
-                    columnClass = firstToUpperCase(columnName);
-
-                    if ("varchar".equals(columnClassName) || "mediumtext".equals(columnClassName)) {
-                        attributeType = "String";
-                    } else if ("int".equals(columnClassName)) {
-                        attributeType = "int";
-                    } else if ("bigint".equals(columnClassName)) {
-                        attributeType = "long";
-                    } else if ("decimal".equals(columnClassName)) {
-                        attributeType = "BigDecimal";
-                    }
-
-                    fileWriter.write(oneTabStr + "public void set" + columnClass + "(" + attributeType + " " + columnName + ") {" + oneEnter);
-                    fileWriter.write(twoTabStr + "this." + columnName + " = " + columnName + ";" + oneEnter + "    }" + twoEnter);
-                    fileWriter.write(oneTabStr + "public " + attributeType + " get" + columnClass + "() {" + oneEnter);
-                    fileWriter.write(twoTabStr + "return this." + columnName + ";" + oneEnter + "    }" + twoEnter);
-                }
                 fileWriter.write("}");
                 fileWriter.close();
             }
@@ -277,18 +201,19 @@ public class GenerateTools {
                 rs = statement.executeQuery(String.format(sql, table));
                 while (rs.next()) {
                     columnDb = rs.getString("COLUMN_NAME").toLowerCase();
-                    columnName = camelFormat(rs.getString("COLUMN_NAME"), true);
+                    columnName = camelFormat(rs.getString("COLUMN_NAME").toLowerCase(), true);
                     columnClassName = rs.getString("DATA_TYPE");
 
-                    if ("varchar".equals(columnClassName) || "mediumtext".equals(columnClassName)) {
-                        attributeType = "String";
-                    } else if ("int".equals(columnClassName)) {
+                    if ("int".equals(columnClassName)) {
                         attributeType = "Int";
                     } else if ("bigint".equals(columnClassName)) {
                         attributeType = "Long";
                     } else if ("decimal".equals(columnClassName)) {
                         attributeType = "BigDecimal";
+                    } else {
+                        attributeType = "String";
                     }
+
                     fileWriter.write(twoTabStr + classObject + ".set" + columnName + "(resultSet.get" + attributeType + "(\"" + columnDb + "\"));" + oneEnter);
                 }
                 fileWriter.write(twoTabStr + "return " + classObject + ";" + oneEnter);
@@ -366,7 +291,7 @@ public class GenerateTools {
         rs = statement.executeQuery(sql);
         List<String> tables = new ArrayList<String>();
         while (rs.next()) {
-            tables.add(rs.getString("TABLE_NAME"));
+            tables.add(rs.getString("TABLE_NAME").toLowerCase());
         }
         return tables;
     }
@@ -380,7 +305,7 @@ public class GenerateTools {
 
     public static String camelFormat(String resource, boolean isClass) {
         if (resource != null && resource.trim().length() > 0) {
-            String[] strings = resource.toLowerCase().split("_+");
+            String[] strings = resource.split("_+");
             if (strings.length > 1) {
                 StringBuffer sb = new StringBuffer();
                 if (isClass) {
