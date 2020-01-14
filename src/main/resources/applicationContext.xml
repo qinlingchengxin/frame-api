@@ -11,21 +11,27 @@
     <context:component-scan base-package="net.ys.cache"/>
     <context:component-scan base-package="net.ys.component"/>
 
-    <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <value>classpath:config.properties</value>
-        </property>
-        <!--默认以UTF-8编码读取配置文件-->
-        <property name="fileEncoding" value="UTF-8"/>
-    </bean>
-
     <import resource="application-quartz.xml"/>
-
     <import resource="application-db.xml"/>
-
     <import resource="application-mq.xml"/>
-
     <import resource="application-aop.xml"/>
-
     <import resource="application-cache.xml"/>
+
+    <beans profile="dev">
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations">
+                <value>classpath:config.properties</value>
+            </property>
+            <property name="fileEncoding" value="UTF-8"/>
+        </bean>
+    </beans>
+
+    <beans profile="prod">
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations">
+                <value>classpath:prod/config.properties</value>
+            </property>
+            <property name="fileEncoding" value="UTF-8"/>
+        </bean>
+    </beans>
 </beans>

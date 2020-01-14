@@ -498,24 +498,25 @@
 
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <package.environment>dev</package.environment>
-            </properties>
-        </profile>
+    <!--指定打包的环境-->
+    <!--   <profiles>
+           <profile>
+               <id>dev</id>
+               <activation>
+                   <activeByDefault>true</activeByDefault>
+               </activation>
+               <properties>
+                   <package.environment>dev</package.environment>
+               </properties>
+           </profile>
 
-        <profile>
-            <id>prod</id>
-            <properties>
-                <package.environment>prod</package.environment>
-            </properties>
-        </profile>
-    </profiles>
+           <profile>
+               <id>prod</id>
+               <properties>
+                   <package.environment>prod</package.environment>
+               </properties>
+           </profile>
+       </profiles>-->
 
     <build>
 
@@ -524,9 +525,10 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>prod/*</exclude>
-                </excludes>
+                <!--排除所有环境的配置-->
+                <!-- <excludes>
+                     <exclude>prod/*</exclude>
+                 </excludes>-->
             </resource>
         </resources>
 
@@ -575,7 +577,7 @@
                             <outputDirectory>${project.build.outputDirectory}</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/resources/${package.environment}</directory>
+                                    <directory>src/main/resources</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
