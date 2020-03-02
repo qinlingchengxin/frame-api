@@ -102,5 +102,17 @@ public class TestController {
             return GenResult.UNKNOWN_ERROR.genResult();
         }
     }
+
+    @ResponseBody
+    @RequestMapping(value = "app/name", method = RequestMethod.GET, headers = "Accept=application/json")
+    @ApiOperation(httpMethod = "GET", response = Map.class, responseContainer = "Map", value = "应用名")
+    public Map<String, Object> appName() {
+        try {
+            return GenResult.SUCCESS.genResult(SysConfig.appName);
+        } catch (Exception e) {
+            LogUtil.error(e);
+            return GenResult.UNKNOWN_ERROR.genResult();
+        }
+    }
 }
 

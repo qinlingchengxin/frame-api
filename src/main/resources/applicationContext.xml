@@ -34,4 +34,13 @@
             <property name="fileEncoding" value="UTF-8"/>
         </bean>
     </beans>
+
+    <beans profile="test">
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations">
+                <value>classpath:test/config.properties</value>
+            </property>
+            <property name="fileEncoding" value="UTF-8"/>
+        </bean>
+    </beans>
 </beans>
