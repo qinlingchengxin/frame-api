@@ -46,6 +46,7 @@ public class HttpsUtil {
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
             return new HttpResponse(responseCode, result);
         } catch (Exception e) {
+            LogUtil.error(e);
             return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, null);
@@ -72,6 +73,7 @@ public class HttpsUtil {
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
             return new HttpResponse(responseCode, result);
         } catch (Exception e) {
+            LogUtil.error(e);
             return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
@@ -96,6 +98,7 @@ public class HttpsUtil {
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
             return new HttpResponse(responseCode, result);
         } catch (Exception e) {
+            LogUtil.error(e);
             return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
@@ -120,6 +123,7 @@ public class HttpsUtil {
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
             return new HttpResponse(responseCode, result);
         } catch (Exception e) {
+            LogUtil.error(e);
             return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
@@ -144,6 +148,7 @@ public class HttpsUtil {
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
             return new HttpResponse(responseCode, result);
         } catch (Exception e) {
+            LogUtil.error(e);
             return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
@@ -196,6 +201,7 @@ public class HttpsUtil {
             LogUtil.info("responseCode:" + responseCode + "\tresult:" + result);
             return new HttpResponse(responseCode, result);
         } catch (Exception e) {
+            LogUtil.error(e);
             return new HttpResponse(9999, e.getMessage());
         } finally {
             close(connection, out);
